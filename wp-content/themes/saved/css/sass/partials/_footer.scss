@@ -1,0 +1,406 @@
+
+/*---------------------------------------------
+ * Footer Container
+ *--------------------------------------------*/
+
+#saved-footer {
+	z-index: 0; // keep footer above video on homepage so clickable
+	position: relative; // for making z-index work in IE9 - IE11
+}
+
+/*---------------------------------------------
+ * Footer at Bottom
+ *--------------------------------------------*/
+
+// Helps footer stick to bottom in modern browsers
+
+body:not(.mce-content-body) { // not on editor style
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+#saved-content {
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+// Internet Explorer hack
+// Flexbox is broken in IE11: https://connect.microsoft.com/IE/feedback/details/802625/min-height-and-flexbox-flex-direction-column-dont-work-together-in-ie-10-11-preview
+// Remove it in IE with the media query hack. Otherwise content area is collapsed. http://keithclark.co.uk/articles/moving-ie-specific-css-into-media-blocks/
+@media screen\0 { // IE9, IE10, IE11, Phone (not Edge12)
+
+	body:not(.mce-content-body) { // not on editor style
+		display: block;
+		min-height: 0;
+	}
+
+	#saved-content {
+		-ms-flex: none;
+		flex: none;
+	}
+
+}
+
+/*---------------------------------------------
+ * Footer Widgets
+ *--------------------------------------------*/
+
+#saved-footer-widgets-row { // .saved-widgets-row
+
+  	@extend .saved-vertical-padding-large;
+	@extend .saved-bg-secondary;
+
+	min-height: 300px;
+
+	// Prevent horizontal scroll
+	overflow: hidden;
+
+}
+
+/*---------------------------------------------
+ * Footer Map
+ *--------------------------------------------*/
+
+#saved-footer {
+
+	.saved-map-section,
+	#saved-map-section-canvas {
+		//max-height: 450px;
+	}
+
+    // When no widgets, darker gradient starting above map section to contrast with white content background
+
+    body:not(.home) & { // not on homepage; interferes with widgets
+
+		&.saved-footer-no-widgets .saved-map-section {
+
+			&::after {
+
+				display: block;
+				position: absolute;
+				top: 0;
+				height: 5em !important;
+				width: 100% !important;
+				margin-top: -5em;
+				content: '';
+
+				background: -moz-linear-gradient(bottom, rgba(252,252,252,1) 2.5em, rgba(252,252,252,0) 5em); /* FF3.6-30 */
+				background: -webkit-linear-gradient(bottom, rgba(252,252,252,1) 2.5em, rgba(252,252,252,0) 5em); /* Chrome10-252,Safari5.1-6 */
+				background: linear-gradient(to top, rgba(252,252,252,1) 2.5em, rgba(252,252,252,0) 5em); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+			}
+
+		}
+
+	}
+
+}
+
+/* Fix bug HS 21243 */
+body:not(.home).saved-no-comments-section #saved-footer.saved-footer-no-widgets .saved-map-section::after {
+  display: none;
+}
+
+/*---------------------------------------------
+ * Footer Bottom (Icons, Notice, Menu)
+ *--------------------------------------------*/
+
+#saved-footer-bottom-inner {
+
+	@extend .saved-vertical-padding-medium;
+
+	display: table;
+	width: 100%;
+
+	// Cells (Icons/Notice left, Menu right)
+
+	> * {
+		display: table-cell;
+		vertical-align: top;
+	}
+
+}
+
+	// Icons / Notice (Left)
+
+	#saved-footer-icons-notice {
+
+		// Have menu
+
+		.saved-footer-has-menu & {
+			width: 10%; // give menu on right most of the space
+			min-width: ct-em(270); // enough for reasonable notice
+			padding-right: ct-em(50); // right margin when have menu
+		}
+
+		// No menu
+
+		.saved-footer-no-menu & {
+			width: 100%;
+		}
+
+		// Icons and notice; add space between
+
+		& > *:nth-child(2) {
+			margin-top: ct-em(30);
+		}
+
+		// Center vertically with menu if no submenus and no notice or no icons
+
+		.saved-footer-no-notice.saved-footer-has-menu.saved-footer-no-submenu &,
+		.saved-footer-no-icons.saved-footer-has-menu.saved-footer-no-submenu & {
+			vertical-align: middle;
+		}
+
+	}
+
+		// Icons
+
+		#saved-footer-icons {
+
+			.saved-list-icons {
+
+				font-size: 1.8em;
+				white-space: nowrap; // icons always on one line
+
+				a {
+
+					transition: opacity 1s ease;
+					color: #fff;
+
+					&:hover {
+						opacity: 0.6;
+					}
+
+				}
+
+			}
+
+		}
+
+		// Notice
+
+		#saved-footer-notice {
+
+			font-size: 0.85em;
+			font-style: italic;
+
+			a {
+				font-weight: bold;
+			}
+
+			.saved-footer-has-menu.saved-footer-has-submenu.saved-footer-no-icons & {
+				margin-top: ct-em(4);
+			}
+
+		}
+
+	// Menu (Right)
+
+	#saved-footer-menu { // <nav> containing <ul>
+
+		// Plain list styling; top-level and sub
+
+		ul {
+			margin: 0;
+			list-style: none;
+		}
+
+		// Center vertically with icons if no submenus and no notice or no icons
+
+		.saved-footer-has-icons.saved-footer-no-notice &,
+		.saved-footer-has-notice.saved-footer-no-icons & {
+			vertical-align: middle;
+		}
+
+	}
+
+		// Menu list
+
+		#saved-footer-menu-content { // <ul>
+
+			// Margin between links
+
+			$margin-horizontal: 3.8%; // horizontal space between links
+			$margin-horizontal-no-submenu: 2.2%; // ditto but for when there are no submenus
+			$margin-vertical: ct-em(18); // vertical space between links, for wrapping
+			$margin-vertical-no-submenu: ct-em(7); // ditto but for when there are no submenus
+
+			// Horizontal margin offset
+			// Negative offsets left/right margin on actual items
+
+			margin: 0 ( -$margin-horizontal / 2) !important;
+
+				// Less margin when no submenus (top-level only)
+
+				.saved-footer-no-submenu & {
+					margin: 0 ( -$margin-vertical-no-submenu / 2 ) !important;
+				}
+
+			// Vertical margin offset
+			// Negative offsets bottom margin on actual items
+
+			margin-bottom: -$margin-vertical !important;
+
+				// Less margin when no submenus (top-level only)
+
+				.saved-footer-no-submenu & {
+					margin-bottom: -$margin-vertical-no-submenu !important;
+				}
+
+			// Align menu
+
+			.saved-footer-has-icons &,
+			.saved-footer-has-notice & {
+				text-align: right;
+			}
+
+			.saved-footer-no-icons.saved-footer-no-notice & {
+				//text-align: center; // center menu when no icons or notice (menu only)
+			}
+
+			// Top-level item
+
+			> li {
+
+				display: inline-block;
+				vertical-align: top;
+				text-align: left;
+
+				// Horizontal margin
+
+				margin: 0 ($margin-horizontal / 2 ); // set offset above
+
+					// Less margin when no submenus (top-level only)
+
+					.saved-footer-no-submenu & {
+						margin: 0 ( $margin-horizontal-no-submenu / 2 ); // set offset above
+					}
+
+				// Vertical margin
+
+				margin-bottom: $margin-vertical; // set offset above
+
+					// Less margin when no submenus (top-level only)
+
+					.saved-footer-no-submenu & {
+						margin-bottom: $margin-vertical-no-submenu; // set offset above
+					}
+
+				// Top-level links
+
+				> a {
+
+					display: inline-block;
+					font-size: 0.85em;
+					font-weight: bold;
+
+					@include saved-uppercase();
+
+					.saved-footer-has-submenu & {
+						padding-bottom: ct-em(3);
+					}
+
+				}
+
+				// Sub-menu contents
+
+				> ul {
+					font-size: 0.825em;
+				}
+
+			}
+
+		}
+
+/*---------------------------------------------
+ * Bottom Sticky
+ *--------------------------------------------*/
+
+// Latest events, comments, etc.
+
+#saved-sticky { // hidden when scroll to footer (or top of home) or under 1024 (see media queries)
+
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: auto;
+	z-index: 1000;
+
+	@include saved-box( $box-border-radius 0 0 0 );
+
+}
+
+	#saved-sticky-inner {
+		position: relative;
+		padding: ct-em(8) ct-em(44) ct-em(10) ct-em(15); // allow space on right for dismiss icon
+		background-color: rgba( 0, 0, 0, 0.07 ); // make slightly darker to contrast with any Main Color BG underneath
+	}
+
+		// Content
+
+		#saved-sticky-content {
+			display: inline-block;
+			font-size: 0.8em;
+			line-height: 1.4;
+			color: #fff;
+
+			a {
+				font-weight: bold;
+				color: #fff;
+			}
+
+		}
+
+			// Posts (events, sermons, etc.)
+
+			.saved-sticky-item {
+
+				display: inline-block;
+				margin-right: ct-em(18);
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+			}
+
+				.saved-sticky-item-date {
+					padding-right: ct-em(10);
+					font-weight: normal;
+					@include saved-uppercase();
+				}
+
+				.saved-sticky-item-title {
+					color: #fff !important;
+				}
+
+		// Dismiss icon
+
+		#saved-sticky-dismiss {
+
+			display: inline-block;
+			position: absolute;
+			top: ct-em(9);
+			right: ct-em(14);
+			padding: 0;
+
+			a {
+
+				font-size: 0.8em;
+				color: #fff;
+				opacity: 0.6;
+				transition: opacity 0.3s;
+
+				&:hover {
+					opacity: 1;
+				}
+
+			}
+
+		}

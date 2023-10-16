@@ -1,0 +1,115 @@
+
+//---------------------------------------------
+// Colors
+//---------------------------------------------
+
+// Text Color
+$text-color: #555;						// Text over content (website background color)
+$text-color-light: #777;
+$text-color-dark: #000;					// Dark text over content, including menu links
+$text-color-on-main: #fff; 				// Text over Main Color (Customizer) as background
+$form-text-color: #000;
+$text-color-error: #c42d2d;
+
+// Background Colors
+// See saved_alternating_bg_class() for how these are applied to homepage sections and footer
+// Note: Main Color background is set via Customizer and output in <head>
+$bg-color: #fff; 						// Content background (website background + boxes)
+$bg-color-contrast: #fafafa;			// Content background when short entry boxes are used (white) - mainly homepage
+$bg-color-secondary: #f5f5f5;			// Widgets rows (homepage, footer), blockquote background, etc.
+
+// Text Selection Color
+// This is when user selects text on a page
+$text-selection-color: #000;
+$text-selection-bg-color: #e5e5e5;
+
+//---------------------------------------------
+// Layout
+//---------------------------------------------
+
+$max-width: 1170px; 					// Max width for any content (used on centered content blocks and media queries)
+$max-width-medium: 980px;				// Homepage content, extended blockquotes, videos, etc.
+$max-width-small: 700px;				// Page/post content (comfortable reading w/no sidebar)
+
+$viewport-padding: 6%; 					// Horizontal space between contents and edge of viewport on smaller screens
+$viewport-padding-reverse: $viewport-padding + 1%; // Use more when reversing, because width is coming from inner element that is not as wide
+
+$logo-max-width: 250px; 				// Update in images.php too. Update in admin-customize.css too.
+$logo-max-height: 30px;					// Update in images.php too.
+
+//---------------------------------------------
+// Typography
+//---------------------------------------------
+
+$entry-font-size: 1em;					// Font size for entries (excerpts, comments) (aim for under 80 characters per line for readability)
+$enlarged-font-size: 1.15em;			// Increased font size (about 20pt) for main article content (under 80 chars per line for readability)
+$enlarged-font-size-reverse: 0.863em;	// What to reverse enlarged font size with
+
+$line-height: 1.5; 						// Body (tighter buttons, menu wrapping, etc.)
+$line-height-content: 1.8;				// Content in posts, comments, widgets
+
+//---------------------------------------------
+// Borders
+//---------------------------------------------
+
+// Border Radius (rounded corners)
+$box-border-radius: 2px !default; 		// Hover boxes; can be used outside of saved-box() mixin
+$image-border-radius: 2px;
+
+//---------------------------------------------
+// Spacing
+//---------------------------------------------
+
+// Vertical Space
+// See _layout.scss for explanation
+// Note each size is 70% of the next larger size
+
+$vertical-space-small-px: 40;	// Space between paragraphs and blocks in content (like paragraph, bottom of headings, blockquote)
+$vertical-space-medium-px: 55;	// Space between major elements in a section (like top of heading, or comments)
+$vertical-space-large-px: 75;	// Space between sections (like article and comment sections)
+
+$vertical-space-small: ct-rem($vertical-space-small-px);
+$vertical-space-medium: ct-rem($vertical-space-medium-px);
+$vertical-space-large: ct-rem($vertical-space-large-px);
+
+$mobile-vertical-space-reduction: 0.75;	// reduce to this much on mobile
+$mobile-vertical-space-small: ct-rem($vertical-space-small-px * $mobile-vertical-space-reduction);
+$mobile-vertical-space-medium: ct-rem($vertical-space-medium-px * $mobile-vertical-space-reduction);
+$mobile-vertical-space-large: ct-rem($vertical-space-large-px * $mobile-vertical-space-reduction);
+
+$vertical-space-content-reduction: 0.7; // for content, reduce size to this to compensate for line height
+
+//---------------------------------------------
+// Buttons
+//---------------------------------------------
+
+// Rectangular Button
+
+$button-height: 2.35em;
+$button-margin: 0.9em;
+$button-margin-half: $button-margin / 2;
+$button-font-size: 0.925em;
+$button-radius: 2px; // rounded corners
+
+//---------------------------------------------
+// Author Box
+//---------------------------------------------
+
+$author-box-avatar-size-px: 108;
+$author-box-avatar-size: ct-em($author-box-avatar-size-px);
+
+//---------------------------------------------
+// Comments
+//---------------------------------------------
+
+$comment-image-size-px: 54;
+$comment-image-size: ct-em($comment-image-size-px);
+
+//---------------------------------------------
+// Admin Bar
+//---------------------------------------------
+
+$admin-bar-height: 32px;					// Offset menu bar, homepage content and arrow by this much
+$admin-bar-mobile-height: 46px;				// Use this offset for smaller screens (big icons, no text)
+$admin-bar-mobile-screen-width: 782px; 		// Screen width to use mobile height on
+$admin-bar-hidden-screen-width: 700px;		// Screen width that admin bar is hidden at when scroll

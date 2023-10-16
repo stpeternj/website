@@ -1,0 +1,21 @@
+/**
+ * Customizer Control Styles
+ */
+
+/* Remove bottom margin from Uppercase control */
+
+#customize-control-saved_customizations-uppercase {
+	margin-bottom: 0;
+}
+
+/* Remove bottom margin from Colored Line control */
+
+#customize-control-saved_customizations-header_line {
+	margin-bottom: 0;
+
+/* Since WordPress 5.9 need to constrain logo to its max width */
+
+#customize-control-saved_customizations-logo_image img.attachment-thumb,
+#customize-control-saved_customizations-logo_hidpi img.attachment-thumb {
+	max-width: 250px;
+}

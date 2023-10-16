@@ -1,0 +1,390 @@
+
+/*---------------------------------------------
+ * Banner / Title / Breadcrumbs
+ *--------------------------------------------*/
+
+#saved-banner {
+
+	position: relative;
+	width: 100%;
+	z-index: 6;
+
+	.js & {
+		visibility: hidden; // will fade in with JS on load - softens the Main Color bg flash
+	}
+
+}
+
+	// Darker main color when no image to contract with dropdown menu also having main color background
+
+	#saved-banner-darken {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba( 0, 0, 0, 0.07 );
+	}
+
+	// Image overlay
+
+	#saved-banner-image {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+
+		// Adjust brightness of image; opacity is set inline
+
+		#saved-banner-image-brightness {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+		}
+
+		// Gradient at bottom over image to make title more legible
+		// This is also used on Prev/Next blocks at bottom of single
+
+		.saved-banner-image-gradient {
+
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+
+			background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 36%, rgba(0,0,0,0.30) 76%, rgba(0,0,0,0.30) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 36%,rgba(0,0,0,0.30) 76%,rgba(0,0,0,0.30) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 36%,rgba(0,0,0,0.30) 76%,rgba(0,0,0,0.30) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#26000000',GradientType=0 ); /* IE6-9 */
+
+		}
+
+	#saved-banner-inner {
+
+		@extend .saved-centered-large; // limit width
+
+		//display: table; // for vertical centering
+		display: block;
+		position: relative; // bring above banner color layer
+		width: 100%;
+		height: 100%;
+		padding: 12.25% 0 4% 0; // change below too; make header banner scale according to screen width (when viewport is 1600, height shd be 400 - since image is 1600x400)
+
+		// Less bottom margin if have breadcrumb bar
+
+		.saved-has-header-bottom & {
+			padding: 12% 0 1.5% 0; // change above too
+		}
+
+		// Less top margin when no image
+
+		.saved-no-header-image &,
+		.saved-no-header-image.saved-has-header-bottom & {
+
+			$padding-top: 6%;
+
+			padding-top: $padding-top;
+
+			// More space when menu wraps to second line to keep menu from covering title
+
+			.saved-header-menu-wrapped & {
+				padding-top: $padding-top + 5%;
+			}
+
+		}
+
+	}
+
+		// Image in front of title (e.g. Person post type)
+
+		$image-by-title-size: ct-em(80);
+		$image-by-title-size-no-accent: ct-em(50);
+		$image-by-title-margin: ct-em(22);
+
+		#saved-banner-image-by-title {
+
+			display: inline-block;
+			vertical-align: top;
+
+			// Smaller image when no accent
+
+			width: $image-by-title-size;
+			height: $image-by-title-size;
+
+			.saved-no-heading-accents & {
+				width: $image-by-title-size-no-accent;
+				height: $image-by-title-size-no-accent;
+			}
+
+			// Image
+
+			img {
+				width: 100%;
+				height: auto;
+				margin-top: 3.75em;
+				border-width: 0;
+				border-radius: $image-border-radius;
+			}
+
+		}
+
+		// Title
+
+		#saved-banner-title {
+
+			// Make room for image on left
+
+			.saved-banner-has-image-by-title & {
+				width: calc( 99% - #{$image-by-title-size} - #{$image-by-title-margin}); // spare 1% to keep on same line
+				margin-left: $image-by-title-margin;
+			}
+
+			display: inline-block;
+			height: 100%;
+			text-align: left;
+			vertical-align: top;
+
+			div { // Using div instead of H1, because H1 is in <article> as hidden assistive text for proper HTML5 and Outline
+
+ 				@extend .saved-text-over-image; // imperceptible shadow to make text contrast with background image
+				@extend .saved-constrained-image-content;
+
+				display: block;
+				margin-top: 0.95em; // make room for logo/menu
+				margin-bottom: 0;
+
+			}
+
+			// Smaller font size based on length to prevent wrapping onto too many lines and stretching height of banner too far
+			// Related: See H1 Header ADjust in _base-elements.scss
+
+			.saved-banner-title-length-25 & { // at least 25 characters
+				font-size: 0.9em;
+			}
+
+			.saved-banner-title-length-30 & {
+				font-size: 0.85em;
+			}
+
+			.saved-banner-title-length-35 & {
+				font-size: 0.8em;
+			}
+
+			.saved-banner-title-length-40 & { // 40 characters or greater - now let it wrap at this small size
+				font-size: 0.75em;
+			}
+
+			// Hide accent line if no title
+
+			.saved-no-header-title & {
+				@include saved-remove-heading-line();
+			}
+
+		}
+
+	// Breadcrumbs and Archive Dropdowns
+
+	#saved-header-bottom {
+
+		position: relative; // help z-index
+		width: 100%;
+		border: 1px solid transparent; // keeps spacing correct
+
+		// Archive dropdowns left-aligned if no room with breadcrumbs
+		// See main.js for how is added .saved-header-bottom-break
+
+		.saved-header-bottom-break {
+
+			.ctfw-breadcrumbs {
+				float: none;
+				padding-right: ct-em(25);
+			}
+
+			#saved-header-archives {
+				float: none;
+				margin-top: ct-em(4);
+			}
+
+		}
+
+		// Margin between two elements
+
+		&.saved-has-header-archives.saved-has-breadcrumbs {
+
+			$margin: 30;
+			$margin-half: ct-em($margin / 2);
+
+			.ctfw-breadcrumbs {
+				margin-right: $margin-half;
+			}
+
+			#saved-header-archives {
+				margin-left: $margin-half;
+			}
+
+		}
+
+	}
+
+		#saved-header-bottom-inner { // .saved-centered-large .saved-clearfix
+			margin-top: ct-em(10);
+			margin-bottom: ct-em(10);
+		}
+
+			.ctfw-breadcrumbs,
+			#saved-header-archives,
+			.saved-header-archive-dropdown {
+				display: inline-block;
+				padding: 2px 0;
+				font-size: 0.78em;
+			}
+
+			// Breadcrumbs
+
+			.ctfw-breadcrumbs {
+
+				float: left;
+				font-style: italic;
+
+				a {
+					font-weight: italic;
+					color: #fff;
+				}
+
+			}
+
+				// Separator Icon
+
+				.saved-breadcrumb-separator {
+					display: inline-block;
+					color: #fff;
+					font-size: 1.1em !important;
+					position: relative;
+					top: ct-em(0.5);
+				}
+
+			// Header Archives - Dropdowns (right of breadcrumbs)
+
+			#saved-header-archives { // <ul>
+				margin: 0;
+				list-style: none;
+				float: right;
+			}
+
+				// Top Level Item
+
+				.saved-header-archive-top { // <li>
+
+					display: inline-block;
+					margin-right: ct-em(13);
+
+					.saved-has-uppercase & {
+						text-transform: uppercase;
+					}
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+				}
+
+					// Section Name
+
+					#saved-header-archives-section-name { // .saved-header-archive-top-name
+
+						padding-right: ct-em(4);
+						font-weight: normal;
+						font-style: italic;
+						text-transform: none;
+
+						a {
+							font-weight: normal;
+						}
+
+					}
+
+					// Top Level Item Name
+
+					.saved-header-archive-top-name { // <a>
+
+						white-space: nowrap;
+						font-weight: bold;
+
+						// Down arrow
+
+						.saved-icon {
+							font-size: 1.1em !important;
+							position: relative;
+							top: ct-em(0.5);
+						}
+
+					}
+
+					// Dropdown Container
+
+					.saved-header-archive-dropdown { // .jq-dropdown
+
+						display: none;
+						width: ct-em(240);
+						margin-top: ct-em(5);
+						margin-left: ct-em(-14);
+
+						&.jq-dropdown-anchor-right {
+							margin-left: ct-em(14);
+						}
+
+						// Dropdown Panel
+
+						.jq-dropdown-panel {
+							font-size: 1.05em;
+						}
+
+						ul {
+
+							margin: 0;
+							list-style: none;
+							line-height: 1.4;
+
+							li {
+
+								a {
+									display: inline-block;
+									max-width: ct-em(160); // don't let it reach number (enough space for 4-digit #)
+									white-space: nowrap;
+									overflow: hidden;
+									text-overflow: ellipsis; // ... before overflows
+								}
+
+								.saved-header-archive-dropdown-count {
+									color: #fff;
+									display: inline-block;
+									float: right;
+								}
+
+
+							}
+
+						}
+
+					}
+
+					// "All" link to index
+
+					.saved-header-archive-dropdown-all {
+						a {
+							font-weight: bold;
+						}
+					}
+
+					// Hide count on events since past events makes inaccurate
+
+					.page-template-events-upcoming .saved-header-archive-dropdown-count,
+					.page-template-events-past .saved-header-archive-dropdown-count,
+					.tax-ctc_event_category .saved-header-archive-dropdown-count {
+						display: none !important;
+					}

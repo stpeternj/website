@@ -1,0 +1,507 @@
+
+/*---------------------------------------------
+ * Calendar
+ *--------------------------------------------*/
+
+$calendar-header-line-height: 3;
+$calendar-top-border-radius: 1px;
+
+// Content before calendar (if any)
+
+.page-template-events-calendar .saved-entry-full-content > *:not(#saved-calendar) {
+	@extend .saved-centered-medium;
+}
+
+// Calendar Container
+
+#saved-calendar {
+
+	position: relative;
+	font-size: $enlarged-font-size-reverse;
+
+	.saved-entry-has-content & {
+		@extend .saved-vertical-margin-top-medium;
+	}
+
+}
+
+// Loading AJAX
+
+#saved-calendar-loading {
+	display: none;
+	opacity: 0.7;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 100;
+	background-color: $bg-color;
+}
+
+// Month Table and Controls
+
+#saved-calendar-header {
+	margin-top: ct-em(-10);
+	@extend .saved-clearfix;
+}
+
+	#saved-calendar-header-left {
+		float: left;
+		margin-right: ct-em(25);
+		line-height: $calendar-header-line-height;
+		vertical-align: middle;
+	}
+
+		#saved-calendar-title { // h2
+
+			display: inline-block;
+			margin: 0;
+			vertical-align: middle;
+			font-size: 2.2em;
+			//line-height: 1.8;
+
+			span {
+				display: inline-block;
+				margin-right: ct-em(8);
+			}
+
+		}
+
+			// Category
+
+			#saved-calendar-title-category {
+				display: inline-block;
+				text-transform: none;
+				font-style: italic;
+				font-weight: normal;
+				font-size: 0.95em;
+			}
+
+				#saved-calendar-remove-category {
+
+					margin-left: ct-em(3);
+					display: inline-block;
+					position: relative;
+
+					a {
+						position: relative;
+						top: ct-em(-3);
+						font-size: 0.65em;
+						color: $text-color-light;
+						border: none;
+					}
+
+				}
+
+	#saved-calendar-header-right { // ul.saved-list-icons
+
+		float: right;
+		padding-top: ct-em(5);
+		line-height: $calendar-header-line-height;
+		font-size: 1.5em;
+
+		a { // icon
+
+			position: relative;
+			display: block;
+			margin: 0;
+			padding: 0 ct-em(1.5);
+			text-align: center;
+			border: 0;
+			font-size: 1.1em;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+		}
+
+		// Icon Adjustments
+
+		.saved-icon-calendar-prev,
+		.saved-icon-calendar-next {
+			top: ct-em(1);
+			left: ct-em(2);
+			margin-top: 0;
+			font-size: 1.3em;
+			padding: 0;
+		}
+
+		.saved-icon-calendar-prev:not(.saved-calendar-no-next) {
+			left: ct-em(6);
+		}
+
+		.saved-icon-calendar-month {
+			font-size: 1em;
+		}
+
+
+	}
+
+		// Dropdowns (Months, Categories)
+
+		.saved-calendar-dropdown {
+
+			margin-top: ct-em(15);
+			left: ct-em(15);
+			font-size: 0.85em;
+
+			.jq-dropdown-panel,
+			.jq-dropdown-menu {
+				position: relative;
+				right: ct-em(-20);
+				padding-top: ct-em(7);
+			}
+
+		}
+
+		// Month Dropdown
+
+		#saved-calendar-month-dropdown {
+			width: ct-em(190);
+			line-height: 1.8;
+			//text-transform: uppercase;
+		}
+
+			.saved-calendar-month-dropdown-year {
+
+				margin-top: ct-em(0);
+				font-size: 1.3em;
+				font-weight: bold;
+				color: #fff;
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+			}
+
+			.saved-calendar-month-dropdown-months { // <ul>
+
+				margin: 0;
+				list-style: none;
+
+				li {
+
+					display: inline-block;
+					width: 23%;
+
+					&.saved-calendar-month-dropdown-past {
+						color: #fff;
+						opacity: 0.58;
+					}
+
+				}
+
+			}
+
+		// Category Dropdown
+
+		#saved-calendar-category-dropdown { // .jq-dropdown
+
+			ul {
+
+				li {
+					line-height: 1.1;
+					padding: ct-em(2) 0;
+				}
+
+			}
+
+		}
+
+// Calendar Table
+
+#saved-calendar-table { // table
+	margin-top: ct-em(28);
+	margin-bottom: 0;
+	border-collapse: separate; // Firefox doesn't like collapse
+	border-spacing: 0;
+	table-layout: fixed; // help overflow: hidden on cells; equal widths
+	border: 0 !important;
+	overflow: hidden;
+}
+
+	// Top (for rounded corners)
+
+	.saved-calendar-table-top {
+		height: $calendar-top-border-radius; // equal to border-radius; update .saved-calendar-table-header padding-bottom and .saved-calendar-table-header-row height
+		border-top-left-radius: $calendar-top-border-radius;
+		border-top-right-radius: $calendar-top-border-radius;
+	}
+
+	// Cells
+
+	#saved-calendar-table th,
+	#saved-calendar-table td {
+		border: 0;
+		padding: 0;
+		position: relative; // helps today border
+	}
+
+	// Header / Controls
+
+	.saved-calendar-table-header-row { // tr
+		height: ( 40px - $calendar-top-border-radius ); // 40 minus .saved-calendar-table-top height
+	}
+
+		.saved-calendar-table-header { // th
+			width: ( 100% / 7 );
+			border-width: 1px !important;
+			border-style: solid !important;
+			vertical-align: middle;
+		}
+
+			.saved-calendar-table-header-content {
+
+				padding-bottom: $calendar-top-border-radius !important; // offset .saved-calendar-table-top height
+				font-size: 1em;
+				line-height: 1;
+				text-align: center !important;
+				color: $text-color-on-main;
+
+				@include saved-uppercase();
+
+			}
+
+				// Three letter abbreviation show on mobile
+
+				.saved-calendar-table-header-short {
+					display: none;
+				}
+
+	// Week
+
+	.saved-calendar-table-week-first .saved-calendar-table-day {
+		border-top-width: 0 !important;
+	}
+
+	.saved-calendar-table-day { // td
+		vertical-align: top;
+		border-width: 0 0 1px 1px !important;
+		border-style: solid !important;
+		border-color: #e5e5e5 !important;
+	}
+
+		// First and last days of week
+
+		.saved-calendar-table-day-1 {
+			border-left-width: 1px !important;
+		}
+
+		.saved-calendar-table-day-7 {
+			border-right-width: 1px !important;
+		}
+
+		// Day content container
+
+		.saved-calendar-table-day-content-container {
+			padding: ct-em(5) ct-em(16) ct-em(10) ct-em(10);
+			overflow: hidden;
+			min-height: 120px;
+		}
+
+			.saved-calendar-table-day-heading { // div
+				margin: ct-em(2) 0 ct-em(4) 0;
+				text-align: right;
+				white-space: nowrap;
+			}
+
+			.saved-calendar-table-day-heading,
+			.saved-calendar-table-day-label {
+				color: $text-color-dark;
+			}
+
+				.saved-calendar-table-day-label { // span
+					display: inline-block;
+					margin-right: ct-em(3);
+					vertical-align: middle;
+				}
+
+				// Number
+
+				.saved-calendar-table-day-number {
+					vertical-align: middle;
+				}
+
+				// Number - linked number for mobile
+
+				a.saved-calendar-table-day-number {
+					display: none;
+				}
+
+			.saved-calendar-table-day-events { // ul
+
+				list-style: none;
+				margin: 0;
+
+				li {
+					margin-bottom: ct-em(4);
+					font-size: 0.9em;
+					line-height: 1.5;
+				}
+
+					a {
+						margin-right: ct-em(3);
+					}
+
+			}
+
+				// Time
+
+				.saved-calendar-table-day-event-time {
+					margin-top: ct-em(4);
+					font-size: 0.95em;
+					font-style: italic;
+					line-height: 1.2 !important;
+					display: block;
+				}
+
+			// Today
+
+			.saved-calendar-table-day-today {
+				z-index: 10;
+				background-color: #fff8e9;
+			}
+
+			// Past
+
+			.saved-calendar-table-day-past {
+
+				background-color: #f9f9f9;
+
+				.saved-calendar-table-day-heading {
+					color: #aaa;
+				}
+
+			}
+
+			// Day from other month
+
+			.saved-calendar-table-day-other-month {
+
+				background-color: #f2f2f2;
+
+				&:not(.saved-calendar-table-day-today) {
+
+					.saved-calendar-table-day-heading,
+					.saved-calendar-table-day-label {
+						color: #aaa;
+					}
+
+				}
+
+			}
+
+	// Event Hover (Tooltipster)
+	// Entries use .saved-event-short class and content-event-short.php partial
+
+	.tooltipster-sidetip.saved-tooltipster-calendar {
+
+		margin: 0 ct-em(40); // don't touch edge of screen
+
+		.tooltipster-box {
+
+			margin: 0;
+			padding: 0;
+			border: 0;
+			background-color: transparent;
+
+			.tooltipster-content {
+
+				@include saved-box();
+
+				margin: 0;
+				padding: 0;
+				width: ct-em(260);
+				overflow: hidden;
+				font-size: 1em;
+				color: $text-color;
+
+				// Short entry on hover
+
+				.saved-entry-short {
+
+					max-height: ct-em(305);
+
+					// Workaround for Firefox in which when having image, height is too short
+					// This forces minimum so content not clipped
+
+					&.saved-entry-has-image {
+
+						&.saved-entry-no-excerpt {
+							min-height: ct-em(258);
+						}
+
+						&.saved-entry-has-excerpt {
+							min-height: ct-em(305);
+						}
+
+					}
+
+				}
+
+					.saved-entry-short-label {
+						display: none;
+					}
+
+			}
+
+		}
+
+	}
+
+	// List of Events (Mobile)
+	// Entries use .saved-event-short and content-event-short.php partial
+
+	#saved-calendar-list {
+
+		@extend .saved-vertical-margin-top-medium;
+		@extend .saved-centered;
+
+		display: none;
+		max-width: 360px;
+		padding-bottom: 1em; // keep last entry from getting bottom clipped on mobile
+		text-align: left;
+
+		// Heading above events list
+
+		@include saved-remove-heading-line();
+
+		h3 { // #saved-calendar-list-heading
+
+			@extend .saved-vertical-margin-bottom-medium;
+
+			display: none;
+			padding-top: ct-em(4);
+			font-size: 1.7em;
+			text-align: left;
+
+		}
+
+		// Event short view
+
+		.saved-event-short { // space between each <article> in list; not hover
+
+			@extend .saved-vertical-margin-top-small;
+
+			display: none;
+			font-size: 1.2em; // not too small
+
+			// Fade excerpt out after max-height
+
+			max-height: ct-em(380);
+
+		}
+
+			// Date shows on heading instead
+
+			.saved-entry-short-date {
+				display: none;
+			}
+
+		.saved-event-short:first-of-type {
+			margin-top: 0;
+		}
+
+	}

@@ -1,0 +1,161 @@
+
+/*---------------------------------------------
+ * Viewport Helpers
+ *--------------------------------------------*/
+
+// Viewport Height (see jQuery fallbacks)
+
+@for $i from 1 through 100 {
+
+  .saved-viewport-height-#{$i} {
+    height: #{$i}vh;
+  }
+
+}
+
+/*---------------------------------------------
+ * Centered Blocks
+ *--------------------------------------------*/
+
+.saved-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.saved-centered-large { // max width (logo/menu, footer, content containers, etc.)
+	@extend .saved-centered;
+	max-width: $max-width;
+}
+
+.saved-centered-medium { // homlepage content, extended blockquotes, videos, etc.
+	@extend .saved-centered;
+	max-width: $max-width-medium;
+}
+
+.saved-centered-small { // page/post content (comfortable reading w/no sidebar)
+	@extend .saved-centered;
+	max-width: $max-width-small; // allows entry content about 75 characters per row for optimal readability
+}
+
+/*---------------------------------------------
+ * Constrained Width
+ *--------------------------------------------*/
+
+// Constrain homepage section and header content
+
+.saved-constrained-image-content {
+  max-width: 800px;
+}
+
+/*---------------------------------------------
+ * Vertical Spacing
+ *--------------------------------------------*/
+
+// See vertical-spacing mixin for classes to @extend (see _@mixins.scss)
+// When extended, mobile size reduction is automatic (see _variables.scss)
+// Example: @extend .saved-vertical-margin-large (or padding)
+
+@include saved-vertical-spacing(); // default (can set 'mobile' argument too)
+
+// Small
+// .saved-vertical-margin-small
+// .saved-vertical-padding-small
+// .saved-vertical-margin-top-small
+// .saved-vertical-padding-top-small
+// .saved-vertical-margin-bottom-small
+// .saved-vertical-padding-bottom-small
+
+// Small (Content) - reduced to compensate for increased line height in content
+// .saved-vertical-margin-small-content
+// .saved-vertical-padding-small-content
+// .saved-vertical-margin-top-small-content
+// .saved-vertical-padding-top-small-content
+// .saved-vertical-margin-bottom-small-content
+// .saved-vertical-padding-bottom-small-content
+
+// Medium
+// .saved-vertical-margin-medium
+// .saved-vertical-padding-medium
+// .saved-vertical-margin-top-medium
+// .saved-vertical-padding-top-medium
+// .saved-vertical-margin-bottom-medium
+// .saved-vertical-padding-bottom-medium
+
+// Medium (Content) - reduced to compensate for increased line height in content
+// .saved-vertical-margin-medium-content
+// .saved-vertical-padding-medium-content
+// .saved-vertical-margin-top-medium-content
+// .saved-vertical-padding-top-medium-content
+// .saved-vertical-margin-bottom-medium-content
+// .saved-vertical-padding-bottom-medium-content
+
+// Large
+// .saved-vertical-margin-large
+// .saved-vertical-padding-large
+// .saved-vertical-margin-top-large
+// .saved-vertical-padding-top-large
+// .saved-vertical-margin-bottom-large
+// .saved-vertical-padding-bottom-large
+
+// Large (Content) - reduced to compensate for increased line height in content
+// .saved-vertical-margin-large-content
+// .saved-vertical-padding-large-content
+// .saved-vertical-margin-top-large-content
+// .saved-vertical-padding-top-large-content
+// .saved-vertical-margin-bottom-large-content
+// .saved-vertical-padding-bottom-large-content
+
+// Misc
+// .saved-vertical-margin-medium-small-content
+
+/*---------------------------------------------
+ * Main Content <main>
+ *--------------------------------------------*/
+
+#saved-content { // <main> between <header> and <footer>
+
+  .ctfw-no-loop-multiple & {
+    @extend .saved-vertical-margin-top-large;
+    @extend .saved-vertical-margin-bottom-large;
+  }
+
+  .ctfw-has-loop-multiple & {
+    @extend .saved-vertical-padding-top-large;
+    @extend .saved-vertical-padding-bottom-large;
+  }
+
+  display: block;
+  min-height: 20vh; // makes single line pages line Not Found more comfortable
+
+  // Remove top margin to make certain elements flush with header
+
+  .saved-has-entry-map & {
+    margin-top: 0 !important; // important to make it stick at 700px media query
+  }
+
+  // Remove bottom margin to make certain elements flush with footer
+
+  .saved-no-comments-section.saved-has-nav-blocks & {
+    margin-bottom: 0;
+  }
+
+}
+
+  #saved-content-inner {
+
+    // Keep blockquote from causing horizontal scroll
+    // while still letting map-section's top edge appear above banner
+    // See this for why: http://stackoverflow.com/a/39554003
+    padding-bottom: 20px; // just enough space for top of map section content BG and its shadow
+    margin-bottom: -20px;
+
+  }
+
+// H1 heading for main content
+// Header banner uses div instead of H1, because H1 should main in the main article
+// This hides the text, as hidden assistive text, for proper HTMl5 and Outline
+
+#saved-main-title,
+.saved-entry-no-meta .saved-entry-full-header {
+  @extend .screen-reader-text;
+}

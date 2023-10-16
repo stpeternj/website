@@ -1,0 +1,761 @@
+/*---------------------------------------------
+ * Box Model
+ *--------------------------------------------*/
+
+// Natural box layout model
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/*---------------------------------------------
+ * Text
+ *--------------------------------------------*/
+
+// Base Font
+
+html,
+.mce-content-body {
+	font-size: 100%;
+	line-height: $line-height;
+	color: $text-color;
+}
+
+// Smooth Fonts
+
+html,
+html a,
+.mce-content-body,
+.mce-content-body a {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+// Links
+
+a {
+
+	text-decoration: none;
+	font-weight: normal;
+	transition: color 0.25s;
+
+	// Links in content
+
+	.saved-entry-full-content &:not(.saved-icon):not(.saved-button):not(.wp-block-file__button),
+	.saved-entry-content-inner &:not(.saved-icon):not(.saved-button):not(.wp-block-file__button),
+	.saved-entry-full-meta &:not(.saved-icon):not(.saved-button):not(.wp-block-file__button),
+	.saved-entry-full-footer &,
+	.saved-entry-short-title &,
+	.saved-entry-compact-right h3 &,
+	// widget entry title
+	.saved-comments &,
+	.saved-map-section &,
+	#respond &,
+	.textwidget &,
+	.widget_ctfw-giving &,
+	.widget_mc4wp_form_widget &,
+	.saved-image-section-text &,
+	.saved-bg-section-text &,
+	& .saved-sticky-item-title,
+	#saved-sticky-content-custom-content &,
+	.saved-colored-section-title &,
+	.mce-content-body & {
+		font-weight: 700;
+		font-style: normal;
+		color: $text-color-dark;
+		border-width: 0 0 2px 0;
+		border-style: solid;
+	}
+
+	// Icons not bold
+
+	.saved-icon,
+	&.saved-icon {
+		font-weight: normal;
+	}
+
+}
+
+// Remove underline from images inside a link
+
+.saved-link-has-image {
+	border-width: 0 !important;
+}
+
+
+// All Headings
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+	@extend .saved-vertical-margin-medium-small-content; // medium top margin, small bottom margin
+	@include saved-uppercase(); // if Customizer setting chosen
+
+	$font-weight: 700;
+
+	font-weight: $font-weight;
+	line-height: 1.05;
+	color: $text-color-dark;
+
+	a {
+		font-weight: $font-weight;
+	}
+
+}
+
+h1 {
+	// <h1> in main <header> banner
+	font-size: 3.6em;
+}
+
+.saved-h1 {
+	// use @extend .saved-h1 instead of adding class to markup
+	@extend h1;
+}
+
+#saved-content h1,
+// <h1> in content area
+#saved-content .saved-h1,
+.mce-content-body h1 {
+	font-size: 2.8em; // size betwen <header> banner and <h2>
+}
+
+h2,
+.saved-h2 {
+	// use @extend .saved-h2 instead of adding class to markup
+	font-size: 2em;
+}
+
+.saved-h2 {
+	// use @extend .saved-h2 instead of adding class to markup
+	@extend h2;
+}
+
+h3,
+.saved-h3 {
+	font-size: 1.6em;
+}
+
+h4,
+.saved-h4 {
+	font-size: 1.4em;
+}
+
+h5,
+.saved-h5 {
+	font-size: 1.25em;
+}
+
+h6,
+.saved-h6 {
+	font-size: 1.1em;
+}
+
+// Major Headings (accent line on top)
+// Those which use Heading Font in head.php
+// If update this, change that to be similar (also in media-queries.scss)
+
+.saved-has-heading-accents {
+
+	.saved-entry-content h1,
+	.saved-entry-content h2:not(.saved-entry-short-title),
+	.saved-entry-content h3,
+	.saved-entry-content h4,
+	.saved-entry-content h5,
+	.saved-entry-content h6,
+	.saved-entry-content .saved-h1,
+	.saved-entry-content .saved-h2,
+	.saved-entry-content .saved-h3:not(.saved-entry-short-title),
+	.saved-entry-content .saved-h4,
+	.saved-entry-content .saved-h5,
+	.saved-entry-content .saved-h6,
+	&.mce-content-body h1,
+	&.mce-content-body h2,
+	&.mce-content-body h3,
+	&.mce-content-body h4,
+	&.mce-content-body h5,
+	&.mce-content-body h6,
+	.saved-bg-section-content h1,
+	.saved-bg-section-content h2,
+	#saved-banner-title div,
+	.saved-widget-title,
+	#saved-comments-title,
+	#reply-title,
+	.saved-caption-image-title,
+	#saved-map-section-address {
+
+		&::before {
+			display: block;
+			position: relative;
+			left: 1px;
+			width: 50px;
+			height: 12px; // make top of line start where text alone would have started
+			border-style: solid;
+			border-width: 0 0 5px 0;
+			margin-bottom: 6px;
+			content: '';
+		}
+
+		// Don't show it when heading is centered / right
+
+		&[style*="center"]::before,
+		&[style*="right"]::before {
+			display: none !important;
+		}
+
+
+	}
+
+	// H1 Header Adjust
+
+	h1,
+	.saved-h1,
+	.saved-bg-section-content h1,
+	#saved-banner-title div {
+
+		&::before {
+
+			left: 2px;
+			width: 64px;
+			height: 22px; // make top of line start where text alone would have started
+			border-width: 0 0 7px 0;
+			margin-bottom: 3px;
+
+			// For reduced font size when long titles used
+			// See _header.scss .saved-banner-title-length-*
+
+			.saved-banner-title-length-25 &,
+			.saved-banner-title-length-30 &,
+			.saved-banner-title-length-35 &,
+			.saved-banner-title-length-40 & {
+				margin-bottom: 5px;
+			}
+
+		}
+
+	}
+
+	// H1 in Content Adjust
+
+	#saved-content h1,
+	// <h1> in content area
+	#saved-content .saved-h1,
+	&.mce-content-body h1,
+	#saved-comments-title {
+
+		&::before {
+			border-width: 0 0 7px 0;
+			width: 64px;
+			height: 20px; // make top of line start where text alone would have started
+			margin-bottom: 5px;
+		}
+
+	}
+
+	// H2 Adjust
+
+	.saved-entry-content h2:not(.saved-entry-short-title),
+	.saved-entry-content .saved-h2,
+	.saved-bg-section h2,
+	// homepage
+	.saved-image-section .saved-widget-title,
+	// homepage
+	.saved-gallery-section .saved-widget-title,
+	// homepage
+	&.mce-content-body h2 {
+
+		&::before {
+			width: 56px;
+			height: 16px; // make top of line start where text alone would have started
+			border-width: 0 0 6px 0;
+			margin-bottom: 6px;
+		}
+
+	}
+
+	// Homepage Widgets Adjust
+
+	.saved-bg-section h2,
+	.saved-image-section .saved-widget-title,
+	.saved-gallery-section .saved-widget-title {
+
+		&::before {
+			width: 56px;
+			height: 14px; // make top of line start where text alone would have started
+			border-width: 0 0 7px 0;
+			margin-bottom: 4px;
+		}
+
+	}
+
+	// Homepage Horizontal Sections Adjust
+
+	.saved-section-orientation-horizontal h1,
+	.saved-section-orientation-horizontal h2 {
+
+		&::before {
+			width: 50px;
+			height: 12px; // make top of line start where text alone would have started
+			border-width: 0 0 5px 0;
+			margin-bottom: 6px;
+		}
+
+	}
+
+	// White headings
+
+	#saved-banner-title div,
+	.saved-bg-section-content h1,
+	.saved-bg-section-content h2,
+	.saved-caption-image-title,
+	.saved-widget .saved-caption-image-title h2 {
+
+		&::before {
+			border-color: #fff !important;
+		}
+
+	}
+
+}
+
+// Bold
+
+b,
+strong {
+	font-weight: 700;
+}
+
+// Text Selection (fails when selectors combined)
+
+::-moz-selection {
+	background-color: $text-selection-bg-color;
+	color: $text-selection-color;
+}
+
+::selection {
+	background-color: $text-selection-bg-color;
+	color: $text-selection-color;
+}
+
+// Code + Pre
+
+code,
+pre {
+	@extend .saved-dark;
+	font-family: Menlo, Consolas, monaco, monospace;
+	font-size: 0.75em;
+	white-space: pre-wrap;
+}
+
+/*---------------------------------------------
+ * Blocks
+ *--------------------------------------------*/
+
+// Content block spacing
+// (heading tags done separately above, with greater top margin)
+p,
+ul,
+ol,
+dl,
+table,
+q,
+[class^=wp-block]:not(.wp-block-cover-text):not(.wp-block-embed__wrapper):not(.wp-block-quote):not(.wp-block-pullquote):not(.wp-block-separator),
+.saved-block-wide-container {
+	@extend .saved-vertical-margin-small-content; // automatically responsive when extending
+}
+
+// Lists
+
+ul,
+ol,
+dl {
+	padding: 0;
+}
+
+ul,
+ol {
+	// more comfortable margins
+	margin-left: ct-em(50);
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+dl {
+	// definition list
+	margin-left: ct-em(30)
+}
+
+dt {
+	font-size: 0.9em;
+	font-style: normal;
+	font-weight: bold;
+	@extend .saved-dark;
+}
+
+dd {
+	margin-bottom: ct-em(20);
+	margin-left: 0;
+}
+
+// Blockquote
+
+blockquote {
+
+	@extend .saved-vertical-margin-medium-content; // automatically responsive when extending
+
+	display: block;
+	position: relative;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0 0.7em 0 ct-em(45) !important;
+	font-size: 1.3em; // a little bigger
+	font-style: italic;
+	line-height: 1.5;
+	@extend .saved-dark;
+
+	&.is-style-default cite,
+	&.is-large cite {
+		text-align: left !important;
+	}
+
+	// Large.
+
+	&.is-style-large,
+	&.is-style-large p {
+		font-size: 1.45em !important;
+	}
+
+	&.is-style-large {
+
+		p {
+			line-height: 1.3 !important;
+		}
+
+		cite {
+			font-size: 0.9em !important;
+			text-align: left !important;
+		}
+
+	}
+
+	&[style*='center'].is-style-large cite {
+		text-align: center !important;
+	}
+
+	// Paragraphs
+
+	p {
+
+		margin-top: 0;
+		margin-bottom: ct-em(11);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+	}
+
+	// Quotation mark before
+
+	&:before {
+		position: absolute;
+		top: -0.35em;
+		left: 10px;
+		display: block;
+		content: "\201C";
+		font-size: 3.5em;
+		font-style: normal;
+		font-weight: 600;
+	}
+
+	// <cite> in blockquote
+
+	cite {
+
+		display: block;
+		margin-top: ct-em(27) !important;
+		font-size: 0.65em !important;
+		font-weight: normal;
+		font-style: normal;
+		text-transform: none !important;
+		color: $text-color !important;
+
+		// Emdash before
+
+		&:before {
+			content: "\2014 \2009";
+			font-weight: 300;
+		}
+
+	}
+
+}
+
+// Pullquote Block.
+
+.wp-block-pullquote {
+
+	@extend .saved-vertical-margin-large-content;
+	@extend .saved-dark;
+	border: 0;
+	padding: 0;
+	border-radius: $box-border-radius;
+	background-color: $bg-color-secondary !important;
+
+	&.alignleft,
+	&.alignright {
+
+		margin-top: 0.7em;
+		margin-bottom: 0.7em;
+
+		blockquote {
+			padding: 1.75em !important;
+		}
+
+	}
+
+	blockquote {
+
+		p {
+			font-size: 0.775em;
+		}
+
+		padding: 1.75em 2.25em !important;
+		margin: 0;
+
+		&:before {
+			content: '';
+		}
+
+		&.has-text-color {
+			color: $text-color-dark !important;
+		}
+
+	}
+
+	&.is-style-solid-color blockquote {
+
+		max-width: 100%;
+		text-align: center;
+
+		p {
+
+			font-size: 0.775em;
+			line-height: 1.5;
+			margin-bottom: 1em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+		}
+
+	}
+
+	&.has-background.has-light-background-color:not(.has-text-color) a {
+		color: #000 !important;
+		border: 0 !important;
+	}
+
+}
+
+// Quote Tag
+
+q {
+	font-style: italic;
+	@extend .saved-dark;
+}
+
+// Tables
+
+.saved-entry-content table,
+.mce-content-body table {
+	width: 100%;
+	border: none;
+}
+
+.saved-entry-content caption,
+.mce-content-body caption {
+	margin-bottom: ct-em(20);
+	font-style: italic;
+	text-align: left;
+}
+
+.saved-entry-content th,
+.mce-content-body th {
+	padding: ct-em(5) ct-em(25) ct-em(5) 0;
+	text-align: left;
+	font-size: 0.9em;
+	font-style: normal;
+	font-weight: bold;
+	@extend .saved-dark;
+}
+
+.saved-entry-content td,
+.mce-content-body td {
+	padding: ct-em(5) ct-em(25) ct-em(5) 0;
+	font-size: 0.9em;
+}
+
+.saved-entry-content td {
+	border: none;
+}
+
+// Horizontal Rule
+
+hr {
+
+	@extend .saved-vertical-margin-medium; // automatically responsive when extending
+
+	padding: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 1px 0 0 0;
+	border-color: #e5e5e5;
+	line-height: 0;
+	font-size: 0;
+
+}
+
+/* Preformatted */
+
+pre {
+	@extend .saved-dark;
+	font-size: 0.85em;
+	white-space: pre-wrap;
+}
+
+/*---------------------------------------------
+ * Images
+ *--------------------------------------------*/
+
+// Remove gap from below <img> tags
+
+img {
+	vertical-align: bottom;
+}
+
+// Remove left/right margin from figures
+
+figure {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+// Image max width and rounded corners
+
+.saved-entry-content img,
+.saved-widget img,
+.saved-caption-image img,
+// for placeholder
+img.size-full,
+img.size-large,
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"],
+.saved-entry-short-image {
+	max-width: 100%;
+	height: auto;
+	border-radius: $image-border-radius;
+}
+
+/*---------------------------------------------
+ * Forms
+ *--------------------------------------------*/
+
+input,
+select,
+textarea,
+button {
+	font-family: inherit;
+}
+
+input,
+textarea {
+
+	margin: 0;
+	font-size: 0.95em;
+	color: $form-text-color;
+	border: 2px solid #000;
+	border-radius: 3px;
+
+	//background-color: transparent;
+	background-color: $bg-color-contrast;
+
+	.saved-bg-secondary &:not([type=submit]):not([type=button]) {
+		background-color: $bg-color; // lighter in footer on gray
+	}
+
+}
+
+input {
+
+	$height: ct-em(40);
+
+	padding: 0 ct-em(10);
+	height: $height;
+	line-height: $height;
+	outline: 0;
+
+}
+
+textarea {
+	padding: ct-em(10) ct-em(12);
+}
+
+textarea:focus {
+	outline: 0;
+}
+
+input[type=radio],
+input[type=checkbox] {
+	height: auto;
+	position: relative;
+	top: ct-em(-1);
+	margin-right: ct-em(4);
+	border: 0;
+}
+
+input[type=file] {
+	border: none;
+	padding: 0;
+	height: auto;
+	line-height: 1;
+	background-color: transparent;
+}
+
+// Remove iOS form styling
+
+.saved-is-ios input:not([type=checkbox]):not([type=radio]),
+.saved-is-ios textarea {
+	// get rid of iOS styles
+	-webkit-appearance: none;
+}
+
+
+/*---------------------------------------------
+ * Media
+ *--------------------------------------------*/
+
+audio,
+video {
+	width: 100%;
+}

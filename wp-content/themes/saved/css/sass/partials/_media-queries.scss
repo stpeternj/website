@@ -1,0 +1,2231 @@
+
+// Adjust elements and layout for devices with screens of all sizes.
+
+/*----------------------------------------------
+ * Viewport Padding
+ *---------------------------------------------*/
+
+@media only screen and (max-width: $max-width + 130px ) {
+
+	//---------------------------------------------
+	// Layout
+	//---------------------------------------------
+
+	// Header / Footer / Etc.
+	// When width nears max, create margin with percent-based width
+
+	#saved-header .saved-centered-large,
+	#saved-footer .saved-centered-large {
+		max-width: 100% - ( $viewport-padding * 2 );
+	}
+
+	// Content Area
+
+	#saved-content {
+
+		padding-left: $viewport-padding;
+		padding-right: $viewport-padding;
+
+		// Prevent 1px horizontal scroll on mobile
+		// Also prevents larger horizontal scroll on archive pages (wherever loop short entries)
+		// Don't apply to event/location or map box stops overlapping header banner
+		// Do apply this at 540px to event/location since overlap no longer needed
+		body.single:not(.single-ctc_event):not(.single-ctc_location) &,
+		body.archive &,
+		body.ctfw-has-loop-multiple & {
+			overflow: hidden;
+		}
+
+	}
+
+	//---------------------------------------------
+	// Custom Elements
+	//---------------------------------------------
+
+	// @extend this to prevent padding on 100% width elements, like post nav blocks
+
+	.saved-no-viewport-padding {
+		margin-left: (-$viewport-padding-reverse);
+		margin-right: (-$viewport-padding-reverse);
+	}
+
+	//---------------------------------------------
+	// Homepage
+	//---------------------------------------------
+
+	// Keep section contents from touching viewport
+
+	.saved-map-section .saved-centered-large,
+	.saved-bg-section-content,
+	.saved-image-section-content.saved-centered-large,
+	.saved-colored-section-content,
+	.saved-home-highlights-content,
+	.saved-gallery-section .saved-centered-large,
+	.saved-home-secondary-widgets-section .saved-centered-large {
+		max-width: 100% - ( $viewport-padding * 2 ) !important;
+	}
+
+}
+
+/*----------------------------------------------
+ * 1280px
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 1280px) {
+
+	//---------------------------------------------
+	// Homepage
+	//---------------------------------------------
+
+	// Section with Image
+
+	.saved-image-section {
+
+		// Only when have image (three columns)
+
+		&.saved-image-section-has-image {
+
+			.saved-loop-entries,
+			.saved-image-section-buttons {
+				font-size: 90%; // reduce font size as three columns narrows
+			}
+
+		}
+
+	}
+
+	// Highlights - shrink text as columns narrow
+
+	.saved-home-highlights-content {
+
+		font-size: 0.8em;
+
+		h2 {
+			font-size: 1.7em;
+		}
+
+	}
+
+}
+
+/*----------------------------------------------
+ * 1200px
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 1200px) {
+
+	//---------------------------------------------
+	// Homepage
+	//---------------------------------------------
+
+	// Highlights - shrink text as columns narrow
+
+	.saved-home-highlights-content {
+
+		font-size: 0.7em;
+
+		h2 {
+			font-size: 1.5em;
+		}
+
+	}
+
+}
+
+/*----------------------------------------------
+ * 1120px
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 1120px) {
+
+	//---------------------------------------------
+	// Layout
+	//---------------------------------------------
+
+	// Constrain homepage section and header content
+
+	.saved-constrained-image-content {
+	  max-width: 800px;
+	}
+
+	//---------------------------------------------
+	// Custom Elements
+	//---------------------------------------------
+
+	// Caption Image - make more space
+
+	.saved-caption-image-caption {
+		bottom: 11%;
+		left: 8%;
+		padding-right: 5%;
+		max-width: 100%;
+	}
+
+	//---------------------------------------------
+	// WordPress
+	//---------------------------------------------
+
+	// Avoid wide touching edge on mobile
+
+	.wp-block-audio.alignwide,
+	.wp-block-audio.alignfull,
+	.wp-block-columns.alignwide,
+	.wp-block-columns.alignfull {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.saved-block-wide-container .wp-block-table.alignwide,
+	.saved-block-wide-container .wp-block-table.alignfull {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	//---------------------------------------------
+	// Entries
+	//---------------------------------------------
+
+	// Content exceeding content area (blockquote, gallery)
+
+	.saved-exceed-980-1170 {
+		margin-left: (-$viewport-padding-reverse);
+		margin-right: (-$viewport-padding-reverse);
+	}
+
+}
+
+/*----------------------------------------------
+ * 1024px - Tablet Landscape, Netbook
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 1024px) {
+
+	//---------------------------------------------
+	// Global Sizing
+	//---------------------------------------------
+
+	// Reduce all fonts / margins
+
+	html {
+		font-size: 90%;
+	}
+
+	//---------------------------------------------
+	// Custom Elements
+	//---------------------------------------------
+
+	// Single post nav prev/next
+
+	.saved-nav-block-title {
+		font-size: 1.4em;
+	}
+
+	//---------------------------------------------
+	// WordPress
+	//---------------------------------------------
+
+	// Reduce pullquote
+
+	.wp-block-pullquote blockquote,
+	.wp-block-pullquote blockquote p {
+		font-size: 1.2em !important;
+	}
+
+	//---------------------------------------------
+	// Header
+	//---------------------------------------------
+
+	// Reduce logo width if necessary to make more room for menu before goes hamburger
+
+	#saved-logo-image img {
+		max-width: 200px;
+	}
+
+	// Adjust menu dropdowns to be flush with menu bar after font size reduction
+
+	.sf-menu li:hover ul,
+	.sf-menu li.sfHover ul {
+		top: 37px;
+		z-index: 12000;
+	}
+
+	// Remove icon divider line
+
+	.saved-header-has-icons.saved-header-has-search {
+
+		#saved-header-icons-divider {
+			display: none;
+		}
+
+		#saved-header-icons {
+			padding-left: ct-em(8);
+		}
+
+	}
+
+	//---------------------------------------------
+	// Homepage
+	//---------------------------------------------
+
+	.saved-bg-section-content {
+
+		.saved-section-orientation-horizontal & {
+
+			h1, h2 {
+	      		position: relative;
+			}
+
+			.saved-section-bg-buttons {
+
+          		ul {
+		          	white-space: normal;
+          		}
+
+			}
+
+		}
+
+	}
+
+	//---------------------------------------------
+	// Entries
+	//---------------------------------------------
+
+	// Keep entry label / date larger
+
+	.saved-entry-short-label {
+		font-size: 0.85em !important;
+	}
+
+	//---------------------------------------------
+	// Event Calendar
+	//---------------------------------------------
+
+	// Reduce cell height from 120px
+
+	.saved-calendar-table-day-content-container {
+		min-height: 100px;
+	}
+
+}
+
+/*----------------------------------------------
+ * 1023px - Smaller Tablet
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 1023px) {
+
+	//---------------------------------------------
+	// Homepage
+	//---------------------------------------------
+
+	// Section with Image
+	// Move image from side to top
+
+	// NOTE: If change this out of 1023px max above, change in _mixins.scss media query too
+
+	.saved-image-section {
+
+		font-size: 100%; // restore font size (see 1280px above)
+
+		&.saved-image-section-has-image {
+			min-height: 0;
+		}
+
+	}
+
+		.saved-image-section-image {
+
+			position: relative;
+			width: 100%;
+			height: 300px;
+
+			$max-height: 40vh;
+			max-height: $max-height;
+		}
+
+		.saved-image-section-content {
+			position: relative;
+			width: 100%;
+		}
+
+			.saved-image-section-content-inner {
+
+				display: block;
+
+				.saved-image-section-has-image & {
+					width: 100%;
+				}
+
+			}
+
+		// Remove top padding if first section; do let image go under menu since content is further down
+
+		#saved-home-main {
+
+			> *:first-child {
+
+				// Most sections
+
+				&.saved-image-section.saved-image-section-has-image:not(.saved-home-highlights-section):not(.saved-home-secondary-widgets-section):not(.saved-map-section) {
+
+					padding-top: 0;
+
+					.saved-header-menu-wrapped & {
+						padding-top: 0;
+					}
+
+				}
+
+			}
+
+		}
+
+}
+
+/*----------------------------------------------
+ * 980px
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 980px) {
+
+	//---------------------------------------------
+	// Entries
+	//---------------------------------------------
+
+	// Content exceeding content area (blockquote, gallery).
+
+	.saved-exceed-700-980 {
+		margin-left: (-$viewport-padding-reverse);
+		margin-right: (-$viewport-padding-reverse);
+	}
+
+	// Move label on thumbnail to bottom and shrink.
+
+	.saved-entry-short-label {
+
+		font-size: 0.75em !important;
+
+		.saved-entry-has-image & {
+			bottom: 0;
+		}
+
+	}
+
+	//---------------------------------------------
+	// Header
+	//---------------------------------------------
+
+	// Hide social icons (footer will show these; search stays)
+
+	.saved-header-has-icons {
+
+		#saved-header-icons,
+		#saved-header-icons-divider {
+			display: none;
+		}
+
+	}
+
+	 // Archive Dropdowns
+
+	 #saved-header-archives-section-name {
+	 	display: none;
+	 }
+
+	//---------------------------------------------
+	// Footer
+	//---------------------------------------------
+
+	// Footer menu and icons/notice on their own rows, centered
+	// main.js saved_rearrange_footer() moves icons/notice after menu (flexbox support still limited)
+	// If change 980px above, also change to match in main.js
+
+	#saved-footer-bottom-inner {
+
+		display: block; // formerly table
+
+		// Cells (Icons/Notice left, Menu right)
+
+		> * {
+			display: block; // formerly table-cell
+			width: 100%;
+		}
+
+	}
+
+		// Icons / Notice
+
+		#saved-footer-icons-notice {
+
+			// Footer has menu
+
+			.saved-footer-has-menu & {
+
+				width: 100%;
+				min-width: 0;
+
+				// Space between menu and icons/notice
+
+				margin-top: ct-em(35); // uses less space when have no icons (see below)
+
+				// Remove right margin
+
+				padding-right: 0;
+
+			}
+
+			// Footer has menu but no icons
+
+			.saved-footer-has-menu.saved-footer-no-icons & {
+				margin-top: ct-em(28); // Space between menu and icons/notice
+			}
+
+			// Space between icons and notice
+
+			& > *:nth-child(2) {
+				margin-top: ct-em(35); // More space to equal space between menu and icons
+			}
+
+		}
+
+		// Menu list
+
+		#saved-footer-menu-content { // <ul>
+			text-align: left !important;
+		}
+
+}
+
+/*----------------------------------------------
+ * 900px
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 900px) {
+
+	//---------------------------------------------
+	// Sermons
+	//---------------------------------------------
+
+	// Books - reduce to 1 column per testament
+
+	.saved-sermon-books-testament { // <section>
+
+		ul {
+
+			$columns: 1;
+
+			-moz-column-count: $columns;
+			-webkit-column-count: $columns;
+			column-count: $columns;
+
+		}
+
+	}
+
+}
+
+/*----------------------------------------------
+ * 860px
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 860px) {
+
+	//---------------------------------------------
+	// Base Elements
+	//---------------------------------------------
+
+	// Blockquote.
+
+	blockquote.saved-exceed-700-980:not(.wp-block-pullquote) {
+
+		padding: 0 ct-em(24) 0 ct-em(58) !important;
+
+		&:before {
+			left: ct-em(5);
+		}
+
+	}
+
+	//---------------------------------------------
+	// Custom Elements
+	//---------------------------------------------
+
+	// Move map section buttons under address
+
+	#saved-map-section-header {
+		display: block;
+		padding-bottom: ct-em(30);
+	}
+
+		#saved-map-section-address,
+		#saved-map-section-buttons {
+			display: block;
+		}
+
+		// Address
+
+		#saved-map-section-address {
+			padding-right: 0;
+		}
+
+		// Buttons
+
+		#saved-map-section-buttons { // .saved-buttons-list
+
+			position: relative;
+			top: 0;
+			left: 0;
+			padding-top: 0;
+			text-align: left;
+
+			li {
+
+				a {
+					min-width: 0;
+				}
+
+			}
+
+		}
+
+	//---------------------------------------------
+	// WordPress Elements
+	//---------------------------------------------
+
+	/* Gutenberg */
+
+	.has-huge-font-size {
+		font-size: 1.6em !important;
+		line-height: 1.4;
+	}
+
+	.has-large-font-size {
+		font-size: 1.4em !important;
+		line-height: 1.4;
+	}
+
+	.has-regular-font-size {
+		font-size: 1em !important;
+		line-height: 1.6;
+	}
+
+	.has-small-font-size {
+		font-size: 0.85em !important;
+		line-height: 1.6;
+	}
+
+	.wp-block-cover {
+		font-size: 0.8em;
+	}
+
+	//---------------------------------------------
+	// Homepage
+	//---------------------------------------------
+
+	// Gallery photos - show only four now
+
+	.saved-gallery-section-content {
+
+		$gallery-items-per-row: 4;
+		$gallery-item-width: 100% / $gallery-items-per-row;
+
+		.gallery-item {
+
+			width: $gallery-item-width;
+
+			&:nth-child(n+5) {
+				display: none;
+			}
+
+		}
+
+	}
+
+}
+
+/*----------------------------------------------
+ * 768px - Tablet Portrait
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+
+	//---------------------------------------------
+	// Global Sizing
+	//---------------------------------------------
+
+	// Reduce all fonts / margins
+
+	html {
+		font-size: 80%; // don't change from 80% or mobile menu becomes badly-sized
+	}
+
+	//---------------------------------------------
+	// Header
+	//---------------------------------------------
+
+	// Move menu button down
+
+	#saved-header-menu-content > li {
+
+		&.saved-menu-button > a {
+			top: 1.5px;
+		}
+
+	}
+
+	// Adjust menu dropdowns to be flush with menu bar after font size reduction
+
+	.sf-menu li:hover ul,
+	.sf-menu li.sfHover ul {
+		top: 35px;
+		z-index: 12000;
+	}
+
+	//---------------------------------------------
+	// Footer
+	//---------------------------------------------
+
+	// Hide footer sticky
+
+	#saved-sticky {
+		display: none !important; // important keeps JS from re-showing
+	}
+
+	//---------------------------------------------
+	// Custom Elements
+	//---------------------------------------------
+
+	// Single post nav prev/next
+
+	.saved-nav-block-title {
+		font-size: 1.3em;
+	}
+
+	//---------------------------------------------
+	// Homepage
+	//---------------------------------------------
+
+	// Section with Image
+
+	.saved-image-section-title-button {
+		margin-top: ct-em(22) !important;	// adjust button position
+	}
+
+	// Horizontal Section
+
+	.saved-bg-section-content {
+
+		.saved-section-orientation-horizontal & {
+
+			.saved-section-bg-buttons {
+				padding-top: ct-em(20);
+			}
+
+		}
+
+	}
+
+	//---------------------------------------------
+	// Entries
+	//---------------------------------------------
+
+	// Left align meta, media buttons, tags, etc.
+
+	.saved-entry-full-meta,
+	#saved-sermon-buttons,
+	.saved-entry-full-footer-item,
+	.saved-attachment-button {
+		text-align: left;
+	}
+
+	//---------------------------------------------
+	// Attachments
+	//---------------------------------------------
+
+	// Back to... button at bottom - left like meta and download button
+
+	.attachment .saved-nav-left {
+		float: left;
+		text-align: left;
+	}
+
+	//---------------------------------------------
+	// Event Calendar
+	//---------------------------------------------
+
+	// Reposition icon buttons
+
+	#saved-calendar-header-right { // ul.saved-list-icons
+		padding-top: ct-em(9);
+	}
+
+	// Bigger font on dropdowns
+
+	.saved-calendar-dropdown {
+		font-size: 1em;
+	}
+
+	//---------------------------------------------
+	// Galleries
+	//---------------------------------------------
+
+	// Galleries Template - Show caption thumbs in 2 columns
+
+	.saved-galleries-list .gallery-item { // duplicate in galleries.scss for 2 columns
+		max-width: (100% / 2);
+	}
+
+}
+
+/*----------------------------------------------
+ * 767px - Just Under Tablet Portrait
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 767px) {
+
+	//---------------------------------------------
+	// Homepage
+	//---------------------------------------------
+
+	// Gallery Section
+
+	.saved-gallery-section-header {
+
+		.saved-button {
+			margin-top: ct-em(37); // line up button with title on mobile
+		}
+
+	}
+
+}
+
+/*----------------------------------------------
+ * 700px - Large / Landscape Phone
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 700px) {
+
+	//---------------------------------------------
+	// Base Elements
+	//---------------------------------------------
+
+	// Reduce headings
+
+	#saved-content h1,
+	#saved-content .saved-h1 {
+		font-size: 1.8em;
+	}
+
+	h2,
+	.saved-h2 {
+		font-size: 1.6em;
+	}
+
+	h3,
+	.saved-h3 {
+		font-size: 1.4em;
+	}
+
+	h4,
+	.saved-h4 {
+		font-size: 1.2em;
+	}
+
+	h5,
+	.saved-h5 {
+		font-size: 1.1em;
+	}
+
+	h6,
+	.saved-h6 {
+		font-size: 1em;
+	}
+
+	// Shrink heading line
+	// Change this also in _base-elements.scss and head.php
+
+	.saved-has-heading-accents {
+
+		.saved-entry-content h1,
+		.saved-entry-content h2:not(.saved-entry-short-title),
+		.saved-entry-content h3,
+		.saved-entry-content h4,
+		.saved-entry-content h5,
+		.saved-entry-content h6,
+		.saved-entry-content .saved-h1,
+		.saved-entry-content .saved-h2,
+		.saved-entry-content .saved-h3:not(.saved-entry-short-title),
+		.saved-entry-content .saved-h4,
+		.saved-entry-content .saved-h5,
+		.saved-entry-content .saved-h6,
+		.mce-content-body h1,
+		.mce-content-body h2,
+		.mce-content-body h3,
+		.mce-content-body h4,
+		.mce-content-body h5,
+		.mce-content-body h6,
+		.saved-bg-section-content h1,
+		.saved-bg-section-content h2,
+		#saved-banner-title div,
+		.saved-widget-title,
+		#saved-comments-title,
+		#reply-title,
+		.saved-caption-image-title,
+		#saved-map-section-address {
+
+			&::before {
+				left: 0;
+				width: 44px;
+				border-width: 0 0 5px 0;
+				margin-bottom: 4px;
+			}
+
+		}
+
+			// H1 Header Adjust
+
+			h1,
+			.saved-h1,
+			.saved-bg-section-content h1,
+			#saved-banner-title div {
+
+				&::before {
+
+					// For reduced font size when long titles used
+					// See _header.scss .saved-banner-title-length-*
+
+					.saved-banner-title-length-25 &,
+					.saved-banner-title-length-30 &,
+					.saved-banner-title-length-35 &,
+					.saved-banner-title-length-40 & {
+						margin-bottom: 4px;
+					}
+
+				}
+
+			}
+
+			// H1 in Content Adjust
+
+			#saved-content h1, // <h1> in content area
+			#saved-content .saved-h1,
+			.mce-content-body h1,
+			#saved-comments-title {
+
+				&::before {
+					width: 56px;
+					height: 15px; // make top of line start where text alone would have started
+					border-width: 0 0 6px 0;
+					margin-bottom: 5px;
+				}
+
+			}
+
+			// Homepage Image Section Widgets
+
+			.saved-image-section .saved-widget-title,
+			.saved-gallery-section .saved-widget-title {
+
+				&::before {
+					width: 50px;
+					height: 12px; // make top of line start where text alone would have started
+					border-width: 0 0 5px 0;
+					margin-bottom: 3px;
+				}
+
+			}
+
+	}
+
+	// Reduce blockquote
+
+	blockquote {
+
+		font-size: 1.2em !important; // a little bigger
+		padding-right: ct-em(30) !important;
+
+		// Large (Style 2 in Gutenberg).
+
+		&.is-style-large,
+		&.is-style-large p {
+			font-size: 1.4em !important;
+		}
+
+			&.is-style-large p {
+				line-height: 1.2 !important;
+			}
+
+	}
+
+	//---------------------------------------------
+	// Custom
+	//---------------------------------------------
+
+	// Widgets two per row (footer and homepage secondary widgets)
+
+	.saved-widgets-row-content {
+
+		$spacing: 6%;
+
+		margin-top: ct-em(-50) !important;
+		margin-right: -$spacing;
+
+		aside {
+			margin-top: ct-em(50);
+			width: 50% - $spacing;
+		}
+
+	}
+
+	// Single post nav prev/next
+
+	.saved-nav-block {
+
+		width: 100%; // one per row now
+		padding-bottom: 25%; // ratio for 1600x400 banners
+
+		// Hide empty block
+
+		&.saved-nav-block-empty {
+			display: none;
+		}
+
+	}
+
+	.saved-nav-block-left {
+
+		border-right-width: 0;
+
+		// White line between blocks when no images
+
+		.saved-nav-block-has-both.saved-nav-block-no-images & {
+			border-width: 0 0 1px 0;
+		}
+
+	}
+
+	.saved-nav-block-title {
+		font-size: 2.1em;
+	}
+
+	// Caption Image - restore size
+
+	.saved-caption-image-caption {
+
+		$right-margin: 8%;
+
+		bottom: 15%;
+		left: 10%;
+		padding-right: $right-margin;
+		max-width: 100% - $right-margin;
+
+	}
+
+		.saved-caption-image-description {
+			line-height: 1.2;
+		}
+
+	//---------------------------------------------
+	// WordPress
+	//---------------------------------------------
+
+	// Instant disappear admin bar on scroll so doesn't cover menu as it scrolls up normally
+
+	// Alternate selector to avoid erroneous Theme Check warning
+	// At this mobile size, admin bar disappears on scroll anyway
+	// This just makes it instant as not to obscure our sticky menu
+
+	.saved-scrolled.admin-bar div[id*=padminba] {
+		display: none;
+	}
+
+	//---------------------------------------------
+	// Layout
+	//---------------------------------------------
+
+	// Reduce vertical spacing by a certain amount set in _variables.scss.
+	// Elements that @extend these classes receive the reduction too (love this)
+
+	@include saved-vertical-spacing( 'mobile' ); // mobile device
+
+	//---------------------------------------------
+	// Header
+	//---------------------------------------------
+
+	// Reduce menu bar height
+	#saved-header-top-inner { // .saved-centered-large
+		height: ct-em(50);
+	}
+
+	// Hide regular menu before MeanMenu loads -- avoid flicker
+
+	.js #saved-header-menu-inner,
+	.js .sf-menu {
+		visibility: hidden; // instead display: none or dropdowns go narrow on size up
+		height: 1px;
+		overflow: hidden;
+	}
+
+	// Allow text logo to wrap
+
+	#saved-logo {
+		width: 100%;
+	}
+
+		#saved-logo-text {
+			white-space: normal;
+		}
+
+	// Allow image logo 100% of cell again
+
+	#saved-logo-image img {
+		max-width: 100%;
+	}
+
+	// Reduce space between menu and logo
+
+	#saved-header-menu {
+		padding-left: 0;
+	}
+
+	#saved-header-menu-content {
+		width: 45px;
+	}
+
+	// Reduce logo text size
+
+	#saved-logo-content {
+		font-size: 0.9em;
+	}
+
+	// Hide search icon
+
+	#saved-header-search {
+		display: none;
+	}
+
+	// Banner
+
+	#saved-banner-title {
+
+		h1 {
+
+			margin-top: 1.5em; // make more room for logo/menu
+			font-size: 2em;
+
+			.saved-no-heading-accents & {
+				margin-top: 2.1em;
+			}
+
+			// More margin for logo
+
+			.saved-has-logo-image & {
+				margin-top: 2em; // make room for logo/menu
+			}
+
+		}
+
+	}
+
+		// Shrink image by title (Person)
+
+		$image-by-title-size: ct-em(56);
+		$image-by-title-margin: ct-em(18);
+
+		#saved-banner-image-by-title {
+			width: $image-by-title-size;
+			height: $image-by-title-size;
+		}
+
+		#saved-banner-title {
+
+			.saved-banner-has-image-by-title & {
+				width: calc( 97% - #{$image-by-title-size} - #{$image-by-title-margin});
+				margin-left: $image-by-title-margin;
+			}
+
+		}
+
+	//---------------------------------------------
+	// Homepage
+	//---------------------------------------------
+
+	// See original in homepage.scss
+
+	#saved-home-main {
+
+		// First section in widget area
+
+		> *:first-child {
+
+			&:not(.saved-home-highlights-section):not(.saved-home-secondary-widgets-section) {
+
+				padding-top: ct-em(37);
+
+				// Special adjustments
+
+				&.saved-map-section {
+
+					padding-top: 0;
+					margin-top: ct-em(50)
+
+				}
+
+			}
+
+		}
+
+	}
+
+	// Section with Background Image
+
+	.saved-bg-section-content {
+
+		// Reduce heading size
+
+ 		h1 { // first section
+			font-size: 2.7em;
+			letter-spacing: ct-em(-0.5);
+		}
+
+		h2 {
+			font-size: 2em;
+			letter-spacing: ct-em(-0.5);
+		}
+
+		// Reduce first section text
+
+		.saved-bg-section-text {
+
+			.saved-first-home-widget & {
+				font-size: 1.3rem;
+				line-height: 1.7;
+			}
+
+		}
+
+		// Large Text
+
+		.saved-bg-section-text {
+
+			.saved-section-has-large-text & {
+				font-size: 1.8rem;
+			}
+
+		}
+
+	}
+
+	// Section with Image (Left or Right Side)
+
+	.saved-image-section-content-inner,
+	.saved-gallery-section-header {
+
+		// Smaller heading
+
+		.saved-widget-title { // <h2>
+			font-size: 2em;
+		}
+
+	}
+
+	// Highlights Section
+
+	.saved-highlights-four-columns {
+		@include saved-highlights-two-columns( $spacing-px: 30 ); // less spacing on mobile
+	}
+
+	.saved-home-highlights-content {
+
+		// Increase font size
+
+		font-size: 0.85em;
+
+		h2 {
+			font-size: 1.5em;
+		}
+
+	}
+
+	// Homepage Gallery Widget
+
+	.saved-gallery-section-header {
+
+		// Keep centered vertically
+
+		.saved-button {
+			margin-top: ct-em(22) !important;
+		}
+
+	}
+
+	//---------------------------------------------
+	// Entries
+	//---------------------------------------------
+
+	.saved-loop-four-columns {
+		@include saved-loop-two-columns( $spacing-px: 20 ); // less spacing on mobile
+	}
+
+	//---------------------------------------------
+	// Sermons
+	//---------------------------------------------
+
+	// Save Button Dropdown
+
+	#saved-sermon-download-dropdown {
+		//margin-left: ct-em(-62) !important;
+	}
+
+	// Sermon Index List - Three Columns to Two
+
+	.saved-sermon-index-list { // <ul>
+
+		&.saved-sermon-index-list-three-columns {
+
+			$columns: 2;
+
+			-moz-column-count: $columns;
+			-webkit-column-count: $columns;
+			column-count: $columns;
+
+		}
+
+	}
+
+	//---------------------------------------------
+	// Event Calendar
+	//---------------------------------------------
+
+	// Reposition icon buttons
+
+	#saved-calendar-header-right { // ul.saved-list-icons
+		padding-top: ct-em(6);
+	}
+
+	// Enlarge title
+
+	#saved-calendar-title {
+		font-size: 2em;
+	}
+
+	// Show list container
+
+	#saved-calendar-list {
+		display: block;
+	}
+
+	// Day of week header abbreviated
+
+	.saved-calendar-table-header-full {
+		display: none;
+	}
+
+	.saved-calendar-table-header-short {
+		display: inline-block;
+		font-size: 1.1em;
+	}
+
+	// Hide day label (Today, Oct, etc.)
+
+	.saved-calendar-table-day-label {
+		display: none;
+	}
+
+	// Show linked day number if has events (unless in past)
+
+	.saved-calendar-table-day-has-events:not(.saved-calendar-table-day-past) span.saved-calendar-table-day-number {
+		display: none;
+	}
+
+	.saved-calendar-table-day-has-events:not(.saved-calendar-table-day-past) a.saved-calendar-table-day-number {
+		display: inline-block;
+		line-height: 1.1;
+	}
+
+	// Hide event links
+
+	.saved-calendar-table-day-events {
+		display: none;
+	}
+
+	// Enlarge and center day
+
+	.saved-calendar-table-day-content-container {
+		padding: ct-em(15) 0; // vertical centering and height
+		min-height: 0 !important;
+	}
+
+		.saved-calendar-table-day-heading {
+			margin: 0 0 ct-em(2) 0;
+			font-size: 1.2em;
+			text-align: center;
+		}
+
+	//---------------------------------------------
+	// Comments
+	//---------------------------------------------
+
+	// Hide edit link
+
+	.comment-edit-link {
+		display: none !important;
+	}
+
+	.saved-comment-buttons li {
+		margin-right: 0;
+	}
+
+ 	// Move inputs below labels
+
+	#respond input[type=text],
+	#respond input[type=email],
+	#respond input[type=url] {
+		position: relative;
+		left: 0;
+		width: 95%;
+	}
+
+	.comment-form-author label.error, // comment error messages
+	.comment-form-email label.error,
+	.comment-form-url label.error {
+		display: block;
+		width: 95%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: right;
+	}
+
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		margin: ct-em(10) 0;
+	}
+
+}
+
+/*----------------------------------------------
+ * 640px
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 640px) {
+
+	//---------------------------------------------
+	// Entries
+	//---------------------------------------------
+
+	// Two columns less spacing
+
+	.saved-loop-two-columns {
+		@include saved-loop-two-columns( $spacing-px: 30 ); // less spacing on mobile
+	}
+
+	//---------------------------------------------
+	// Homepage
+	//---------------------------------------------
+
+	// Section Widget
+
+	.saved-bg-section-content {
+
+		// Make horizontal orientation go vertical for mobile
+
+		.saved-section-orientation-horizontal & {
+
+			display: block;
+
+			// Columns
+
+			h1, h2,
+			.saved-bg-section-text,
+			.saved-section-bg-buttons {
+				display: block;
+			}
+
+			// Heading orientation
+
+			h1, h2 {
+          		width: auto;
+          		padding-right: 0;
+          		white-space: normal;
+			}
+
+			// Reduce heading size
+
+			h1 { // first section
+				font-size: 2.7em;
+				letter-spacing: ct-em(-0.5);
+			}
+
+			h2 {
+				font-size: 2em;
+				letter-spacing: ct-em(-0.5);
+			}
+
+			// Text
+
+			.saved-bg-section-text {
+				padding-top: 0 !important;
+			}
+
+			// Buttons
+
+			.saved-section-bg-buttons {
+
+          		padding-left: 0;
+				padding-top: 0;
+
+          		ul {
+          			float: none;
+          		}
+
+			}
+
+		}
+
+		.saved-section-orientation-horizontal.saved-section-is-centered & {
+			@include saved-remove-heading-line(); // doesn't center well
+		}
+
+	}
+
+	// Events Widget
+
+	.saved-colored-section-button-full {
+		display: none; // "More" shows on mobile insread of "More Events"
+	}
+
+	.saved-colored-section-button-short {
+		display: inline-block; // "More" shows on mobile insread of "More Events"
+	}
+
+	// Gallery photos - show only three now
+
+	.saved-gallery-section-content {
+
+		$gallery-items-per-row: 3;
+		$gallery-item-width: 100% / $gallery-items-per-row;
+
+		.gallery-item {
+
+			width: $gallery-item-width;
+
+			&:nth-child(n+4) {
+				display: none;
+			}
+
+		}
+
+	}
+
+	//---------------------------------------------
+	// Event Calendar
+	//---------------------------------------------
+
+	// Reduce day height
+
+	.saved-calendar-table-day-content-container {
+		padding: ct-em(8) 0; // vertical centering and height
+	}
+
+	// Center list heading
+
+	#saved-calendar-list-heading {
+		text-align: center;
+	}
+
+}
+
+/*----------------------------------------------
+ * 600px
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 600px) {
+
+	// Stop exceeding content bounds (gets cut off)
+
+	.saved-exceed-700-980 {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+  .wp-block-pullquote {
+    padding-left: 2em !important;
+  }
+
+  /* Prevent cover block from running of edges on mobile */
+
+  .wp-block-cover {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+  }
+
+}
+
+/*----------------------------------------------
+ * 540px
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 540px) {
+
+	// Prevent 1px horizontal scroll on mobile
+	// See how this is handled higher up as well
+	#saved-content {
+		overflow: hidden !important;
+	}
+
+	//---------------------------------------------
+	// Custom Styles
+	//---------------------------------------------
+
+	// Move map sections content and map to their own rows
+
+	.saved-map-section {
+		min-height: 0;
+	}
+
+		// Section Container, Map and Info
+
+		#saved-map-section-map,
+		#saved-map-section-canvas {
+			height: 200px;
+		}
+
+		// Remove max height on single entries
+
+		.saved-entry-full-map {
+
+			.saved-map-section,
+			#saved-map-section-canvas {
+				max-height: none;
+			}
+
+		}
+
+			// Map (Right) and Content (Left)
+
+			#saved-map-section-map,
+			#saved-map-section-content-bg {
+				position: relative;
+				width: 100%;
+			}
+
+			// Map (Right)
+
+			#saved-map-section-map { // container for #saved-map-section-canvas
+				left: 0;
+			}
+
+			// Content (Left)
+
+			#saved-map-section-content-bg {
+				top: 0;
+				height: 100%;
+				box-shadow: none;
+			}
+
+			#saved-map-section-content-container {
+				max-width: none !important;
+			}
+
+				#saved-map-section-content { // inside #saved-map-section-content-container which has .saved-centered-large
+
+					@include saved-box();
+
+					display: block;
+					width: 100%;
+					padding: 0 6.5%;
+					background-color: #fff;
+
+				}
+
+					#saved-map-section-content-inner {
+						height: auto !important;
+						display: block !important;
+					}
+
+	//---------------------------------------------
+	// WordPress Styles
+	//---------------------------------------------
+
+	// Move floated images to their own line and center
+	// At 540 there is little room left for long words right of a 300px wide floated image
+
+	.alignleft,
+	.alignright {
+
+		display: block;
+		margin: $mobile-vertical-space-small auto !important;
+		float: none !important;
+
+		&.wp-caption {
+			padding-top: ct-em(8);
+		}
+
+	}
+
+	//---------------------------------------------
+	// Galleries
+	//---------------------------------------------
+
+	// Single Gallery - Hide all gallery captions
+
+	.gallery-caption {
+		display: none;
+	}
+
+	// Single Gallery - Make 6+ columns show as 5 columns
+
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item { /* duplicate in style.css for 5 columns */
+		max-width: (100% / 5);
+	}
+
+	//---------------------------------------------
+	// Event Calendar
+	//---------------------------------------------
+
+	// Left-align title and controls
+
+	#saved-calendar-header-left,
+	#saved-calendar-header-right {
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	#saved-calendar-header-right {
+
+		padding: 0;
+
+		position: relative;
+		left: ct-em(-14) !important;
+
+		li:first-child {
+			margin-left: 0;
+		}
+
+	}
+
+		.saved-icon-calendar-next.saved-calendar-no-prev,
+		.saved-icon-calendar-prev.saved-calendar-no-next {
+			margin-left: ct-em(4) !important;
+		}
+
+		// Dropdowns - open rightward
+
+		.saved-calendar-dropdown,
+		#saved-calendar-category-dropdown {
+
+			.jq-dropdown-menu,
+			.jq-dropdown-panel {
+				position: relative;
+				left: ct-em(170);
+			}
+
+		}
+}
+
+/*----------------------------------------------
+ * 480px
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 480px) {
+
+	//---------------------------------------------
+	// Custom
+	//---------------------------------------------
+
+	// Single post nav prev/next blocks
+
+	.saved-nav-block-title {
+		font-size: 1.4em;
+	}
+
+	// Prev/next nav buttons (comments, attachments)
+	// Stack them on top of each other
+
+	.saved-nav-left,
+	.saved-nav-right {
+		float: none;
+		text-align: center;
+		margin: 0 auto;
+		width: 100%;
+
+	}
+
+	.saved-nav-left {
+		margin-bottom: ct-em(15);
+	}
+
+	// Less space between widgets
+
+	.saved-widgets-row-content {
+
+		$spacing: 7%;
+
+		margin-top: ct-em(-40) !important;
+		margin-right: -$spacing;
+
+		aside {
+			margin-top: ct-em(40);
+			width: 50% - $spacing;
+		}
+
+	}
+
+
+/*---------------------------------------------
+ * Author Box
+ *--------------------------------------------*/
+
+// More compact
+
+$avatar_reduce: 0.7;
+
+.saved-author-box {
+
+	.single & {
+		min-height: calc( ( #{$author-box-avatar-size} * #{$avatar_reduce} ) + 5em );
+		padding: ct-em(30);
+		padding-bottom: ct-em(25);
+	}
+
+}
+
+	.saved-author-avatar {
+
+		width: calc( #{$author-box-avatar-size} * #{$avatar_reduce} );
+		height: calc( #{$author-box-avatar-size} * #{$avatar_reduce} );
+
+		.single & {
+			left: ct-em(30);
+		}
+
+	}
+
+	.saved-author-content {
+
+		margin-left: calc( ( #{$author-box-avatar-size} * #{$avatar_reduce} ) + 1.5em );;
+
+		h2 {
+
+			margin-right: ct-em(20);
+
+			// Prevent long name from bumping "More Posts" button down
+
+			.saved-author-box-show-button & {
+				width: calc( 100% - #{ct-em(90)} ); // room for button
+			}
+
+		}
+
+	}
+
+	//---------------------------------------------
+	// Entries
+	//---------------------------------------------
+
+	 // Full
+
+	.saved-entry-full-icons {
+		position: relative;
+		top: ct-em(-2);
+	}
+
+	// Three columns to two
+
+	.saved-loop-three-columns {
+		@include saved-loop-two-columns( $spacing-px: 30 ); // less spacing on mobile
+	}
+
+	//---------------------------------------------
+	// Homepage
+	//---------------------------------------------
+
+	// Section with Background
+
+	.saved-bg-section-content {
+
+		.saved-bg-section-text {
+
+			// Smaller content font
+
+			font-size: 1.2em;
+
+			.saved-section-has-large-text & {
+				font-size: 1.6em;
+			}
+
+		}
+
+	}
+
+	// Section with Image
+
+	.saved-image-section {
+
+		&.saved-image-section-has-image {
+
+			// Restore font size now that single column (was reduced for three columns when getting narrow)
+
+			.saved-loop-entries,
+			.saved-image-section-buttons {
+				font-size: 100%;
+			}
+
+		}
+
+	}
+
+	// Highlights Section - Three columns to one
+
+	.saved-highlights-three-columns {
+		@include saved-highlights-one-column( $spacing-px: 30 ); // less spacing on mobile
+	}
+
+	//---------------------------------------------
+	// Event Calendar
+	//---------------------------------------------
+
+	// Move month/category dropdowns to right (keep from going off screen on small phones)
+
+	.saved-calendar-dropdown {
+
+		.jq-dropdown-panel,
+		.jq-dropdown-menu {
+			right: ct-em(-60) !important;
+		}
+
+	}
+
+	// Make day of week heading normal weight
+
+	.saved-calendar-table-header-short {
+		font-weight: normal;
+	}
+
+	// Reduce day size
+
+	.saved-calendar-table-day-content-container {
+		padding: ct-em(3) 0; // vertical centering and height
+	}
+
+		.saved-calendar-table-day-heading {
+			font-size: 1.1em;
+		}
+
+	//---------------------------------------------
+	// People
+	//---------------------------------------------
+
+	// Show image above meta
+
+	#saved-person-header-content,
+	#saved-person-image-column,
+	#saved-person-meta {
+		display: block;
+		text-align: center;
+		padding-left: 0;
+		margin-left: 0;
+		width: 100%;
+	}
+
+	#saved-person-image {
+		margin: 0 auto;
+	}
+
+	#saved-person-meta {
+
+		.saved-person-has-image & {
+			margin-top: $mobile-vertical-space-small;
+			padding-left: 0;
+		}
+	}
+
+	//---------------------------------------------
+	// Galleries
+	//---------------------------------------------
+
+	// Single Gallery - Make 4+ columns show as 3 columns
+
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item { /* duplicate in style.css for 3 columns */
+		max-width: (100% / 3);
+	}
+
+	//---------------------------------------------
+	// Comments
+	//---------------------------------------------
+
+	// Remove "Author" or "Trackback" from after name
+
+	.saved-comment-author span,
+	.saved-comment-trackback-link span {
+		display: none;
+	}
+
+	// Remove icon from Reply button
+
+	.saved-comment-buttons .saved-icon {
+		display: none;
+	}
+
+	// Reduce padding on author box with background
+
+	.single-post .bypostauthor > article {
+		padding: ct-em(30);
+	}
+
+}
+
+/*----------------------------------------------
+ * 400px
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 400px) {
+
+	//---------------------------------------------
+	// Custom Elements
+	//---------------------------------------------
+
+	// Widgets one per row (footer and homepage secondary widgets)
+
+	.saved-widgets-row-content {
+
+		margin-right: 0;
+
+		aside {
+
+			&:not(:first-child) {
+				margin-top: 0;
+			}
+
+			margin-bottom: ct-em(35);
+			display: block;
+			float: none;
+			width: 100%;
+			font-size: 1em !important; // restore font size since have more space than three column
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+		}
+
+	}
+
+	/*---------------------------------------------
+	 * Homepage
+	 *--------------------------------------------*/
+
+	// Events Widget
+
+	.saved-colored-section-button {
+		display: none; // Hide "More" because with long titles / smalls creens, it sometimes only shows 1 (better 2 with no button)
+	}
+
+	/*---------------------------------------------
+	 * Author Box
+	 *--------------------------------------------*/
+
+	// Move button to its own line
+
+	.saved-author-content {
+
+		h2 {
+
+			display: block;
+
+			.saved-author-box-show-button & {
+				width: 100%;
+			}
+
+		}
+
+	}
+
+		.saved-author-box-archive {
+			margin: ct-em(20) 0;
+			float: none;
+		}
+
+		.saved-author-bio {
+			line-height: 1.6;
+		}
+
+	//---------------------------------------------
+	// Sermons
+	//---------------------------------------------
+
+	// Sermon Index List - Two Columns to One
+
+	.saved-sermon-index-list { // <ul>
+
+		&.saved-sermon-index-list-two-columns,
+		&.saved-sermon-index-list-three-columns {
+
+			$columns: 1;
+
+			-moz-column-count: $columns;
+			-webkit-column-count: $columns;
+			column-count: $columns;
+
+		}
+
+	}
+
+	// Sermon "Save" buttons make wrap in case "Save" has dropdown , wrap, don't get cut off screen
+
+	#saved-sermon-buttons {
+		max-width: ct-em(320);
+	}
+
+}
+
+/*----------------------------------------------
+ * 319px - Smaller Than iPhone SE Portrait (320px)
+ *---------------------------------------------*/
+
+@media only screen and (max-width: 319px) {
+
+	//---------------------------------------------
+	// Custom
+	//---------------------------------------------
+
+	// Widgets row smaller font
+
+	.saved-widgets-row-content { // footer and homepage secondary widgets
+
+		aside {
+			font-size: 0.95em; // reduce
+		}
+
+	}
+
+	//---------------------------------------------
+	// Header
+	//---------------------------------------------
+
+	// Archive Dropdowns
+
+	#saved-header-archives,
+	.saved-header-archive-dropdown {
+		display: none !important;
+	}
+
+	//---------------------------------------------
+	// Entries
+	//---------------------------------------------
+
+	// One column
+
+	.saved-loop-four-columns,
+	.saved-loop-three-columns,
+	.saved-loop-two-columns {
+		@include saved-loop-one-column( $spacing-px: 30 ); // less spacing on mobile
+	}
+
+	//---------------------------------------------
+	// Homepage
+	//---------------------------------------------
+
+	// Image Section
+
+	.saved-image-section-content-inner {
+
+		// Set max width and center so nothing awkwardly wide when one per row
+
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 330px !important;
+
+		// Show one entry max now - small phone, don't make scroll thru 3 or 4
+
+		.saved-loop-entries .saved-entry-short {
+			display: none;
+		}
+
+		.saved-loop-entries .saved-entry-short:first-child {
+			display: block;
+			margin-bottom: 0 !important;
+		}
+
+	}
+
+	// Events Widget
+
+	.saved-colored-section-button {
+		display: none;
+	}
+
+	// Highlights Section - Two columns to one
+
+	.saved-highlights-four-columns, // four has already gone to two
+	.saved-highlights-two-columns {
+		@include saved-highlights-one-column( $spacing-px: 30 ); // less spacing on mobile
+	}
+
+		.saved-home-highlights-content {
+
+			// Match font size to highlight in footer
+
+			font-size: 1em;
+
+			h2 {
+				font-size: 1.4em;
+			}
+
+		}
+
+	//---------------------------------------------
+	// Sermons
+	//---------------------------------------------
+
+	// Books - one testament per row
+
+	.saved-sermon-books-testament { // <section>
+
+		$column-gap: 14%;
+
+		width: 100%;
+
+		&:nth-child(odd) {
+			margin-right: 0;
+		}
+
+	}
+
+	//---------------------------------------------
+	// Galleries
+	//---------------------------------------------
+
+	// Galleries Template - Show caption thumbs in 1 column
+
+	.saved-galleries-list .gallery-item {
+		max-width: 100%;
+	}
+
+	//---------------------------------------------
+	// Comments
+	//---------------------------------------------
+
+	// No indentation for threaded comments
+
+	.saved-comment,
+	.saved-comment #respond {
+		margin-left: 0;
+	}
+
+}

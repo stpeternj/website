@@ -1,0 +1,35 @@
+
+// These affect the admin area's content editor when adding or editing a post.
+// This is compiled into style.css which is loaded in its entirety into the editor.
+// See saved_add_editor_style() for how Customizer fonts and colors are added to editor's <head>.
+
+.mce-content-body {
+
+	margin: ct-em(30); // prevent content from touching edge of editor
+	font-size: 115%; // match actual frontend size
+
+	// Move heading accent line down
+	// WordPress 4.8 and earlier (okay on 4.9+)
+
+	&.saved-has-heading-accents.saved-wp-4-8-or-less {
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+
+			&::before {
+				margin-bottom: ct-em(-2);
+			}
+
+		}
+
+	}
+
+	.wp-caption-dd {
+		padding-top: 0.5em;
+	}
+
+}

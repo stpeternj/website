@@ -1,0 +1,347 @@
+/*---------------------------------------------
+ * Full / Single
+ *--------------------------------------------*/
+
+// Media Container
+
+#saved-sermon-media {
+	@extend .saved-vertical-margin-bottom-medium;
+	padding-top: ct-em(10);
+}
+
+	// Media Buttons
+
+	#saved-sermon-buttons {
+		@extend .saved-vertical-margin-top-medium;
+		text-align: center;
+	}
+
+// Save Button Dropdown
+
+#saved-sermon-download-dropdown {
+
+	width: ct-em(190);
+	margin-left: ct-em(0);
+	margin-top: ct-em(0);
+
+	.jq-dropdown-panel {
+		padding: ct-em(9) ct-em(15) ct-em(6) ct-em(15);
+		text-transform: none;
+		font-size: 0.85em;
+	}
+
+		ul {
+			margin: 0;
+			list-style: none;
+			line-height: 2;
+		}
+
+			.saved-icon { // icon
+				display: inline-block;
+				width: ct-em(24);
+				color: #fff;
+			}
+
+}
+
+	.saved-sermon-download-dropdown-filesize {
+		color: #fff;
+		float: right;
+	}
+
+/*---------------------------------------------
+ * Sermon Indexes
+ *--------------------------------------------*/
+
+// Index Container
+
+.saved-sermon-index {
+
+	@extend .saved-vertical-margin-top-medium;
+	font-size: $enlarged-font-size-reverse;
+
+	> * {
+
+		margin-top: 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+}
+
+	// Header Buttons
+	#saved-sermon-index-header {
+
+		@extend .saved-vertical-margin-bottom-medium;
+
+		ul {
+			margin-top: 0;
+		}
+
+	}
+
+	// No Items
+
+	#saved-sermon-index-none {
+		@extend .saved-enlarged;
+	}
+
+// List Items (Topics, Speakers, etc.)
+
+.saved-sermon-index-list { // <ul>
+
+	@extend .saved-list;
+
+	$top-level-margin: ct-em(20);
+	$sub-level-margin: ct-em(8);
+
+	margin-bottom: (-$top-level-margin) !important;
+
+	// Second and third level margins
+
+	ul {
+
+		margin-left: 0;
+
+		margin-top: $sub-level-margin;
+
+		ul {
+			margin-left: ct-em(12);
+		}
+
+	}
+
+	// Top-level Item
+
+	> li {
+
+		padding-bottom: $top-level-margin;
+
+		// Link bigger
+
+		> a {
+			font-size: 1.15em;
+			text-transform: none !important;
+		}
+
+		// Count lower
+
+		> .saved-list-item-count {
+			top: ct-em(4);
+		}
+
+	}
+
+	// All Items
+
+	li {
+
+		// Second level or deeper
+
+		li {
+
+			// Flush left
+
+			.saved-list-item-count {
+				top: ct-em(2);
+			}
+
+			// Less vertical margin
+
+			margin-bottom: $sub-level-margin;
+
+			// Second-level links smaller
+
+			a {
+				font-size: 0.9em;
+				font-weight: normal !important;
+				border: 0 !important;
+			}
+
+		}
+
+	}
+
+	// Three Columns
+
+	&.saved-sermon-index-list-three-columns {
+
+		$columns: 3;
+		$column-gap: ct-em(100);
+
+		-moz-column-count: $columns;
+		-webkit-column-count: $columns;
+		column-count: $columns;
+		-moz-column-gap: $column-gap;
+		-webkit-column-gap: $column-gap;
+		column-gap: $column-gap;
+
+	}
+
+	// Two Columns
+
+	&.saved-sermon-index-list-two-columns {
+
+		$columns: 2;
+		$column-gap: ct-em(70);
+
+		-moz-column-count: $columns;
+		-webkit-column-count: $columns;
+		column-count: $columns;
+		-moz-column-gap: $column-gap;
+		-webkit-column-gap: $column-gap;
+		column-gap: $column-gap;
+
+	}
+
+}
+
+// Sermon Books
+
+$books-bottom-margin: ct-em(50);
+
+#saved-sermon-books-list {
+	margin-bottom: (-$books-bottom-margin);
+}
+
+.saved-sermon-books-testament { // <section>
+
+	$column-gap: 10%;
+
+	display: inline-block;
+	width: 49% - ($column-gap / 2);
+	margin-bottom: $books-bottom-margin;
+	vertical-align: top;
+
+	@include saved-remove-heading-line();
+
+	&:nth-child(odd) {
+		margin-right: $column-gap;
+	}
+
+	h2 {
+		margin-top: 0;
+	}
+
+	ul {
+
+		@extend .saved-enlarged;
+
+		$columns: 2;
+		$column-gap: ct-em(60);
+
+		-moz-column-count: $columns;
+		-webkit-column-count: $columns;
+		column-count: $columns;
+		-moz-column-gap: $column-gap;
+		-webkit-column-gap: $column-gap;
+		column-gap: $column-gap;
+
+		padding-bottom: ct-em(12); // workaround for when there is only one item, it gets cut off in IE / Edge
+
+		a {
+			text-transform: none !important;
+		}
+
+	}
+
+	.saved-list-item-count {
+		margin-top: ct-em(3);
+		font-size: 0.75em;
+	}
+
+}
+
+// Sermon Dates
+
+#saved-sermon-dates-list {
+
+	$margin: ct-em(15);
+
+	@include saved-remove-heading-line();
+
+	ul {
+		margin: 0;
+	}
+
+	li {
+		margin-right: $margin;
+		display: inline-block;
+		list-style: 0;
+	}
+
+	a {
+		font-size: 1.15em;
+	}
+
+}
+
+	.saved-sermon-dates-count {
+		position: relative;
+		top: ct-em(-0.5);
+		margin-left: ct-em(5);
+		font-size: 0.9em;
+	}
+
+// Sermon Series
+
+#saved-sermon-series-list {
+
+	$margin-px: 50;
+	$margin: ct-em($margin-px);
+
+	@include saved-remove-heading-line();
+
+	ul {
+		margin-top: 0;
+		margin-bottom: -$margin + 0.5em;
+		margin-left: ct-em(-$margin-px / 2);
+		margin-right: ct-em(-$margin-px / 2);
+		@extend .saved-clearfix;
+	}
+
+		li {
+
+			display: inline-block;
+			width: 27%;
+			min-width: 250px;
+			margin-bottom: $margin - 0.6em; // reduce to account for line height
+			margin-left: ct-em($margin-px / 2);
+			margin-right: ct-em($margin-px / 2);
+			list-style: none;
+			vertical-align: top;
+			line-height: 1.3;
+
+		}
+
+			a {
+				font-size: 1.15em;
+				text-transform: none;
+			}
+
+			.saved-sermon-series-dates,
+			.saved-sermon-series-count {
+				font-size: 0.9em;
+			}
+
+			.saved-sermon-series-dates {
+				margin-top: ct-em(9);
+				@extend .saved-dark;
+			}
+
+			.saved-sermon-series-count {
+				margin-top: ct-em(4);
+				font-style: italic;
+			}
+
+}
+
+/*---------------------------------------------
+ * Embeds
+ *--------------------------------------------*/
+
+.sermonnet .fluid-width-video-wrapper {
+   padding-top: 0 !important;
+}

@@ -1,0 +1,554 @@
+
+//---------------------------------------------
+// Typography
+//---------------------------------------------
+
+// Uppercase
+
+@mixin saved-uppercase() {
+
+	.saved-has-uppercase & {
+		text-transform: uppercase;
+	}
+
+}
+
+//---------------------------------------------
+// Custom Elements
+//---------------------------------------------
+
+// Box (with shadow; for dropdowns, tooltips, etc.)
+
+@mixin saved-box( $border-radius: $box-border-radius ) {
+	border-radius: $border-radius;
+	background-color: $bg-color;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+// Remove heading top line
+// Useful in Text widget, comments, etc.
+@mixin saved-remove-heading-line() {
+
+	h1::before,
+	h2::before,
+	h3::before,
+	h4::before,
+	h5::before,
+	h6::before,
+	.saved-h1::before,
+	.saved-h2::before,
+	.saved-h3::before,
+	.saved-h4::before,
+	.saved-h5::before,
+	.saved-h6::before {
+		display: none !important;
+	}
+
+}
+
+//---------------------------------------------
+// Spacing
+//---------------------------------------------
+
+// Vertical Spacing
+// See _layout.scss for explanation
+@mixin saved-vertical-spacing( $device: 'default' ) {
+
+	// Regular sizing
+	$small: $vertical-space-small;
+	$medium: $vertical-space-medium;
+	$large: $vertical-space-large;
+
+	// Mobile sizing
+ 	@if $device == 'mobile' {
+		$small: $mobile-vertical-space-small;
+		$medium: $mobile-vertical-space-medium;
+		$large: $mobile-vertical-space-large;
+	}
+
+	// Content sizing
+	// Reduce to compensate for increased line height in content blocks
+	$small-content: $small * $vertical-space-content-reduction;
+	$medium-content: $medium * $vertical-space-content-reduction;
+	$large-content: $large * $vertical-space-content-reduction;
+
+	// Small
+
+	.saved-vertical-margin-small {
+	  margin-top: $small;
+	  margin-bottom: $small;
+	}
+
+	.saved-vertical-padding-small {
+	  padding-top: $small;
+	  padding-bottom: $small;
+	}
+
+	.saved-vertical-margin-top-small {
+	  margin-top: $small;
+	}
+
+	.saved-vertical-padding-top-small {
+	  padding-top: $small;
+	}
+
+	.saved-vertical-margin-bottom-small {
+	  margin-bottom: $small;
+	}
+
+	.saved-vertical-padding-bottom-small {
+	  padding-bottom: $small;
+	}
+
+	// Small (Content)
+
+	.saved-vertical-margin-small-content {
+	  margin-top: $small-content;
+	  margin-bottom: $small-content;
+	}
+
+	.saved-vertical-padding-small-content {
+	  padding-top: $small-content;
+	  padding-bottom: $small-content;
+	}
+
+	.saved-vertical-margin-top-small-content {
+	  margin-top: $small-content;
+	}
+
+	.saved-vertical-padding-top-small-content {
+	  padding-top: $small-content;
+	}
+
+	.saved-vertical-margin-bottom-small-content {
+	  margin-bottom: $small-content;
+	}
+
+	.saved-vertical-padding-bottom-small-content {
+	  padding-bottom: $small-content;
+	}
+
+	// Medium
+
+	.saved-vertical-margin-medium {
+	  margin-top: $medium;
+	  margin-bottom: $medium;
+	}
+
+	.saved-vertical-padding-medium {
+	  padding-top: $medium;
+	  padding-bottom: $medium;
+	}
+
+	.saved-vertical-margin-top-medium {
+	  margin-top: $medium;
+	}
+
+	.saved-vertical-padding-top-medium {
+	  padding-top: $medium;
+	}
+
+	.saved-vertical-margin-bottom-medium {
+	  margin-bottom: $medium;
+	}
+
+	.saved-vertical-padding-bottom-medium {
+	  padding-bottom: $medium;
+	}
+
+	// Medium (Content)
+
+	.saved-vertical-margin-medium-content {
+	  margin-top: $medium-content;
+	  margin-bottom: $medium-content;
+	}
+
+	.saved-vertical-padding-medium-content {
+	  padding-top: $medium-content;
+	  padding-bottom: $medium-content;
+	}
+
+	.saved-vertical-margin-top-medium-content {
+	  margin-top: $medium-content;
+	}
+
+	.saved-vertical-padding-top-medium-content {
+	  padding-top: $medium-content;
+	}
+
+	.saved-vertical-margin-bottom-medium-content {
+	  margin-bottom: $medium-content;
+	}
+
+	.saved-vertical-padding-bottom-medium-content {
+	  padding-bottom: $medium-content;
+	}
+
+	// Large
+
+	.saved-vertical-margin-large {
+	  margin-top: $large;
+	  margin-bottom: $large;
+	}
+
+	.saved-vertical-padding-large {
+	  padding-top: $large;
+	  padding-bottom: $large;
+	}
+
+	.saved-vertical-margin-top-large {
+	  margin-top: $large;
+	}
+
+	.saved-vertical-padding-top-large {
+	  padding-top: $large;
+	}
+
+	.saved-vertical-margin-bottom-large {
+	  margin-bottom: $large;
+	}
+
+	.saved-vertical-padding-bottom-large {
+	  padding-bottom: $large;
+	}
+
+	// Large (Content)
+
+	.saved-vertical-margin-large-content {
+	  margin-top: $large-content;
+	  margin-bottom: $large-content;
+	}
+
+	.saved-vertical-padding-large-content {
+	  padding-top: $large-content;
+	  padding-bottom: $large-content;
+	}
+
+	.saved-vertical-margin-top-large-content {
+	  margin-top: $large-content;
+	}
+
+	.saved-vertical-padding-top-large-content {
+	  padding-top: $large-content;
+	}
+
+	.saved-vertical-margin-bottom-large-content {
+	  margin-bottom: $large-content;
+	}
+
+	.saved-vertical-padding-bottom-large-content {
+	  padding-bottom: $large-content;
+	}
+
+	// Misc
+
+	.saved-vertical-margin-medium-small-content { // headings in content
+	  margin-top: $medium-content;
+	  margin-bottom: $small-content;
+	}
+
+}
+
+//---------------------------------------------
+// Entries / Columns
+//---------------------------------------------
+
+// Four Columns (Entries)
+@mixin saved-loop-four-columns( $spacing-px: 30 ) {
+
+	$spacing: ct-em($spacing-px);
+
+	&.saved-loop-entries {
+		margin-bottom: -$spacing;
+	}
+
+	.saved-entry-short {
+
+		display: block;
+		float: left;
+		width: 22%; // fallback for Android 4.3 and earlier
+		width: calc( 24.95% - #{ct-em( $spacing-px * 3 / 4 )} );
+		margin-bottom: $spacing;
+
+		// Right margin except on every 4th item
+
+		&:not(:nth-child(4n)) {
+			margin-right: $spacing;
+		}
+
+		// Fade excerpt out after max-height
+		// Different max-height depending on columns
+
+		max-height: ct-em(307); // four columns
+
+	}
+
+}
+
+// Three Columns (Entries)
+@mixin saved-loop-three-columns( $spacing-px: 30 ) {
+
+	$spacing: ct-em($spacing-px);
+
+	&.saved-loop-entries {
+		margin-bottom: -$spacing;
+	}
+
+	.saved-entry-short {
+
+		display: block;
+		float: left;
+		width: 32%; // fallback for Android 4.3 and earlier
+		width: calc( 33.2% - #{ct-em( $spacing-px * 2 / 3 )} );
+		margin-bottom: $spacing;
+
+		// Right margin except on every 3rd item
+
+		&:not(:nth-child(3n)) {
+			margin-right: $spacing;
+		}
+
+		// Fade excerpt out after max-height
+		// Different max-height depending on columns
+
+		max-height: ct-em(338); // three columns
+
+		// In homepage widget (it's three columns when have image)
+
+		@media only screen and (min-width: 1024px) { // special height only before go full width on mobile (see _media-queries.scss)
+
+			.saved-image-section & {
+				max-height: ct-em(276);
+			}
+
+		}
+
+	}
+
+}
+
+// Two Columns (Entries)
+@mixin saved-loop-two-columns( $spacing-px: 40 ) {
+
+	$spacing: ct-em($spacing-px);
+
+	// Negate other columns
+	// For going from 4 to 2 to 1 columns on mobile
+
+	.saved-entry-short:not(:nth-child(4n)) { // four columns
+		margin-right: 0;
+	}
+
+	&.saved-loop-entries { // four and three columns
+		margin-bottom: 0;
+	}
+
+	// Entry
+
+	.saved-entry-short {
+
+		display: block;
+		float: left;
+  		width: 45%; // fallback for Android 4.3 and earlier
+		width: calc( 49.9% - #{ct-em( $spacing-px / 2)} );
+		margin-bottom: $spacing;
+
+		// Right margin only on left column
+
+		&:not(:nth-child(2n)) {
+			margin-right: $spacing;
+		}
+
+		// No bottom margin on last two items
+
+		&:nth-last-of-type(-n+2) {
+			margin-bottom: 0;
+		}
+
+		// Title
+
+		h2 {
+			font-size: 1.6em; // h3 equivalent
+		}
+
+		// Fade excerpt out after max-height
+		// Different max-height depending on columns
+
+		max-height: ct-em(348); // two columns
+
+	}
+
+}
+
+// One Column (Entries)
+@mixin saved-loop-one-column( $spacing-px: 50 ) {
+
+	$spacing: ct-em($spacing-px);
+
+	// Negate other columns
+	// For going from 4 to 2 to 1 columns on mobile
+
+	&.saved-loop-entries { // four and three columns
+		margin-bottom: 0;
+	}
+
+	&:not(:nth-child(2n)), // two columns
+	&:nth-last-of-type(-n+2) { // two columns
+		margin-bottom: 0;
+	}
+
+	// Never awkwardly wide
+
+	max-width: 360px;
+
+	// Entry
+
+	.saved-entry-short {
+
+		float: none;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: $spacing !important;
+
+		// No margin bottom on last entry
+
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+
+		// Fade excerpt out after max-height
+		// Different max-height depending on columns
+
+		max-height: ct-em(448);
+
+	}
+
+}
+
+//---------------------------------------------
+// Homepage Highlights / Columns
+//---------------------------------------------
+
+// Four Columns (Highlights)
+@mixin saved-highlights-four-columns( $spacing-px: 30 ) {
+
+	$spacing: ct-em($spacing-px);
+
+	margin-bottom: -$spacing;
+
+	.saved-highlight {
+
+		display: block;
+		float: left;
+		width: 22%; // fallback for Android 4.3 and earlier
+		width: calc( 24.95% - #{ct-em( $spacing-px * 3 / 4 )} );
+		margin-bottom: $spacing;
+
+		// Right margin except on every 4th item
+
+		&:not(:nth-child(4n)) {
+			margin-right: $spacing;
+		}
+
+	}
+
+}
+
+// Three Columns (Highlights)
+@mixin saved-highlights-three-columns( $spacing-px: 30 ) {
+
+	$spacing: ct-em($spacing-px);
+
+	margin-bottom: -$spacing;
+
+	.saved-highlight {
+
+		display: block;
+		float: left;
+		width: 32%; // fallback for Android 4.3 and earlier
+		width: calc( 33.2% - #{ct-em( $spacing-px * 2 / 3 )} );
+		margin-bottom: $spacing;
+
+		// Right margin except on every 3rd item
+
+		&:not(:nth-child(3n)) {
+			margin-right: $spacing;
+		}
+
+	}
+
+}
+
+// Two Columns (Highlights)
+@mixin saved-highlights-two-columns( $spacing-px: 40 ) {
+
+	$spacing: ct-em($spacing-px);
+
+	// Negate other columns
+	// For going from 4 to 2 to 1 columns on mobile
+
+	.saved-highlight:not(:nth-child(4n)) { // four columns
+		margin-right: 0;
+	}
+
+	margin-bottom: 0; // four and three columns
+
+	// Entry
+
+	.saved-highlight {
+
+		display: block;
+		float: left;
+  		width: 45%; // fallback for Android 4.3 and earlier
+		width: calc( 49.9% - #{ct-em( $spacing-px / 2)} );
+		margin-bottom: $spacing;
+
+		// Right margin only on left column
+
+		&:not(:nth-child(2n)) {
+			margin-right: $spacing;
+		}
+
+		// No bottom margin on last two items
+
+		&:nth-last-of-type(-n+2) {
+			margin-bottom: 0;
+		}
+
+	}
+
+}
+
+// One Column (Highlights)
+@mixin saved-highlights-one-column( $spacing-px: 50 ) {
+
+	$spacing: ct-em($spacing-px);
+
+	// Negate other columns
+	// For going from 4 to 2 to 1 columns on mobile
+
+	&:not(:nth-child(2n)), // two columns
+	&:nth-last-of-type(-n+2) { // two columns
+		margin-bottom: 0;
+	}
+
+	// Entry
+
+	.saved-highlight {
+
+		float: none;
+		width: 100%;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		margin-bottom: $spacing !important;
+
+		// No margin bottom on last entry
+
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+
+	}
+
+}

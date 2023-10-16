@@ -1,0 +1,187 @@
+/*
+Theme Name: Saved
+Theme URI: https://churchthemes.com/themes/saved
+Author: ChurchThemes.com
+Author URI: https://churchthemes.com
+Description: A smart church WordPress theme with drag-and-drop homepage builder.
+Copyright: (c) 2017 - 2023, ChurchThemes.com, LLC
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, custom-colors, custom-menu, custom-header, editor-style, featured-image-header, featured-images, footer-widgets, full-width-template, threaded-comments, translation-ready
+Text Domain: saved
+Version: 2.2.1
+*/
+
+/**********************************************
+ * NOTES
+ **********************************************/
+
+/*
+
+STYLE CUSTOMIZATION
+
+If you want to edit styles, it is best to use a child theme.
+Theme updates replace original stylesheets so keeping your customizations separate makes updates easier.
+See this guide for more information: https://churchthemes.com/guides/developer/child-theming/
+
+Sass is used to generate style.css (see the /sass directory). You can use Sass but do not have to.
+The .scss files are commented more heavily than this resulting style.css file.
+
+PREFIXES
+
+To prevent conflicts with plugins, everything is prefixed with saved- (this theme),
+ctcom- (all churchthemes.com themes) or ctfw- (framework). Those with wp- or no prefix are from WordPress.
+Other prefixes are from third party code.
+
+*/
+
+/**********************************************
+ * TABLE OF CONTENTS
+ **********************************************/
+
+/*
+
+1. Normalize
+2. Base Elements
+3. Custom Styles
+4. WordPress Styles
+5. Maps
+6. Tools
+7. Backgrounds
+8. Layout
+9. Header Bar
+10. Header Menu
+11. Header Banner
+12. Footer
+13. Widgets
+14. Homepage
+15. Entry Styles
+16. Sermons
+17. Events
+18. Attachments
+19. Galleries
+20. Comments
+21. Plugins
+22. Editor Styles
+23. Media Queries
+
+*/
+
+@import "modules/functions";
+@import "modules/variables";
+@import "modules/mixins";
+
+/**********************************************
+ * 1. NORMALIZE
+ **********************************************/
+@import "partials/normalize";
+
+/**********************************************
+ * 2. BASE ELEMENTS
+ **********************************************/
+@import "partials/base-elements";
+
+/**********************************************
+ * 3. CUSTOM STYLES
+ **********************************************/
+@import "partials/custom";
+
+/**********************************************
+ * 4. WORDPRESS STYLES
+ **********************************************/
+@import "partials/wordpress";
+
+/**********************************************
+ * 5. MAPS
+ **********************************************/
+@import "partials/maps";
+
+/**********************************************
+ * 6. TOOLS
+ **********************************************/
+@import "partials/tools";
+
+/**********************************************
+ * 7. BACKGROUNDS
+ **********************************************/
+@import "partials/backgrounds";
+
+/**********************************************
+ * 8. LAYOUT
+ **********************************************/
+@import "partials/layout";
+
+/**********************************************
+ * 9. HEADER BAR
+ **********************************************/
+@import "partials/header-bar";
+
+/**********************************************
+ * 10. HEADER MENU
+ **********************************************/
+@import "partials/header-menu";
+
+/**********************************************
+ * 1. HEADER MENU
+ **********************************************/
+@import "partials/header-banner";
+
+/**********************************************
+ * 12. FOOTER
+ **********************************************/
+@import "partials/footer";
+
+/**********************************************
+ * 13. WIDGETS
+ **********************************************/
+@import "partials/widgets";
+
+/**********************************************
+ * 14. HOMEPAGE
+ **********************************************/
+@import "partials/homepage";
+
+/**********************************************
+ * 15. ENTRY STYLES
+ **********************************************/
+@import "partials/entries";
+
+/**********************************************
+ * 16. SERMONS
+ **********************************************/
+@import "partials/sermons";
+
+/**********************************************
+ * 17. EVENTS
+ **********************************************/
+@import "partials/events";
+
+/**********************************************
+ * 18. ATTACHMENTS
+ **********************************************/
+@import "partials/attachments";
+
+/**********************************************
+ * 19. GALLERIES
+ **********************************************/
+@import "partials/galleries";
+
+/**********************************************
+ * 20. COMMENTS
+ **********************************************/
+@import "partials/comments";
+
+/**********************************************
+ * 21. PLUGINS
+ **********************************************/
+@import "partials/plugins";
+
+/**********************************************
+ * 22. EDITOR STYLES
+ **********************************************/
+@import "partials/editor";
+
+/**********************************************
+ * 23. MEDIA QUERIES
+ **********************************************/
+@import "partials/media-queries";

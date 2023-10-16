@@ -1,0 +1,669 @@
+
+/*---------------------------------------------
+ * Header Menu (Dropdowns)
+ *--------------------------------------------*/
+
+#saved-header-menu {
+
+	padding-top: ct-em(10);
+	padding-left: 1.5em; // ensure space between menu and logo
+
+	.saved-header-has-icons & {
+		padding-right: 1.2em; // ensure space between menu and icons
+	}
+
+}
+
+	// Header Menu List
+
+	#saved-header-menu-content { // <ul>
+		position: relative;
+		top: 0;
+		margin: 0;
+		margin-top: 6px;
+		margin-bottom: 15px;
+		float: left;
+		font-weight: 400;
+	}
+
+		// Header Menu Items (Top Level)
+
+		#saved-header-menu-content > li {
+
+			display: inline-block;
+			margin: 5px 0 0 12px;
+			padding-bottom: 0;
+			vertical-align: top;
+			font-size: 0.9em;
+			text-align: center;
+			cursor: pointer;
+
+			// Regular Link
+
+			&:not(.saved-menu-button) > a {
+
+				margin-bottom: -20px !important;
+				padding-bottom: 24px;
+				font-size: 0.95em;
+				font-weight: 700;
+				line-height: 1.5;
+
+				.saved-has-uppercase & {
+					text-transform: uppercase;
+				}
+
+				// Less when menu wrapped because dropdown is higher
+
+				.saved-header-menu-wrapped & {
+					margin-bottom: -14px !important;
+					padding-bottom: 18px;
+				}
+
+			}
+
+			// Menu Button
+
+			&.saved-menu-button {
+
+				top: 0; // changes in media querie;
+
+				padding-bottom: 17px;
+				margin-bottom: -20px !important; // move logo/icons back up
+
+				> a {
+
+					margin-top: -6px !important; // center vertically without moving dropdown up
+					transition: none;
+
+					/* Font Adjustments */
+
+					.saved-nav-font-nunito & {
+						line-height: 2.4;
+					}
+
+				}
+
+				// Less when menu wrapped because dropdown is higher
+
+				.saved-header-menu-wrapped & {
+					padding-bottom: 3px;
+					margin-bottom: -7px !important; // move logo/icons back up
+					border-bottom: 1px solid transparent; // assists with connection when wrapped to 2 lines
+				}
+
+			}
+
+			// Give each top-level link a z-index lower than the previous, so area between link
+			// and dropdown is above any link below it on second line
+
+			&:nth-child(1) > a:hover {
+				z-index: 99;
+			}
+
+			&:nth-child(2) > a:hover {
+				z-index: 98;
+			}
+
+			&:nth-child(3) > a:hover {
+				z-index: 97;
+			}
+
+			&:nth-child(4) > a:hover {
+				z-index: 96;
+			}
+
+			&:nth-child(5) > a:hover {
+				z-index: 95;
+			}
+
+			&:nth-child(6) > a:hover {
+				z-index: 94;
+			}
+
+			&:nth-child(7) > a:hover {
+				z-index: 93;
+			}
+
+			&:nth-child(8) > a:hover {
+				z-index: 92;
+			}
+
+			&:nth-child(9) > a:hover {
+				z-index: 91;
+			}
+
+			&:nth-child(10) > a:hover {
+				z-index: 90;
+			}
+
+			&:nth-child(11) > a:hover {
+				z-index: 89;
+			}
+
+			&:nth-child(12) > a:hover {
+				z-index: 87;
+			}
+
+			&:nth-child(13) > a:hover {
+				z-index: 86;
+			}
+
+			&:nth-child(14) > a:hover {
+				z-index: 85;
+			}
+
+			&:nth-child(15) > a:hover {
+				z-index: 84;
+			}
+
+			&:nth-child(16) > a:hover {
+				z-index: 83;
+			}
+
+			&:nth-child(17) > a:hover {
+				z-index: 82;
+			}
+
+			&:nth-child(18) > a:hover {
+				z-index: 81;
+			}
+
+			&:nth-child(19) > a:hover {
+				z-index: 80;
+			}
+
+			&:nth-child(20) > a:hover {
+				z-index: 79;
+			}
+
+		}
+
+			#saved-header-menu-content > li > a {
+				position: relative; // for arrow placement
+				display: inline-block;  // for arrow placement
+				color: $text-color-dark; // top-level link color
+				text-align: center;
+			}
+
+			// Hover and make it stick on submenu hover
+
+			#saved-header-menu-content ul {
+
+				// Links on hover
+				> li:hover > a,
+				ul li:hover > a,
+				ul li.sfHover > a,
+				ul li a:focus,
+				ul li a:hover,
+				ul li a:active {
+					padding-top: 7px;
+					padding-bottom: 7px;
+					padding-left: 11px;
+					margin-left: -7px;
+					margin-right: -6px;
+					margin-top: -3px;
+					margin-bottom: -3px;
+					background-color: rgba(0, 0, 0, 0.1) !important; // darker for contrast
+					transition: background-color 0.25s ease-in-out; // fade on hover
+				}
+
+				// Top item in list; BG cover all the way to top of dropdown
+
+				> li:first-child:hover > a,
+				ul li:first-child:hover > a,
+				ul li:first-child.sfHover > a,
+				ul li:first-child a:focus,
+				ul li:first-child a:hover,
+				ul li:first-child a:active {
+					padding-top: 9px;
+					margin-top: -5px;
+				}
+
+				// Last item in list; BG cover all the down to bottom of dropdown
+
+				> li:last-child:hover > a,
+				ul li:last-child:hover > a,
+				ul li:last-child.sfHover > a,
+				ul li:last-child a:focus,
+				ul li:last-child a:hover,
+				ul li:last-child a:active {
+					padding-bottom: 9px;
+					margin-bottom: -5px;
+				}
+
+			}
+
+		/*
+		Superfish (Dropdowns) - http://users.tpg.com.au/j_birch/plugins/superfish/
+		Copyright (c) 2013 Joel Birch
+		Dual licensed under the MIT and GPL licenses
+		*/
+
+		.sf-menu,
+		.sf-menu * {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.sf-menu {
+			float: left;
+			margin-bottom: 16px;
+			line-height: 1;
+		}
+
+			// All items
+
+			.sf-menu li {
+				position: relative;
+			}
+
+			// All Links
+
+			.sf-menu a {
+				display: block;
+				position: relative;
+			}
+
+			// Hover Setup
+
+			.sf-menu li:hover ul,
+			.sf-menu li.sfHover ul {
+				top: 40px;
+				z-index: 12000;
+			}
+
+				// Less for when menu is wrapped to second line (top level only)
+
+				.saved-header-menu-wrapped .sf-menu > li:hover > ul,
+				.saved-header-menu-wrapped .sf-menu > li.sfHover > ul {
+					top: ct-em(32); // also see media queries for changine this depending on font size reduction
+				}
+
+			.sf-menu li:not(.jq-dropdown-align-right):hover ul,
+			.sf-menu li:not(.jq-dropdown-align-right).sfHover ul {
+				left: -10px; // align dropdowns left by default
+			}
+
+				.sf-menu li.saved-menu-button:not(.jq-dropdown-align-right):hover ul,
+				.sf-menu li.saved-menu-button:not(.jq-dropdown-align-right).sfHover ul {
+					left: 0;
+				}
+
+			.sf-menu li.jq-dropdown-align-right:hover ul,
+			.sf-menu li.jq-dropdown-align-right.sfHover ul {
+				right: -15px; // align right when near right edge, so doesn't go off screen (also see .jq-dropdown-open-left)
+			}
+
+			.sf-menu > li.jq-dropdown-open-left > ul ul { // open sub-menus to the left if will go off screen (see main.js)
+			  left: auto !important; // reset default positioning
+			  right: 100% !important; // open to the left
+			}
+
+			.sf-menu li:hover li ul,
+			.sf-menu li.sfHover li ul,
+			.sf-menu li li:hover li ul,
+			.sf-menu li li.sfHover li ul {
+				top: -999em;
+			}
+
+			.sf-menu li li:hover ul,
+			.sf-menu li li.sfHover ul,
+			.sf-menu li li li:hover ul,
+			.sf-menu li li li.sfHover ul {
+				left: 160px; // match .sf-menu ul width below
+				top: 2px;
+			}
+
+			// Sub Menu Lists
+
+			.sf-menu ul {
+				position: absolute;
+				top: -999em;
+				width: 160px; // left offset of submenus need to match (see .sf-menu li li:hover ul above)
+				padding: 5px 6px; // dropdown spacing
+				text-align: left;
+				@include saved-box();
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+
+				// Third level submenu
+
+				.sf-menu ul ul {
+					margin-top: -4px;
+					border: 0;
+					border-top-left-radius: $box-border-radius;
+					border-top-right-radius: $box-border-radius;
+				}
+
+				// Sub Menu Items
+
+				$open-right: 6px;
+				$open-left: 6px;
+
+				.sf-menu ul li {
+					width: 100%;
+					margin-left: $open-right;
+				}
+
+					// Sub Menu Item Links
+
+					.sf-menu li li a {
+						position: relative;
+						left: -$open-right;
+						padding: 4px 4px; // spacing between links
+						font-size: 0.925em;
+						line-height: 1.2;
+						color: #fff;
+					}
+
+					// Opening left
+
+					.sf-menu > li.jq-dropdown-open-left {
+
+						ul li {
+							margin-left: -$open-left;
+						}
+
+						li a {
+							left: $open-left;
+						}
+
+					}
+
+						// Extra right margin for arrows
+
+						.sf-menu li li.menu-item-has-children a {
+							padding-right: 26px; // keep text from hitting arrow
+						}
+
+							// Not on the second level - creates hover / line break issues w/some fonts
+							// (not showing more then 2 levels deep)
+
+							.sf-menu ul ul li a {
+								padding-right: 0 !important;
+							}
+
+					// Sub Menu Hovering
+
+					.sf-menu ul li:hover > a,
+					.sf-menu ul li.sfHover > a,
+					.sf-menu ul a:focus,
+					.sf-menu ul a:hover,
+					.sf-menu ul a:active {
+						outline: 0;
+						// color set in head.php
+					}
+
+
+			// Arrow Icon (inserted with JavaScript)
+
+			.saved-menu-arrow {
+
+				position: absolute;
+				top: 50%;
+				right: ct-em(5);
+				margin-top: ct-em(-6.8);
+				font-size: 1em;
+				color: #fff;
+
+				.sf-menu > li.jq-dropdown-open-left & {
+					margin-right: ct-em(-14.5);
+				}
+
+			}
+
+/*---------------------------------------------
+ * Mobile Menu
+ *--------------------------------------------*/
+
+/*
+MeanMenu - https://github.com/meanthemes/meanMenu
+GPL License, Copyright (c) 2013 Chris Wharton
+A responsive menu appears at the top and the regular menu disappears on small devices
+*/
+
+// Hide until small screen triggered
+
+a.meanmenu-reveal {
+	display: none;
+}
+
+// When under viewport size, .mean-container is added to target
+
+.mean-container .mean-bar {
+	position: relative;
+	z-index: 1; // lower than logo and search
+	width: 70px;
+	height: 0 !important;
+	margin-right: -0.7em;
+	padding: 0;
+	float: right;
+	text-align: right;
+}
+
+// Open / Close Button
+
+.mean-container a.meanmenu-reveal {
+	display: block;
+	position: absolute;
+	top: -10px; // center it vertically
+	right: 8px !important;
+	width: 22px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 22px;
+	text-decoration: none;
+	text-indent: -9999em;
+	color: $text-color-dark;
+}
+
+	.mean-container a.meanmenu-reveal span {
+		display: block;
+		margin-top: 3px;
+		height: 3px;
+		background-color: #000;
+	}
+
+	// Close icon
+	.mean-container .mdi-close {
+		position: relative;
+		top: 1px;
+		left: 1px;
+	}
+
+// Menu Items
+
+.mean-container .mean-nav {
+
+	display: inline-block; // re-add BG and center w/text-align above
+	width: 226px;
+	margin: 20px 0 0 0;
+	float: right;
+	font-size: 1.05em;
+	line-height: 1.3;
+
+	@include saved-box();
+
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+
+	// Make mobile menu contents scroll if will run off bottom of screen
+	$max-height: calc(100vh - 80px);
+	max-height: 350px; // Fallback for Android 4.3 and earlier
+	max-height: $max-height; // Minus 80px because sticky bar is fixed and cannot scroll page
+	overflow: auto;
+
+}
+
+	// List
+
+	.mean-container .mean-nav ul {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+		// Item
+
+		.mean-container .mean-nav ul li {
+			position: relative;
+			width: 100%;
+			float: left;
+			overflow: hidden; // keep expand from overflowing bounds
+		}
+
+			// Links
+
+			.mean-container .mean-nav ul li a {
+				display: inline-block;
+				width: calc( 100% - 4.8em ); // leave space on right for Expand
+				margin: ct-em(5) 0 ct-em(5) ct-em(16);
+				float: left;
+				text-align: left;
+				text-decoration: none;
+				color: #fff;
+			}
+
+			// Top-level Link
+
+			.mean-container .mean-nav > ul > li > a {
+
+				font-weight: bold;
+
+				.saved-has-uppercase & {
+					text-transform: uppercase;
+				}
+
+			}
+
+			// First top-level link
+
+			.mean-container .mean-nav > ul > li:first-child > a {
+
+				margin-top: ct-em(13);
+
+				&.mean-expand {
+					margin-top: 0.55em
+				}
+
+			}
+
+			// Last top-level link
+
+			.mean-container .mean-nav > ul > li:last-child {
+
+				> a {
+					margin-bottom: ct-em(13);
+				}
+
+				> ul {
+					position: relative;
+					top: -0.5em;
+				}
+
+			}
+
+				// Sub Links
+
+				.mean-container .mean-nav ul li li a {
+					width: calc( 100% - 6.5em ); // leave space on right for Expand
+					padding-left: 5%;
+					font-size: 1em;
+					margin-top: ct-em(5); // make room for + and -
+					margin-bottom: ct-em(6);
+					text-shadow: none !important;
+					visibility: visible;
+				}
+
+					.mean-container .mean-nav ul li li li a {
+						width: calc( 100% - 7em ); // leave space on right for Expand
+						padding-left: 10%;
+						//font-style: italic;
+					}
+
+						.mean-container .mean-nav ul li li li li a {
+							width: calc( 100% - 8em ); // leave space on right for Expand
+							padding-left: 15%;
+						}
+
+							.mean-container .mean-nav ul li li li li li a {
+								width: calc( 100% - 9.5em ); // leave space on right for Expand
+								padding-left: 20%;
+							}
+
+	// Last Item
+
+	.mean-container .mean-nav ul li.mean-last a {
+		margin-bottom: ct-em(8);
+		border-bottom: none;
+	}
+
+	// Expand Button
+
+	.mean-container .mean-nav ul li a.mean-expand {
+
+		$radius: 16px;
+
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 2;
+		width: $radius;
+		height: $radius;
+		margin: 0.2em 0.6em 0 0;
+		padding: 0;
+		border: none;
+		text-align: center;
+		font-size: 1.3em !important;
+		font-family: Arial, Helvetica, sans-serif; // so +/- don't vary per font
+		line-height: 1;
+		font-weight: normal;
+		background-color: #fff;
+
+		// Minus move up
+
+		&.mean-clicked {
+			line-height: 0.9;
+		}
+
+	}
+
+.mean-container .mean-push {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	float: left;
+	clear: both;
+}
+
+.mean-nav .wrapper {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+// Box sizing
+
+.mean-container .mean-bar, .mean-container .mean-bar * {
+	-webkit-box-sizing:	content-box;
+	-moz-box-sizing:	content-box;
+	box-sizing:			content-box;
+}
+
+// Hide
+
+.mean-remove {
+	display: none !important;
+}
+
+// Search
+
+.mean-container .saved-search-field {
+	font-size: 0.9em;
+}

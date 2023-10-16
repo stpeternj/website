@@ -1,0 +1,47 @@
+
+.attachment {
+
+	& .saved-entry-full > *:last-child {
+		margin-bottom: 0;
+	}
+
+	.saved-entry-content {
+		@extend .saved-vertical-margin-top-medium;
+	}
+
+	// Back button max 100%  and centered since there is none on right
+
+	.saved-nav-left-right {
+		@extend .saved-vertical-margin-top-medium;
+	}
+
+		.saved-nav-left { // use in .saved-nav-left-right
+			width: 100%;
+			position: relative;
+			top: -5px;
+			text-align: center;
+		}
+
+}
+
+.saved-attachment-image {
+
+	@extend .saved-vertical-margin-bottom-medium;
+	@extend .saved-enlarged; // make caption as big as if was in content area
+
+	.wp-caption {
+		max-width: none;
+		margin: 0;
+	}
+
+	.wp-caption-text {
+		@extend .saved-centered-small;
+		margin-top: ct-em(15);
+	}
+
+}
+
+.saved-attachment-button {
+	@extend .saved-vertical-margin-top-small;
+	text-align: center;
+}

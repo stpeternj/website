@@ -1,0 +1,1042 @@
+/*---------------------------------------------
+ * Blocks
+ *--------------------------------------------*/
+
+.saved-block { // handy for making <span> display as block, such as in <h1> where div not allowed
+	display: block;
+}
+
+/*---------------------------------------------
+ * Text
+ *--------------------------------------------*/
+
+// Enlarged Text (used on main article content)
+
+.saved-enlarged {
+	font-size: $enlarged-font-size;
+}
+
+// Regular Text Color
+
+.saved-text-color {
+	color: $text-color;
+}
+
+// Light Text Color
+
+.saved-light {
+	color: $text-color-light;
+}
+
+// Dark Text Color
+
+.saved-dark {
+	color: $text-color-dark;
+}
+
+// Bold Text
+
+.saved-bold {
+	font-weight: 600; // semi-bold if available; otherwise bold
+}
+
+// Nowrap Text
+
+.saved-nowrap {
+	white-space: nowrap;
+}
+
+// Shadow Text
+// @extend on title over header image, section title on homepage, etc.
+
+.saved-text-over-image {
+	text-shadow: 0 0 15px rgba(0, 0, 0, 0.1); // imperceptible shadow to make text contrast with background image
+}
+
+// More compact entry content for comments and Text widget, etc.
+
+.saved-compact-content {
+
+	@extend .saved-entry-content;
+
+	blockquote {
+
+		// More compact
+
+		padding-top: ct-em(24);
+		padding-bottom: ct-em(24);
+		font-size: 1.3em;
+		text-align: left;
+
+		&:before {
+			position: absolute;
+			top: 0.09em;
+			left: 0.42em;
+			font-size: 3.8em;
+		}
+
+		// No shadow
+
+		box-shadow: none;
+		border: none;
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: ct-em(40);
+		padding-right: 0;
+
+		// Quotation mark before
+
+		&:before {
+			position: absolute;
+			top: ct-em(-5);
+			left: 0;
+		}
+
+		// Paragraphs
+
+		p {
+
+			margin-top: 0;
+			margin-bottom: ct-em(11);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+		}
+
+	}
+
+	// Reduce block margins
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: ct-rem(20);
+		margin-bottom: ct-rem(15);
+	}
+
+	p,
+	ul,
+	ol,
+	dl,
+	table,
+	blockquote,
+	q {
+		margin-top: ct-em(25);
+		margin-bottom: ct-em(25);
+	}
+
+	.alignnone {
+		margin-top: ct-em(25);
+		margin-bottom: ct-em(25);
+	}
+
+	p .alignnone {
+		margin-top: ct-em(6);
+		margin-bottom: ct-em(6);
+	}
+
+	.aligncenter {
+		margin-top: ct-em(35);
+		margin-bottom: ct-em(35);
+	}
+
+	// Increase caption image text
+
+	.wp-caption-text {
+		font-size: 0.9em;
+	}
+
+	// Smaller buttons
+
+	.saved-buttons-list {
+		font-size: 0.9em;
+	}
+
+}
+
+/*---------------------------------------------
+ * Images
+ *--------------------------------------------*/
+
+// Brighten on Hover
+// Short view featured image, caption image, gallery thumbnail
+// This is container of an image
+
+.saved-not-mobile .saved-hover-image {
+
+	overflow: hidden;
+
+	a img,
+	a .saved-hover-bg,
+	&.saved-nav-block .saved-hover-bg {
+
+		transition: all .25s ease-in-out;
+
+		-webkit-filter: brightness(1) contrast(0.95);
+		filter: brightness(1) contrast(0.95);
+
+	}
+
+	&:hover a img,
+	&:hover a .saved-hover-bg,
+	&.saved-nav-block:hover .saved-hover-bg {
+
+		-webkit-filter: brightness(1.1) contrast(0.95);
+		filter: brightness(1.1) contrast(0.95);
+
+		// Scale effect only on HiDPI - or gets blurry
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-resolution: 120dpi), only screen and (-o-min-device-pixel-ratio: 5 / 4) {
+			transform: scale(1.075);
+		}
+
+	}
+
+}
+
+// Caption Image (e.g. Highlight Widget, Galleries Template)
+// Highlight is square, Gallery image is rectangular
+
+.saved-caption-image {
+
+	@extend .saved-hover-image;
+	position: relative;
+	overflow: hidden; // prevent most lines between images (see img max-width)
+
+	a {
+		display: block; // helps with spacing, especially with regard to matchHeight
+		border: 0 !important;
+	}
+
+		img {
+			max-width: calc( 100% + 2px ); // prevent most lines between images (see .gallery-icon overflow)
+		}
+
+}
+
+	// Background if no image
+
+	.saved-caption-image-inner {
+		@extend .saved-bg-secondary;
+	}
+
+	// Image background layer
+
+	.saved-caption-image-bg {
+
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+
+	}
+
+	// Brightness layer (Highlights)
+
+	.saved-caption-image-brightness {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+	}
+
+	// Gradient layer (Highlights)
+
+	.saved-caption-image-gradient {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 36%, rgba(0,0,0,0.35) 76%, rgba(0,0,0,0.35) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 36%,rgba(0,0,0,0.35) 76%,rgba(0,0,0,0.35) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 36%,rgba(0,0,0,0.35) 76%,rgba(0,0,0,0.35) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#26000000',GradientType=0 ); /* IE6-9 */
+	}
+
+	// Container for Title and Description
+
+	.saved-caption-image-caption {
+
+		$right-margin: 8%;
+
+		display: block;
+		position: absolute;
+		bottom: 15%;
+		left: 10%;
+		padding-right: $right-margin;
+		width: 100% - $right-margin;
+
+		@extend .saved-text-over-image; // virtually imperceptible shadow for contrast
+
+	}
+
+		// Title
+
+		.saved-caption-image-title {
+
+			@extend .saved-h5;
+
+			display: inline-block;
+			position: relative; // helps z-index kick in
+			float: left; // needed for IE in order for float/clear: left on description to work below
+			max-width: 100%;
+			line-height: 1.15;
+
+			&,
+			& h2 { // in widget
+				color: #fff;
+			}
+
+		}
+
+		// Description
+
+		.saved-caption-image-description {
+			display: inline-block;
+			position: relative; // helps z-index kick in (in color scheme CSS)
+			max-width: 80%;
+			margin-top: ct-em(5);
+			float: left; // float/clear left causes new line without resorting to display: block which span 100% width of title/caption
+			clear: left;
+			line-height: 1.4;
+			font-size: 1.1em;
+			font-style: italic;
+			font-weight: normal;
+			color: #fff;
+		}
+
+/*---------------------------------------------
+ * Icons
+ *--------------------------------------------*/
+
+// List Icons
+
+.saved-list-icons { // ul
+
+	$margin-vertical: 1;
+	$margin-horizontal: 0;
+
+	list-style: none;
+	margin: ct-em(-$margin-vertical) ct-em(-$margin-horizontal) !important;
+	padding: 0;
+
+	li {
+
+		display: inline-block;
+		margin: ct-em($margin-vertical) ct-em($margin-horizontal);
+		line-height: 0;
+
+		a {
+			color: $text-color-dark;
+		}
+
+		// Adjustments
+
+		.mdi-microphone,
+		.mdi-google-play {
+			font-size: 0.95em;
+		}
+
+		.mdi-microphone,
+		.mdi-pinterest,
+		.mdi-vine,
+		.mdi-rss {
+			margin-left: ct-em(-2);
+			margin-right: ct-em(-2);
+		}
+
+		.mdi-apple,
+		.mdi-vimeo {
+			margin-left: ct-em(-1);
+			margin-right: ct-em(-1);
+		}
+
+	}
+
+}
+
+/*---------------------------------------------
+ * Buttons
+ *--------------------------------------------*/
+
+// Button Shared (Single + List)
+
+.saved-button,
+.saved-buttons-list a,
+.saved-menu-button > a,
+input[type=submit],
+.saved-nav-left-right a,
+.wp-block-file .wp-block-file__button {
+
+	$button-padding: ct-em(12);
+	$button-border-rgb: 50;
+	$button-border-rgb-alpa: 0.25;
+	$button-border-rgb-alpa-light: 0.18;
+
+	display: inline-block;
+	position: relative;
+	top: 0;
+	height: $button-height;
+	line-height: $button-height - ct-em(2); // move text up a bit to compensate for bottom edge
+	padding: 0 $button-padding;
+	font-size: $button-font-size;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 0;
+	white-space: nowrap;
+	color: #fff !important;
+	border-radius: $button-radius;
+	border-style: solid;
+	border-width: 0 0 ct-em(4) 0;
+	border-color: rgba( $button-border-rgb, $button-border-rgb, $button-border-rgb, $button-border-rgb-alpa );
+
+	@include saved-uppercase();
+
+	// Light / Hover
+
+	transition: all 0.3s; // for hover effect
+
+	&.saved-button-light,
+	&:not(.sf-with-ul):not(.saved-button-not-light):hover {
+		background-color: rgba(235, 235, 235, 1) !important;
+		border-color: rgba( $button-border-rgb, $button-border-rgb, $button-border-rgb, $button-border-rgb-alpa-light );
+	}
+
+	&.saved-button-light {
+		color: #000 !important;
+	}
+
+	// Icon Button
+
+	.saved-icon {
+		font-size: 1.15em;
+		padding-right: ct-em(3.5);
+		position: relative;
+		top: ct-em(1.5);
+		margin-left: ct-em(-1);
+	}
+
+	// Icon Adjustments
+
+	.saved-icon-nav-button-left {
+		margin-left: ct-em(-4);
+		padding-right: ct-em(2);
+	}
+
+	.saved-icon-nav-button-right {
+		margin-right: ct-em(-8);
+		padding-left: ct-em(3);
+	}
+
+	.saved-icon-download {
+		padding-right: ct-em(2.5);
+	}
+
+	.saved-icon-comment-reply {
+		font-size: 1.1em;
+	}
+
+	.saved-icon-comment-edit {
+		font-size: 1.1em;
+	}
+
+	// Large
+
+	&.saved-button-large {
+		font-size: 1.2em;
+	}
+
+	&.saved-button-block {
+
+		margin-top: 0.4em;
+		margin-bottom: 0.4em;
+		margin-right: 0.8em;
+
+		&:last-child:not(.aligncenter) {
+			margin-right: 0;
+		}
+
+	}
+
+	// Alignment
+
+	&.alignleft {
+		margin: 0.7em 1.75em 0.7em 0;
+	}
+
+	&.alignright {
+		margin: 0.7em 0 0.7em 1.5em;
+	}
+
+	&.aligncenter {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 320px;
+	}
+
+}
+
+// Buttons List
+
+.saved-buttons-list { // ul
+
+	margin: 0 (-$button-margin-half) (-$button-margin) (-$button-margin-half);
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: inline-block;
+		margin: 0 $button-margin-half $button-margin $button-margin-half;
+	}
+
+	&.saved-buttons-list-close {
+
+		margin: 0 (-$button-margin-half / 2) (-$button-margin / 2) (-$button-margin-half / 2);
+
+		li { // closer spacing (half)
+			margin: 0 ($button-margin-half / 2) ($button-margin / 2) ($button-margin-half / 2);
+		}
+
+	}
+
+	// Large
+
+	&.saved-buttons-list-large {
+		font-size: 1.25em;
+	}
+
+}
+
+/*---------------------------------------------
+ * Lists
+ *--------------------------------------------*/
+
+// List Items
+// Used by CT Categories widget (extended) and Sermon topics, speakers, etc. archives
+// ie. content generated by wp_list_categories()
+// main.js moves count into span tag so it can be styled
+
+.saved-list {
+
+	$top-level-margin: ct-em(6);
+	$sub-level-margin: ct-em(4);
+
+	margin: 0;
+	margin-bottom: (-$top-level-margin) !important;
+	list-style: none;
+	line-height: 1.3;
+
+	// Hide list until main.js moves count into span, to avoid flicker
+
+	.js & {
+		visibility: hidden;
+	}
+
+	// Second and third level margins
+
+	ul {
+		margin-top: $sub-level-margin;
+		margin-left: ct-em(12);
+	}
+
+	// Top-level Item
+
+	> li {
+
+		padding-bottom: $top-level-margin;
+		-webkit-column-break-inside: avoid;
+		page-break-inside: avoid;
+		break-inside: avoid;
+
+		& > a {
+			@include saved-uppercase();
+			font-weight: bold;
+		}
+
+	}
+
+	// All Items
+
+	li {
+
+		position: relative;
+		list-style: none;
+
+		// Second level or deeper
+
+		li {
+
+			// Less margin
+
+			margin-bottom: $sub-level-margin;
+
+			// Second-level links smaller
+
+			a {
+				font-size: 1em;
+			}
+
+			// Third and deeper italic
+
+			li {
+				font-style: italic;
+			}
+
+		}
+
+	}
+
+	// Make room for count so wrapping is nice
+
+	> li {
+		padding-right: ct-em(30);
+	}
+
+}
+
+	// List Items Count
+
+	.saved-list-item-count { // class added and ( ) removed by JavaScript
+
+		position: absolute;
+		top: ct-em(1);
+		right: 0;
+		font-size: 0.9em;
+		font-style: normal;
+
+		li li & {
+			right: ct-em(-33);
+		}
+
+	}
+
+/*---------------------------------------------
+ * Navigation
+ *--------------------------------------------*/
+
+// Prev/Next Nav Blocks (Single Post)
+
+.saved-nav-blocks {
+
+	@extend .saved-vertical-margin-top-large;
+	@extend .saved-no-viewport-padding; // make it fit 100% to viewport on smaller screens
+
+	z-index: 0 !important; // under map section when no comments or widgets
+	overflow: hidden;
+
+	// Make single post nav flush with bottom when no comments section shown
+
+	.saved-has-nav-blocks.saved-no-comments-section & {
+		margin-bottom: 0;
+	}
+
+}
+
+	.saved-nav-block {
+
+		position: relative;
+		display: inline-block;
+		width: 50%;
+		padding-bottom: ( 25% / 2 ); // ratio for 1600x400 banners (divided by 2 because width is 50%)
+		cursor: pointer;
+
+		&.saved-nav-block-empty {
+
+			cursor: default;
+
+			@extend .saved-bg-secondary;
+
+			.saved-no-comments-section & {
+				@extend .saved-bg;
+			}
+
+		}
+
+		overflow: hidden;
+
+	}
+
+		.saved-nav-block-image,
+		.saved-nav-block-content {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.saved-nav-block-image {
+			width: 101%;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+
+			.saved-nav-block-image-brightness {
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #000;
+			}
+
+		.saved-nav-block-content {
+			z-index: 2; // above image
+			padding: 0 10%;
+		}
+
+			.saved-nav-block-content-columns {
+				display: table;
+				height: 100%;
+				min-width: 50%;
+			}
+
+				.saved-nav-block-content-column {
+					display: table-cell;
+					height: 100%;
+					vertical-align: middle;
+					text-align: left;
+				}
+
+				.saved-nav-block-content-arrow {
+
+ 					@extend .saved-text-over-image; // imperceptible shadow to make text contrast with background image
+
+					position: absolute;
+					top: 44%; // Fallback for old versions Android without calc()
+					top: calc( 50% - 26px );
+					font-size: 36px;
+
+					&.saved-nav-block-content-left {
+						left: 5%;
+					}
+
+					&.saved-nav-block-content-right {
+						right: 5%;
+					}
+
+				}
+
+				.saved-nav-block-content-text {
+
+					max-width: 450px;
+
+					$padding: 1.5em;
+
+					&.saved-nav-block-content-right {
+						padding-left: $padding;
+					}
+
+					&.saved-nav-block-content-left {
+						padding-right: $padding;
+					}
+
+					* {
+	 					@extend .saved-text-over-image; // imperceptible shadow to make text contrast with background image
+					}
+
+				}
+
+					.saved-nav-block-label {
+						padding-bottom: ct-em(2);
+						text-transform: none;
+						font-size: 0.9em;
+						font-style: italic;
+					}
+
+					.saved-nav-block-title {
+						@extend h4;
+						@include saved-uppercase();
+					}
+
+	.saved-nav-block-left {
+
+		float: left;
+
+		// White line between blocks when no images
+
+		.saved-nav-block-has-both.saved-nav-block-no-images & {
+			border-width: 0 1px 0 0;
+			border-style: solid;
+			border-color: $bg-color-contrast;
+		}
+
+	}
+
+	.saved-nav-block-right {
+		float: right;
+	}
+
+// Prev/Next Nav Buttons (Comments and Attachments)
+
+.saved-nav-left-right {
+	@extend .saved-clearfix;
+}
+
+	.saved-nav-left { // use in .saved-nav-left-right
+		float: left;
+		width: 50%;
+		max-width: 100%;
+	}
+
+	// Next / Newer
+
+	.saved-nav-right {
+		@extend .saved-nav-left;
+		float: right;
+		text-align: right;
+	}
+
+// Post Page Numbers ( << 1 2 3 >> below loops)
+
+.saved-pagination {
+	@extend .saved-vertical-margin-top-medium;
+	@extend .saved-clearfix;
+	position: relative; // keep numbers showing
+}
+
+	ul.page-numbers { // WordPress-provided class; see .saved-button class
+
+		margin: 0;
+		list-style: none;
+		font-size: 1.25em;
+		text-align: center;
+
+		li {
+
+			margin: ct-em(4);
+			display: inline-block;
+
+			 > * {
+				padding: 0;
+				font-weight: bold;
+			}
+
+		}
+
+		span {
+
+			&.current {
+				color: $text-color-dark;
+			}
+
+			&.dots {
+				width: auto;
+				padding: 0;
+				border: none;
+				color: $text-color;
+			}
+
+		}
+
+		.saved-icon {
+			position: relative;
+			top: ct-em(2);
+			font-size: 1.35em;
+		}
+
+		.saved-icon-nav-links-left {
+			margin-left: ct-em(3);
+		}
+
+		.saved-icon-nav-links-right {
+			padding-left: 0;
+		}
+
+	}
+
+/*---------------------------------------------
+ * Author Box
+ *--------------------------------------------*/
+
+// Used below blog posts and author archive
+
+.saved-author-box {
+
+	position: relative;
+
+	// Margin on top of viewing single post (not in archive, where box appears at top)
+
+	.single & {
+		@extend .saved-vertical-margin-top-large;
+		@extend .saved-bg-secondary;
+		top: ct-em(-5);
+		min-height: $author-box-avatar-size + 5em;
+		padding: ct-em(40);
+		padding-bottom: ct-em(35);
+		border-radius: $box-border-radius;
+	}
+
+	.archive.author & {
+		padding-bottom: ct-em(10); // a little extra space
+	}
+
+	// Archive (at top)
+
+	.archive & {
+		min-height: $author-box-avatar-size + 0.5em;
+	}
+
+}
+
+	.saved-author-avatar {
+
+		position: absolute;
+		width: $author-box-avatar-size;
+		height: $author-box-avatar-size;
+
+		.single & {
+			left: ct-em(40);
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			border-radius: $box-border-radius;
+		}
+
+	}
+
+	.saved-author-content {
+
+		margin-left: $author-box-avatar-size + 2.4em;
+
+		header {
+			min-height: ct-em(42);
+		}
+
+			h2 {
+
+				display: inline-block;
+				margin: ct-em(-5) ct-em(30) 0 0;
+				vertical-align: middle;
+
+				// Prevent long name from bumping "More Posts" button down
+
+				.saved-author-box-show-button & {
+					width: calc( 100% - #{ct-em(100)} ); // room for button
+				}
+
+			}
+
+	}
+
+		// Button
+
+		.saved-author-box-archive {
+			vertical-align: middle;
+			float: right;
+			font-size: 0.9em;
+		}
+
+		.saved-author-bio {
+
+			margin-top: ct-em(14);
+
+			p:first-child {
+				margin-top: 0;
+			}
+
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+/*---------------------------------------------
+ * Search Form
+ *--------------------------------------------*/
+
+// Search Form Shared Styles (Header, Widget, etc.)
+
+.saved-search-form form {
+
+	margin: 0;
+	white-space: nowrap;
+
+	> * {
+		display: inline-block;
+		margin-left: ct-em(4);
+		vertical-align: middle;
+	}
+
+	> *:first-child {
+		margin-left: 0;
+	}
+
+	input[type=text] {
+		width: ct-em(220);
+	}
+
+}
+
+/*---------------------------------------------
+ * Visibility
+ *--------------------------------------------*/
+
+// Hidden
+
+.saved-hidden {
+	display: none;
+}
+
+// Hidden but active element (e.g. hidden submit)
+
+.saved-invisible {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	left: 30000px;
+}
+
+// Text meant only for screen readers (required, Theme Check)
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/*---------------------------------------------
+ * Clearfix
+ *--------------------------------------------*/
+
+.saved-clearfix:before,
+.saved-clearfix:after {
+  content: "";
+  display: table;
+}
+
+.saved-clearfix:after {
+  clear: both;
+}

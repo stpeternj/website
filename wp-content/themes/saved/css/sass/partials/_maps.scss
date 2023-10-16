@@ -1,0 +1,239 @@
+
+/*---------------------------------------------
+ * Google Maps JS
+ *--------------------------------------------*/
+
+// Responsive Map
+
+.ctfw-google-map.ctfw-google-map-responsive {
+	padding-bottom: 50%; // responsive at 1:2 ratio
+}
+
+	/* Prevent responsive images affecting Google Maps */
+
+	.ctfw-google-map img {
+		max-width: none;
+	}
+
+// Default Cursor
+
+.ctfw-google-map div {
+	cursor: default !important;
+}
+
+/*---------------------------------------------
+ * Map Section
+ *--------------------------------------------*/
+
+$height: 220px; // min-height, will stretch
+$vertical-extend: 5px; // extend top and bottom of content box by 5px
+$vertical-extend-double: $vertical-extend * 2;
+
+// Section container
+
+.saved-map-section {
+	min-height: $height;
+	z-index: 10; // higher than banner above
+	position: relative;
+	width: 100%;
+}
+
+// Section Container, Map and Info
+
+#saved-map-section-map,
+#saved-map-section-canvas {
+	height: 100%;
+}
+
+	// Map (Right) and Content (Left)
+
+	#saved-map-section-map,
+	#saved-map-section-content-bg {
+		position: absolute;
+		top: 0;
+	}
+
+	// Map (Right)
+
+	#saved-map-section-map { // container for #saved-map-section-canvas
+		right: 0; // right half
+		width: calc( 50% - #{ct-em(10)} );
+		height: 100%;
+	}
+
+		// Map Marker (overlay so can use icon font and change color dynamically)
+
+		#saved-map-section-marker {
+
+			$icon-size: 50px;
+
+			position: absolute;
+			top: calc( 50% - #{$icon-size} ); // vertical center, with botton of icon over the center
+			width: 100%;
+			margin-top: 4px; // offset to match Google's own marker position
+			text-align: center;
+			line-height: 1;
+
+			.saved-icon {
+				position: relative; // moved leftward by JS
+				font-size: $icon-size;
+			}
+
+		}
+
+	// Content (Left)
+
+	#saved-map-section-content { // inside #saved-map-section-content-container which has .saved-centered-large
+		position: relative; // assist z-index
+		z-index: 2; // show content above #saved-map-section-content-bg
+		display: table;
+		width: 50%; // left half
+		padding-right: ct-em(50); // don't let contents run up against map
+	}
+
+		#saved-map-section-content-inner {
+
+			@extend .saved-dark;
+
+			width: 100%;
+			height: $height !important;
+			padding: ct-em(40) 0 ct-em(38) 0; // top and bottom
+			display: table-cell !important;
+			vertical-align: middle;
+			font-size: 0.95rem;
+
+			> *:nth-child(2) { // Margin between info and buttons if have two sets of content
+				margin-top: ct-em(28);
+			}
+
+		}
+
+			// Header (Address / Buttons)
+
+			#saved-map-section-header {
+				display: table;
+				width: 100% !important;
+			}
+
+				#saved-map-section-address,
+				#saved-map-section-buttons {
+					display: table-cell;
+				}
+
+				// Address
+
+				#saved-map-section-address {
+
+					@extend .saved-h3;
+
+					margin: 0;
+					padding-bottom: ct-em(20);
+					padding-right: ct-em(10); // don't touch buttons
+
+				}
+
+				// Buttons
+
+				#saved-map-section-buttons { // .saved-buttons-list
+
+					position: relative;
+					top: ct-em(-10);
+					right: ct-em(-10); // pull it to edge
+					padding-top: $button-margin / 2;
+					vertical-align: middle;
+					text-align: right;
+
+					li {
+
+						a {
+							min-width: ct-em(115);
+						}
+
+					}
+
+				}
+
+			// List
+
+			#saved-map-section-list { // ul
+				list-style: none;
+				margin: 0 ct-em(10) ct-em(-18) 0 !important; // negative of bottom margin below
+				padding: 0;
+				display: inline-block
+			}
+
+				// Item
+
+				#saved-map-section-list li {
+
+					display: block;
+					float: left;
+					position: relative;
+					margin-right: ct-em(20);
+					margin-bottom: ct-em(18); // set negative margin in #saved-map-section-list above
+					vertical-align: top;
+					line-height: 1.4;
+					min-height: ct-em(28); // same height so wrap same
+
+					&.saved-map-info-full {
+						float: none;
+					}
+
+					a {
+						position: relative;
+						top: ct-em(-1); // move underline link up
+					}
+
+						// Contents
+
+						& p {
+							//margin: 0 0 0 27px; // make room for icon
+							margin: 0;
+							//font-style: italic;
+						}
+
+				}
+
+					// Item Text (before note)
+
+					.saved-map-section-item-text { // class applied only when have note
+
+						padding-right: 4px;
+
+						// Dates are important
+
+						#saved-map-section-date & {
+
+							font-weight: bold;
+							font-style: normal;
+
+							@include saved-uppercase();
+
+						}
+
+					}
+
+					// Item Note
+
+					.saved-map-section-item-note {
+
+						white-space: nowrap;
+						font-style: italic;
+
+					}
+
+	// Content Background (beneath content)
+
+	#saved-map-section-content-bg {
+
+		width: calc( 50% + #{ct-em(10)} );
+		z-index: 1; // shadow above map
+
+ 		// Extend box top and bottom
+		top: -$vertical-extend;
+		height: calc(100% + #{$vertical-extend-double} );
+
+		// Box styling and background
+		@include saved-box(); // saved_widget_image_side_class() applies color class in map-section.php
+
+	}

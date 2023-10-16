@@ -1,0 +1,406 @@
+
+/*---------------------------------------------
+ * Shared Styles
+ *--------------------------------------------*/
+
+// Widget Entries (Compact)
+
+.saved-widget {
+
+	// Spacing between entries
+
+	.saved-entry-compact {
+
+		margin-top: ct-em(30);
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+	}
+
+}
+
+// Dropdown Widgets
+
+.widget_ctfw-archives,
+.widget_ctfw-categories {
+
+	form {
+		margin: 0;
+	}
+
+	select {
+		margin-left: 1px;
+		width: 100%;
+		max-width: 250px;
+	}
+
+}
+
+// List Widgets
+
+.widget_categories > ul, // default WP categories - blog only
+.widget_ctfw-categories > ul, // enhanced categories - taxonomy selector
+.widget_ctfw-archives > ul, // monthly sermon archives
+.widget_ctfw-galleries > ul, // gallery page list
+.widget_recent_entries > ul,
+.widget_recent_comments > ul,
+.widget_archive > ul,
+.widget_meta > ul,
+.widget_pages > ul,
+.widget_links > ul,
+.widget_nav_menu ul.menu {
+	@extend .saved-list;
+}
+
+// Widgets Row
+// Footer and homepage secondary widgets section
+
+.saved-widgets-row-content {
+
+	$spacing: 6%;
+
+	@extend .saved-clearfix;
+	position: relative;
+	margin-top: ct-em(-70) !important;
+	margin-right: -$spacing;
+
+	aside {
+
+		display: inline-block;
+		vertical-align: top;
+		margin-right: $spacing;
+		margin-top: ct-em(70);
+		width: 33.333% - $spacing;
+		font-size: 0.85em; // smaller font in widgets
+		line-height: $line-height-content;
+
+		*:not([class^=mejs-]):not(button):first-child {
+			margin-top: 0;
+		}
+
+		*:not([class^=mejs-]):not(button):last-child {
+			margin-bottom: 0;
+		}
+
+		h2 {
+			@extend .saved-h3;
+			@extend .saved-vertical-margin-bottom-small;
+			font-size: 1.9em; // size title back up to H2
+		}
+
+	}
+
+}
+
+/*---------------------------------------------
+ * WP Search
+ *--------------------------------------------*/
+
+.widget_search {
+
+	.saved-search-field {
+		margin-left: 0;
+	}
+
+	.saved-search-button {
+		font-size: 1.7em;
+		color: $text-color-dark;
+	}
+
+}
+
+/*---------------------------------------------
+ * WP Recent Comments
+ *--------------------------------------------*/
+
+.widget_recent_comments li {
+
+	margin-top: ct-em(20); // more than list widgets
+
+	.comment-author-link {
+
+		@extend .saved-dark;
+
+		a {
+			@extend .saved-dark;
+		}
+
+	}
+
+	a {
+		text-transform: none !important;
+		font-weight: normal !important;
+	}
+
+}
+
+
+/*---------------------------------------------
+ * WP Text Widget
+ *--------------------------------------------*/
+
+.widget_text {
+
+	.textwidget {
+
+		@extend .saved-compact-content;
+		@include saved-remove-heading-line(); // remove line from top
+
+		// Make H1 and H2 same size as H3 since widget title is H2
+
+		h1,
+		h2 {
+			font-size: 1.6em !important; // same as H3
+		}
+
+	}
+
+}
+
+/*---------------------------------------------
+ * WP Tag Cloud Widget
+ *--------------------------------------------*/
+
+.widget_tag_cloud {
+
+	.tagcloud {
+		font-size: 0.8em !important; // single size; override inline styles from WP
+	}
+
+	a {
+		@extend .saved-button;
+		margin: ct-em(5) ct-em(5) ct-em(5) 0;
+		font-size: 1em !important; // single size; override inline styles from WP
+	}
+
+}
+
+/*---------------------------------------------
+ * WP Calendar Widget
+ *--------------------------------------------*/
+
+.widget_calendar #wp-calendar {
+	width: 100%;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.widget_calendar #wp-calendar caption,
+.widget_calendar #wp-calendar td,
+.widget_calendar #wp-calendar th {
+	padding: ct-em(4);
+	text-align: left;
+}
+
+.widget_calendar #wp-calendar caption {
+
+	@extend .saved-h4;
+	@extend .saved-dark;
+	padding: 0 0 ct-em(8) 0;
+	font-weight: bold;
+
+	@include saved-uppercase();
+
+}
+
+.widget_calendar #wp-calendar th {
+	border: 0;
+	padding: ct-em(10) 0 ct-em(10) ct-em(4);
+	@extend .saved-dark;
+	font-weight: bold;
+}
+
+.widget_calendar #wp-calendar tfoot td {
+
+	padding-top: ct-em(18);
+
+	@include saved-uppercase();
+
+	a {
+		font-weight: bold;
+	}
+
+	&#next {
+		text-align: right;
+		padding-right: 8%;
+	}
+
+}
+
+.textwidget > :first-child {
+	margin-top: 0;
+}
+
+.textwidget > :last-child {
+	margin-bottom: 0 !important;
+}
+
+/*---------------------------------------------
+ * WP RSS Widget
+ *--------------------------------------------*/
+
+.widget_rss {
+
+	ul {
+		margin: 0;
+		list-style: none;
+	}
+
+	li {
+
+		@include saved-box();
+		padding: ct-em(11) ct-em(16);
+		line-height: 1.45;
+
+		&:not(:first-child) {
+
+			margin-top: ct-em(28);
+
+			a {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
+		}
+
+		a {
+			font-weight: bold;
+		}
+
+	}
+
+	h2 {
+
+		// Hide RSS icon
+
+	 	img {
+			display: none;
+		}
+
+		// Heading link not colored
+
+		a {
+			color: $text-color-dark;
+		}
+
+	}
+
+	.rss-date,
+	.rssSummary,
+	cite {
+		margin-top: ct-em(6);
+		font-size: 0.9em;
+	}
+
+	.rss-date {
+		display: block;
+		font-style: italic;
+		@extend .saved-dark;
+	}
+
+	cite {
+		display: block;
+		font-style: italic;
+	}
+
+	.rssSummary {
+		margin-top: ct-em(10);
+		font-size: 0.85em;
+	}
+
+}
+
+/*---------------------------------------------
+ * CT Highlight Widget
+ *--------------------------------------------*/
+
+.saved-highlight {
+
+	max-width: 340px;
+	display: inline-block;
+
+	// Rounded corners
+
+	&,
+	.saved-caption-image,
+	.saved-caption-image-inner,
+	.saved-caption-image-brightness,
+	.saved-caption-image-gradient,
+	img {
+		border-radius: $box-border-radius;
+	}
+
+	// Avoid double line above title
+	// It's in h2 within this element
+
+	.saved-caption-image-title {
+		@include saved-remove-heading-line();
+	}
+
+}
+
+/*---------------------------------------------
+ * CT Gallery Widget
+ *--------------------------------------------*/
+
+// Note there is a buttom margin on gallery thumbnails that could be improved by removal
+
+// Gallery container
+
+.saved-widget .gallery {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+// Link
+
+.saved-gallery-widget-link { // holds <a>
+
+	margin-top: ct-em(30);
+	font-size: 0.9em;
+	text-align: center;
+
+	.saved-button {
+		font-size: 1.1em;
+	}
+
+}
+
+/*---------------------------------------------
+ * CT Giving Widget
+ *--------------------------------------------*/
+
+// Giving Widget
+
+.saved-giving-widget-button {
+	margin-top: ct-em(35);
+}
+
+/*---------------------------------------------
+ * MailChimp for WordPress Widget
+ *--------------------------------------------*/
+
+.widget_mc4wp_form_widget {
+
+	p:first-child {
+		font-size: 1.3em;
+		//font-style: italic;
+	}
+
+	.mc4wp-form-fields > * {
+		margin-bottom: 0;
+	}
+
+	input[type=email] {
+		width: 100%;
+		font-size: 1.2em;
+	}
+
+	input[type=submit] {
+		@extend .saved-button-large;
+	}
+
+}

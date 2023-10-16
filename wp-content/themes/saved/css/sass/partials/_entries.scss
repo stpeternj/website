@@ -1,0 +1,732 @@
+
+// These are generic styles used by multiple post types
+// NotE: Homepage and Footer may extend this for custom layout
+// See homepage.scss, footer.scscc and the *-home.php widget templates
+
+/*---------------------------------------------
+ * Shared Styles (Full + Short + Comments)
+ *--------------------------------------------*/
+
+// Entry Content (full content, short excerpt and comment content use this; also editor in admin)
+
+.saved-entry-content,
+.saved-entry-content-inner,
+.mce-content-body {
+
+	position: relative; // helps content stay on top gradient BG's
+
+	font-size: $entry-font-size;
+	line-height: $line-height-content;
+
+	> :first-child {
+		margin-top: 0 !important; // remove margin from first element (probably <p>)
+	}
+
+	> :last-child {
+		margin-bottom: 0 !important; // remove margin from last element (probably <p>)
+	}
+
+}
+
+// Meta List Icons (Short + Compact)
+
+.saved-entry-short-icons,
+.saved-entry-compact-icons {
+
+	li {
+		position: relative;
+		top: ct-em(1.5);
+		line-height: 0;
+	}
+
+		.saved-icon {
+			position: relative;
+			font-size: 1.15em;
+			font-style: normal;
+			color: $text-color-dark;
+		}
+
+		// Adjustments
+
+		.saved-icon-video-watch {
+			font-size: 1.3em;
+			top: ct-em(0.8);
+		}
+
+
+		.saved-icon-audio-listen {
+			font-size: 1.1em;
+		}
+
+		.saved-icon-pdf-download {
+			top: ct-em(-0.8);
+			font-size: 1.02em;
+		}
+
+}
+
+/*---------------------------------------------
+ * Full / Single
+ *--------------------------------------------*/
+
+// Prevent horizontal scroll
+
+@media only screen and (max-width: 600px) {
+
+	.saved-entry-full-content {
+	  overflow: hidden;
+	}
+
+}
+
+// Enlarge font size
+
+.saved-entry-full, // single post/page
+.archive #saved-content-inner, // treat archive similarly
+.blog #saved-content-inner,
+.search #saved-content-inner {
+
+	// Larger size for main article content
+
+	& > .saved-entry-content {
+
+		@extend .saved-enlarged;
+
+		// On loop of short entries show regular size
+
+		#saved-loop-after-content {
+			font-size: $enlarged-font-size-reverse;
+		}
+
+	}
+
+}
+
+// Don't let floated image near bottom eat the footer
+
+.saved-entry-full-content {
+	@extend .saved-clearfix;
+}
+
+// Margin between content and loop after content (short entries)
+
+.saved-entry-full .saved-entry-content-inner,
+.archive #saved-content-inner > .saved-entry-content,
+.blog #saved-content-inner > .saved-entry-content,
+.search #saved-content-inner > .saved-entry-content
+{
+	@extend .saved-vertical-margin-bottom-medium;
+}
+
+// Make certain content exceed content width (Blockquote, Gallery, Image)
+
+.saved-exceed-700-980 {
+	margin-left: -140px; // move it out so width is exactly 980
+	margin-right: -140px;
+}
+
+.saved-exceed-980-1170 {
+	margin-left: -70px; // move it out so width is exactly 980
+	margin-right: -70px;
+}
+
+// Entry Header
+
+.saved-entry-full-header {
+	@extend .saved-vertical-margin-bottom-small;
+	padding-bottom: ct-em(8);
+	overflow: hidden; // prevent horizontal scroll on mobile from negative margins
+}
+
+// Entry Map (in header) - Event, Location
+
+.saved-entry-full-map {
+
+	@extend .saved-no-viewport-padding; // make it fit 100% to viewport on smaller screens
+	@extend .saved-vertical-margin-bottom-large;
+
+	.saved-map-section,
+	#saved-map-section-canvas {
+		max-height: 350px;
+	}
+
+}
+
+    // Darker gradient starting beneath map section to contrast with white content background
+
+	.saved-entry-full-map .saved-map-section::after { // only if has content or can cover up prev/next blocks
+
+		display: block;
+		position: absolute;
+		bottom: 0;
+		height: 10em !important;
+		width: 100% !important;
+		margin-bottom: -10em;
+		content: '';
+
+		background: -moz-linear-gradient(top,  rgba(252,252,252,1) 5em, rgba(252,252,252,0) 10em); /* FF3.6-30 */
+		background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 5em,rgba(252,252,252,0) 10em); /* Chrome10-252,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(252,252,252,1) 5em,rgba(252,252,252,0) 10em); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+	}
+
+	// Show contents above darker gradient below map section
+
+	.saved-entry-full > *:not(.saved-entry-full-map),
+	.saved-nav-blocks,
+	#comments {
+		z-index: 10;
+		position: relative;
+	}
+
+	// Push contents below map down when no content
+	// Keeps prev/next blocks from being covered by gradient
+
+	.saved-entry-no-content .saved-entry-full-map {
+		margin-bottom: 10em;
+	}
+
+// Meta List
+
+.saved-entry-full-meta { // <ul>
+
+	$vertical-margin: ct-em(10);
+	$vertical-margin-buttons: ct-em(28);
+	$horizontal-margin: ct-em(28);
+
+	margin: (-$vertical-margin) (-$horizontal-margin) 0 0; // negative of li right margin; see overflow: hidden on .saved-entry-header
+
+	.saved-entry-meta-has-buttons & {
+		margin: (-$vertical-margin-buttons) (-$horizontal-margin) 0 0; // negative of li right margin; see overflow: hidden on .saved-entry-header
+	}
+
+	padding-top: ct-em(5); // account for line height
+	padding-bottom: ct-em(1); // keeps bottom of .saved-button from being cutoff on mobile
+	list-style: none;
+	font-size: 0.95em;
+	text-align: center;
+
+	> li {
+
+		@extend .saved-dark;
+
+		margin: $vertical-margin $horizontal-margin 0 0;
+
+		.saved-entry-meta-has-buttons & {
+			margin: $vertical-margin-buttons $horizontal-margin 0 0;
+		}
+
+		display: inline-block;
+		max-width: ct-em(350);
+		vertical-align: top;
+		line-height: 1.4;
+		text-align: left;
+
+		a {
+
+			font-style: normal;
+			position: relative;
+			top: ct-em(-1);
+			white-space: nowrap; // help with Safari issue
+
+			&.mdi { // icon
+				border: 0 !important;
+			}
+
+		}
+
+		// Dates, etc. are important
+
+		&.saved-entry-full-date,
+		&.saved-entry-full-meta-bold {
+
+			font-weight: bold;
+			font-style: normal;
+
+			@include saved-uppercase();
+
+		}
+
+	}
+
+}
+
+	// Buttons
+
+	.saved-entry-full-meta-buttons {
+
+		position: relative;
+		top: ct-em(-3);
+
+		a {
+			margin-right: ct-em(7);
+		}
+
+	}
+
+	.saved-entry-full-meta-second-line {
+
+		text-transform: none;
+		font-style: italic;
+		font-weight: normal;
+
+		a {
+			font-weight: bold;
+		}
+
+	}
+
+// Smaller icons in entry meta (see Person)
+
+.saved-entry-full-icons {
+	font-size: 1.1em;
+	position: relative;
+	top: ct-em(1);
+}
+
+// Make blockquote exceed bounds horizontally (only on narrow width)
+
+.saved-content-width-700 .saved-entry-full-content > blockquote { // not on short view (first level)
+	@extend .saved-exceed-700-980;
+}
+
+// Make gallery exceed bounds horizontally
+
+.saved-content-width-700 .saved-entry-full-content > .gallery { // not on short view (first level)
+	@extend .saved-exceed-700-980;
+}
+
+// Make single image in content exceed bounds horizontally
+
+.saved-image-exceed-700-980 { // <p> that contains img
+	@extend .saved-exceed-700-980;
+}
+
+// Entry Footer
+
+.saved-entry-full-footer {
+	@extend .saved-vertical-margin-top-medium;
+}
+
+	// Item such as for terms
+
+	.saved-entry-full-footer-item {
+
+		@extend .saved-dark;
+
+		margin: ct-em(20) 0;
+		text-align: center;
+		font-size: 0.95em;
+		font-style: italic;
+
+		&:first-child {
+			margin-top: 0; // no margin on first item
+		}
+
+	}
+
+		// Term Lists (categories, tags, etc.)
+
+		.saved-entry-full-footer-terms {
+
+			margin-top: ct-em(10);
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+		}
+
+	// Multipage Navigation (Prev/Next)  - for posts/pages broken into multiple pages
+
+	.saved-entry-full-page-nav { // .saved-buttons-list
+
+		text-align: center;
+
+		li {
+			margin: 0 ct-em(8);
+		}
+
+		.saved-entry-full-footer-has-terms & {
+			@extend .saved-vertical-margin-medium;
+		}
+
+		.saved-entry-full-footer-no-terms.saved-no-comments-section & {
+			position: relative;
+			top: ct-em(-18);
+			padding-top: ct-em(18);
+		}
+
+
+	}
+
+// Password Protection Form
+
+.post-password-form {
+
+	font-size: $enlarged-font-size-reverse;
+
+	label {
+		font-weight: 600;
+	}
+
+	input[type=password] {
+		display: block; // force "Password:" and submit button to their own lines
+		margin: 20px 0;
+	}
+
+}
+
+/*---------------------------------------------
+ * Short / Multiple
+ *--------------------------------------------*/
+
+// Short Entry
+// Note: Also used by entry widgets and event calendar hovers / mobile list
+
+.saved-entry-short { // space between each <article>
+
+	@include saved-box();
+	position: relative;
+	background-color: #fff;
+	overflow: hidden;
+
+	// Fade excerpt out after max-height
+
+	&.saved-entry-has-excerpt {
+
+		// Add gradient layer to bottom
+
+		&::after {
+
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			height: 25px;
+			opacity: 0.9;
+
+			// Gradient
+			background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+		}
+
+	}
+
+}
+
+	// Label (usually a date)
+
+	.saved-entry-short-label {
+
+		margin: 0;
+		padding: 5px 7px;
+		border-top-left-radius: $box-border-radius;
+		border-bottom-right-radius: $box-border-radius;
+		line-height: 1.1;
+		font-size: 0.75em;
+		font-weight: normal;
+		color: #fff;
+		float: left;
+
+		@include saved-uppercase();
+
+		// On top of image if present
+
+		.saved-entry-has-image & {
+			position: absolute;
+			//top: 0;
+			left: 0;
+			z-index: 1; // above image
+		}
+
+	}
+
+	// Image - flush with edge
+
+	.saved-entry-short-image {
+
+		display: block;
+		position: relative;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+
+		img {
+			display: block; // fixes line at top of image at certain screen sizes
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+	}
+
+	// Inner - below image
+
+	.saved-entry-short-inner {
+
+		clear: both;
+		padding: ct-em(16) ct-em(18);
+
+		// Vertical margin between elements
+
+		$element-margin: ct-em(11);
+
+		> *,
+		.saved-entry-short-header > * {
+
+			margin-top: $element-margin;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+		}
+
+		// Links - remove underline styling
+
+		.saved-entry-short-meta a,
+		.saved-entry-content-short a {
+			border-width: 0;
+			font-weight: normal;
+		}
+
+		// Heading
+
+		h2 {
+			margin-bottom: 0;
+			font-size: 0.95em !important; // smaller, but same size as body font links
+			text-transform: none !important;
+			line-height: 1.5;
+		}
+
+	}
+
+		// Meta
+
+		.saved-entry-short-meta { // <ul>
+
+			@extend .saved-clearfix;
+
+			margin-left: ct-em(-7);
+			margin-right: ct-em(-7);
+			margin-bottom: ct-em(-1.5) !important;
+			font-size: 0.8em;
+			font-style: italic;
+
+			> li {
+
+				@extend .saved-dark;
+
+				float: left;
+				margin: 0 ct-em(7);
+				padding: ct-em(2) 0;
+				display: inline-block;
+				vertical-align: top;
+				line-height: 1.4;
+
+			}
+
+				a {
+					font-style: italic !important;
+					border: 0 !important;
+					font-weight: normal !important;
+					color: $text-color-dark;
+				}
+
+
+		}
+
+			.saved-entry-short-separator {
+				@extend .saved-light;
+				margin: 0 ct-em(3);
+			}
+
+			.saved-entry-short-secondary {
+				color: $text-color;
+				font-style: italic;
+			}
+
+		.saved-entry-content-short {
+			font-size: 0.75em;
+			line-height: 1.45;
+		}
+
+// Columns
+
+.saved-loop-four-columns {
+	@include saved-loop-four-columns();
+}
+
+.saved-loop-three-columns {
+	@extend .saved-centered-medium;
+	@include saved-loop-three-columns();
+}
+
+.saved-loop-two-columns {
+	@extend .saved-centered-small;
+	@include saved-loop-two-columns();
+}
+
+.saved-loop-one-column {
+	@extend .saved-centered-small;
+	@include saved-loop-one-column();
+}
+
+// Sticky posts - required class
+
+.sticky {
+	display: block;
+}
+
+/*---------------------------------------------
+ * Compact
+ *--------------------------------------------*/
+
+$compact-image-width: 100px;
+$compact-image-max-width: 35%;
+
+// Compact Entry
+// Used by widgets in footer
+
+.saved-entry-compact { // space between each <article>
+	@include saved-box();
+	background-color: #fff;
+
+}
+
+	// Header (Image Left + Title/Meta Right)
+
+	.saved-entry-compact-header {
+
+		@extend .saved-clearfix;
+		overflow: hidden; // see 1px notes below
+
+		// Image Left + Title/Meta Right
+
+		> div {
+			float: left;
+			vertical-align: top;
+		}
+
+	}
+
+		// Left - Image
+
+		.saved-entry-compact-image {
+
+			// The 1px stuff below keeps a 1px line from appearing at certain screen sizes
+			// See hidden overflow in .saved-entry-compact-header
+
+			width: $compact-image-width;
+			max-width: $compact-image-max-width;
+			position: relative;
+			overflow: hidden;
+
+			img {
+				display: block; // fixes line at top of image at certain screen sizes
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+
+			// Date
+
+			time {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				border-top-left-radius: $box-border-radius;
+				border-bottom-right-radius: $box-border-radius;
+				padding: ct-em(8) ct-em(9);
+				line-height: 1;
+				font-size: 0.8em;
+				color: #fff;
+
+				@include saved-uppercase();
+
+			}
+
+		}
+
+		// Right - Title & Meta
+
+		.saved-entry-compact-right {
+
+			width: calc( 100% - #{$compact-image-width} );
+			min-width: calc( 100% - #{$compact-image-max-width} );
+			padding: ct-em(13) ct-em(16) ct-em(11) ct-em(16);
+
+			.saved-entry-has-excerpt & {
+				padding-bottom: 0;
+			}
+
+			// Full width if no image
+
+			.saved-entry-no-image & {
+				width: 100% !important;
+			}
+
+			// Heading
+
+			h3 { // h3 is entry widget
+
+				margin-bottom: 0;
+				line-height: 1.4;
+				font-size: 0.95em !important;
+				text-transform: none !important;
+
+				a {
+					@extend .saved-dark;
+				}
+
+			}
+
+		}
+
+			// Meta
+
+			.saved-entry-compact-meta { // <ul>
+
+				@extend .saved-clearfix;
+
+				margin-top: ct-em(5);
+				margin-bottom: ct-em(-3) !important;
+				margin-left: ct-em(-8);
+				margin-right: ct-em(-8);
+				padding-top: ct-em(2);
+
+				> li {
+					@extend .saved-dark;
+					margin: ct-em(3) ct-em(8) !important;
+					display: block;
+					float: left;
+					vertical-align: top;
+					font-size: 0.9em;
+					font-style: italic;
+					line-height: 1.4;
+				}
+
+				a {
+					color: $text-color-dark;
+				}
+
+			}
+
+		// Content / Excerpt
+
+		.saved-entry-content-compact {
+
+			margin-top: ct-em(11);
+			padding: 0 ct-em(16) ct-em(14) ct-em(16);
+			font-size: 0.85em;
+			line-height: 1.45;
+
+			.saved-entry-no-image & {
+				margin-top: ct-em(9);
+			}
+
+		}
