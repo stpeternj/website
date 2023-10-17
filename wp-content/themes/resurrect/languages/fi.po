@@ -1,0 +1,3165 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Resurrect\n"
+"POT-Creation-Date: 2021-09-15 14:44-0500\n"
+"PO-Revision-Date: 2021-09-15 14:44-0500\n"
+"Last-Translator: churchthemes.com <contact@churchthemes.com>\n"
+"Language-Team: Kaj Kiviniemi\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_nx:1,2;_x:1,2c;_ex:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:1,2,3c\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: comment.php:48
+#, php-format
+msgid "%s Reply"
+msgstr "%s vastaus"
+
+#: comment.php:49
+msgid "Log in to Reply"
+msgstr "Kirjaudu sisään vastataksesi"
+
+#: comment.php:56
+#, php-format
+msgctxt "comment"
+msgid "%s Edit"
+msgstr "%s Muokkaa"
+
+#: comment.php:70
+msgctxt "comments"
+msgid "(Author)"
+msgstr "Julkaisija"
+
+#: comment.php:76
+msgid "(Trackback)"
+msgstr "(Trackback)"
+
+#: comment.php:78
+msgid "(Pingback)"
+msgstr "(Pingback)"
+
+#: comment.php:90
+#, php-format
+msgctxt "comments"
+msgid "%3$s <span class=\"resurrect-comment-time\">at %4$s</span>"
+msgstr "%3$s <span class=\"resurrect-comment-time\">%4$s</span>"
+
+#: comment.php:103
+msgid "Your comment is awaiting moderation."
+msgstr "Kommenttisi odottaa moderointia."
+
+#: comments.php:29
+msgctxt "password protected"
+msgid "Comments"
+msgstr "Kommentit"
+
+#: comments.php:33
+msgid "Enter the password above to view any comments."
+msgstr "Kirjoita salasana näyttääksesi kommentit."
+
+#: comments.php:44
+#, php-format
+msgid "One Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "Yksi kommentti"
+msgstr[1] "%1$s kommenttia"
+
+#: comments.php:68
+#, php-format
+msgid " %s Older Comments"
+msgstr " %s vanhempia kommentteja"
+
+#: comments.php:69
+#, php-format
+msgid "Newer Comments %s"
+msgstr "Uudempia kommentteja %s"
+
+#: comments.php:83
+msgctxt "comment form"
+msgid "Add a Comment"
+msgstr "Lisää kommentti"
+
+#: comments.php:84
+#, php-format
+msgid "Add a Reply to %s"
+msgstr "Vastaa %s :lle"
+
+#: comments.php:85
+msgctxt "comment form"
+msgid "Cancel"
+msgstr "Peruuta"
+
+#: comments.php:86
+msgctxt "comment form"
+msgid "Add Comment"
+msgstr "Lisää kommentti"
+
+#: comments.php:96
+msgid "Commenting has been turned off."
+msgstr "Kommentointi poistettu käytöstä."
+
+#: content-attachment-header.php:25
+#, php-format
+msgid "Uploaded %s"
+msgstr "Lähetetty %s"
+
+#: content-attachment.php:46
+#, php-format
+msgid "Download %s"
+msgstr "Ladattu %s"
+
+#: content-event-header.php:67
+msgid "Excluded Dates"
+msgstr ""
+
+#: content-event.php:57
+msgctxt "event"
+msgid "Get Directions"
+msgstr "Hanki ajo-ohjeet"
+
+#: content-event.php:68 content-footer-short.php:134
+msgctxt "event"
+msgid "Register"
+msgstr ""
+
+#: content-footer-full.php:19 content-footer-full.php:30
+#: content-footer-full.php:36 content-footer-full.php:46
+#: content-post-header.php:39 content-sermon-header.php:34
+#: content-sermon-header.php:41 content-sermon-header.php:48
+#: widget-templates/widget-events.php:1 widget-templates/widget-sermons.php:67
+#: widget-templates/widget-sermons.php:73
+#: widget-templates/widget-sermons.php:79
+#: widget-templates/widget-sermons.php:85
+msgid ", "
+msgstr ", "
+
+#: content-footer-full.php:20 content-footer-full.php:37
+#, php-format
+msgid "Tagged with %s"
+msgstr "Tägätty %s"
+
+#: content-footer-full.php:31
+#, php-format
+msgid "Series: %s"
+msgstr "Sarjat: %s"
+
+#: content-footer-full.php:69
+msgid "Pages:"
+msgstr "Sivut:"
+
+#: content-footer-full.php:105
+#, php-format
+msgid "%1$s Edit %2$s"
+msgstr "%1$s Muokkaa %2$s"
+
+#: content-footer-short.php:48
+msgid "Read"
+msgstr "Lue"
+
+#: content-footer-short.php:50
+msgctxt "sermon button"
+msgid "Details"
+msgstr "Lisätiedot"
+
+#: content-footer-short.php:59
+msgid "Watch"
+msgstr "Katso"
+
+#: content-footer-short.php:68
+msgid "Listen"
+msgstr "Kuuntele"
+
+#: content-footer-short.php:75 content-sermon.php:170
+msgid "Download PDF"
+msgstr "Lataa PDF"
+
+#: content-footer-short.php:77
+msgid "PDF"
+msgstr "PDF"
+
+#: content-footer-short.php:97
+msgid "Location Details"
+msgstr "Paikan yksityistiedot"
+
+#: content-footer-short.php:102 content-footer-short.php:126
+#: page-templates/events-calendar.php:560
+msgid "Directions"
+msgstr "Ajo-ohjeet"
+
+#: content-footer-short.php:121
+msgid "Event Details"
+msgstr "Tapahtuman lisätiedot"
+
+#: content-footer-short.php:151
+msgid "Read Biography"
+msgstr "Lue esittely"
+
+#: content-footer-short.php:165
+msgid "View Gallery"
+msgstr "Avaa galleria"
+
+#: content-footer-short.php:187
+msgid "Read More"
+msgstr "Lue lisää"
+
+#: content-footer-short.php:193
+#, php-format
+msgid "View %s"
+msgstr "Avaa %s"
+
+#: content-location.php:45
+msgctxt "location"
+msgid "Get Directions"
+msgstr "Hanki ajo-ohjeet"
+
+#: content-sermon.php:136
+msgid "Show Video Player"
+msgstr "Näytä videosoitin"
+
+#: content-sermon.php:145
+msgid "Show Audio Player"
+msgstr "Näytä audiosoitin"
+
+#: content-sermon.php:152
+msgid "Download Video"
+msgstr "Lataa video"
+
+#: content-sermon.php:154
+msgid "Save Video"
+msgstr "Tallenna video"
+
+#: content-sermon.php:161
+msgid "Download Audio"
+msgstr "Lataa audio"
+
+#: content-sermon.php:163
+msgid "Save Audio"
+msgstr "Tallenna audio"
+
+#: content-sermon.php:172
+msgid "Save PDF"
+msgstr "Tallenna PDF"
+
+#: footer.php:28
+msgid "View Full Site"
+msgstr "Siirry täysversioon"
+
+#: footer.php:32
+msgid "View Mobile Site"
+msgstr "Siirry mobiilisivustoon"
+
+#: framework/includes/admin/admin-taxonomies.php:80
+#, fuzzy, php-format
+#| msgid ""
+#| "<b>Custom Ordering:</b> Try <a href=\"%s\" target=\"_blank\">this plugin</"
+#| "a> for custom ordering your %s."
+msgid ""
+"<b>Custom Ordering:</b> Try <a href=\"%s\" target=\"_blank\" rel=\"noopener "
+"noreferrer\">this plugin</a> for custom ordering your %s."
+msgstr ""
+"<b>Muokattu lajittelu:</b> Kokeile <a href=\"%s\" target=\"_blank\">tätä "
+"lisäosaa</a> %s muokattuun lajitteluun."
+
+#: framework/includes/admin/admin-widgets.php:33
+msgctxt "widget image library"
+msgid "Choose Image for Widget"
+msgstr "Valitse kuva widgetille"
+
+#: framework/includes/admin/admin-widgets.php:34
+msgctxt "widget image library"
+msgid "Use in Widget"
+msgstr "Käytä widgetissä"
+
+#: framework/includes/admin/admin-widgets.php:64
+msgid "Sorry, this widget is not made for use in this area. Please delete."
+msgstr ""
+"Valitettavasti tätä widgettiä ei voida käyttää tässä. Ole hyvä ja poista."
+
+#: framework/includes/admin/edd-license.php:76
+msgid "<strong>License key could not be activated.</strong>"
+msgstr "<strong>Lisenssiä ei voitu aktivoida.</strong>"
+
+#: framework/includes/admin/edd-license.php:77
+#, php-format
+msgid ""
+"<strong>Theme License Inactive:</strong> <a href=\"%1$s\">Activate Your "
+"Theme License</a> to enable updates for the <strong>%2$s</strong> theme."
+msgstr ""
+"<strong>Teeman lisenssi ei-aktiivinen:</strong> <a href=\"%1$s\">Aktivoi "
+"teeman lisenssi</a> voidaksesi päivittää <strong>%2$s</strong> -teeman."
+
+#: framework/includes/admin/edd-license.php:78
+#, php-format
+msgid ""
+"<strong>Theme License Expired:</strong> <a href=\"%1$s\">Renew Your Theme "
+"License</a> to re-enable updates for the <strong>%2$s</strong> theme "
+"(expired on <strong>%3$s</strong>)."
+msgstr ""
+"<strong>Teeman lisenssi umpeutunut:</strong> <a href=\"%1$s\">Uusi lisenssi</"
+"a> mahdollistaaksesi päivitykset <strong>%2$s</strong> -teemalle (umpeutunut "
+"<strong>%3$s</strong>)."
+
+#: framework/includes/admin/edd-license.php:79
+#, php-format
+msgid ""
+"<strong>Theme License Expired:</strong> Ask %6$s to renew their <a href="
+"\"%1$s\">Theme License</a> for <strong>%2$s</strong> to re-enable updates "
+"for your site (expired <strong>%3$s</strong>)."
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:80
+#, php-format
+msgid ""
+"<strong>Theme License Expiring Soon:</strong> <a href=\"%1$s\">Renew Your "
+"Theme License</a> to continue receiving updates for the <strong>%2$s</"
+"strong> theme (expires on <strong>%3$s</strong>)."
+msgstr ""
+"<strong>Teeman lisenssi umpeutumassa:</strong> <a href=\"%1$s\">Uusi "
+"lisenssi</a> voidaksesi päivittää jatkossa <strong>%2$s</strong> -teeman "
+"(umpeutuu <strong>%3$s</strong>)."
+
+#: framework/includes/admin/edd-license.php:125
+msgid ""
+"If you have modified theme files directly (not common), your changes will be "
+"overwritten (make a child theme instead). Click \"Cancel\" to stop or \"OK\" "
+"to update the theme."
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:126
+#, fuzzy, php-format
+#| msgid ""
+#| "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\"%4$s>Update Now</"
+#| "a> or read the <a href=\"%5$s\" target=\"_blank\">Changelog</a>."
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" target=\"_blank\" "
+"rel=\"noopener noreferrer\">Check out what's new</a> or <a href=\"%5$s"
+"\"%6$s>update now</a>."
+msgstr ""
+"<strong>%1$s %2$s</strong> on saatavilla. <a href=\"%3$s\"%4$s>Päivitä nyt</"
+"a> tai lue <a href=\"%5$s\" target=\"_blank\">muutosloki</a>."
+
+#: framework/includes/admin/edd-license.php:403
+msgctxt "license expiration"
+msgid "unknown date"
+msgstr "tuntematon päivämäärä"
+
+#: framework/includes/admin/edd-license.php:429
+#: framework/includes/admin/edd-license.php:455
+msgctxt "page title"
+msgid "Theme License"
+msgstr "Teeman lisenssi"
+
+#: framework/includes/admin/edd-license.php:430
+msgctxt "menu title"
+msgid "Theme License"
+msgstr "Teeman lisenssi"
+
+#: framework/includes/admin/edd-license.php:472
+msgctxt "heading"
+msgid "License Key"
+msgstr "Lisenssiavain"
+
+#: framework/includes/admin/edd-license.php:481
+msgid "License Key"
+msgstr "Lisenssiavain"
+
+#: framework/includes/admin/edd-license.php:495
+msgid "Save Key"
+msgstr "Tallenna avain"
+
+#: framework/includes/admin/edd-license.php:499
+#: framework/includes/admin/edd-license.php:508
+msgid "License Status"
+msgstr "Lisenssin tila"
+
+#: framework/includes/admin/edd-license.php:515
+msgctxt "license key"
+msgid "Active"
+msgstr "Aktiivinen"
+
+#: framework/includes/admin/edd-license.php:518
+msgctxt "license status"
+msgid "Expiring Soon"
+msgstr "Umpeutumassa"
+
+#: framework/includes/admin/edd-license.php:523
+msgctxt "license key"
+msgid "Expired"
+msgstr "Umpeutunut"
+
+#: framework/includes/admin/edd-license.php:527
+msgctxt "license key"
+msgid "Inactive"
+msgstr "Ei-aktiivinen"
+
+#: framework/includes/admin/edd-license.php:540
+msgid "License Expiration"
+msgstr "Lisenssin vanheneminen"
+
+#: framework/includes/admin/edd-license.php:561
+msgid "Deactivate License"
+msgstr "Deaktivoi lisenssi"
+
+#: framework/includes/admin/edd-license.php:565
+msgid "Activate License"
+msgstr "Aktivoi lisenssi"
+
+#: framework/includes/admin/edd-license.php:572
+msgid "Renew License"
+msgstr "Uudista lisenssi"
+
+#: framework/includes/admin/edd-license.php:862
+msgid "your website provider"
+msgstr ""
+
+#: framework/includes/archives.php:281 framework/includes/content-types.php:684
+#, php-format
+msgctxt "month archive"
+msgid "%1$s %2$d"
+msgstr "%1$s Muokkaa %2$d"
+
+#: framework/includes/classes/breadcrumbs.php:55
+msgctxt "breadcrumb separator"
+msgid " > "
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:242
+msgctxt "breadcrumb year format"
+msgid "Y"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:259
+msgctxt "breadcrumb month format"
+msgid "F"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:276
+msgctxt "breadcrumb day format"
+msgid "jS"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:326
+msgctxt "sermon breadcrumb"
+msgid "Sermons"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:327
+msgctxt "sermon breadcrumb"
+msgid "Topics"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:328
+msgctxt "sermon breadcrumb"
+msgid "Series"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:329
+msgctxt "sermon breadcrumb"
+msgid "Books"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:330
+msgctxt "sermon breadcrumb"
+msgid "Speakers"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:331
+msgctxt "sermon breadcrumb"
+msgid "Dates"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:366
+#, php-format
+msgctxt "breadcrumb"
+msgid "Page %s"
+msgstr "Sivu %s"
+
+#: framework/includes/classes/breadcrumbs.php:377
+msgctxt "breadcrumb"
+msgid "Search Results"
+msgstr "Hakutulokset"
+
+#: framework/includes/classes/breadcrumbs.php:571
+msgctxt "breadcrumbs"
+msgid "Home"
+msgstr "Koti"
+
+#: framework/includes/classes/customize-controls.php:71
+#: framework/includes/classes/customize-controls.php:147
+msgid "Colorable"
+msgstr "Väritettävissä"
+
+#: framework/includes/classes/customize-controls.php:87
+msgid "The selected image is <strong>colorable</strong>."
+msgstr "Valittu kuva on <strong>väritettävissä</strong>."
+
+#: framework/includes/classes/customize-controls.php:124
+msgctxt "customizer"
+msgid "Presets"
+msgstr "Esiasetukset"
+
+#: framework/includes/classes/widget-archives.php:34
+msgctxt "widget"
+msgid "CT Archives"
+msgstr ""
+
+#: framework/includes/classes/widget-archives.php:36
+msgid "Monthly archive for chosen post type"
+msgstr "Kuukausiarkisto valitulle julkaisutyypille"
+
+#: framework/includes/classes/widget-archives.php:85
+msgctxt "archives widget"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-archives.php:97
+msgctxt "archives widget title default"
+msgid "Archives"
+msgstr "Arkistot"
+
+#: framework/includes/classes/widget-archives.php:111
+msgctxt "archives widget"
+msgid "Type"
+msgstr "Tyyppi"
+
+#: framework/includes/classes/widget-archives.php:137
+msgctxt "archives widget"
+msgid "Limit"
+msgstr "Rajoitus"
+
+#: framework/includes/classes/widget-archives.php:139
+msgctxt "archives widget"
+msgid "Set to 0 for no limit."
+msgstr "Aseta 0 ilman rajoitusta."
+
+#: framework/includes/classes/widget-archives.php:170
+msgctxt "archives widget"
+msgid "Show counts"
+msgstr "Näytä lukumäärät"
+
+#: framework/includes/classes/widget-archives.php:193
+msgctxt "archives widget"
+msgid "Show as dropdown"
+msgstr "Näytä alasvetovalikkona"
+
+#: framework/includes/classes/widget-archives.php:250
+msgctxt "archives widget"
+msgid "Blog"
+msgstr "Blogi"
+
+#: framework/includes/classes/widget-categories.php:34
+msgctxt "widget"
+msgid "CT Categories"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:36
+msgid "Shows categories of various types"
+msgstr "Näyttää erityyppisiä kategorioita"
+
+#: framework/includes/classes/widget-categories.php:88
+msgctxt "categories widget"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-categories.php:100
+msgctxt "categories widget title default"
+msgid "Categories"
+msgstr "Kategoriat"
+
+#: framework/includes/classes/widget-categories.php:114
+msgctxt "categories widget"
+msgid "Type"
+msgstr "Tyyppi"
+
+#: framework/includes/classes/widget-categories.php:140
+msgctxt "categories widget"
+msgid "Order By"
+msgstr "Järjestä"
+
+#: framework/includes/classes/widget-categories.php:149
+msgctxt "categories widget order by"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-categories.php:150
+msgctxt "categories widget order by"
+msgid "Date"
+msgstr "Päivämäärä"
+
+#: framework/includes/classes/widget-categories.php:151
+msgctxt "categories widget order by"
+msgid "Post Count"
+msgstr "Julkaisujen lkm"
+
+#: framework/includes/classes/widget-categories.php:179
+msgctxt "categories widget order"
+msgid "Low to High"
+msgstr "Pienimmästä suurimpaan"
+
+#: framework/includes/classes/widget-categories.php:180
+msgctxt "categories widget order"
+msgid "High to Low"
+msgstr "Suurimmasta pienimpään"
+
+#: framework/includes/classes/widget-categories.php:199
+msgctxt "categories widget"
+msgid "Limit"
+msgstr "Rajoitus"
+
+#: framework/includes/classes/widget-categories.php:201
+msgctxt "categories widget"
+msgid "Set to 0 for unlimited."
+msgstr "0 = rajoittamaton."
+
+#: framework/includes/classes/widget-categories.php:232
+msgctxt "categories widget"
+msgid "Show counts"
+msgstr "Näytä lukumäärät"
+
+#: framework/includes/classes/widget-categories.php:258
+msgctxt "categories widget"
+msgid "Show hierarchy"
+msgstr "Näytä hierarkia"
+
+#: framework/includes/classes/widget-categories.php:281
+msgctxt "categories widget"
+msgid "Show as dropdown"
+msgstr "Näytä alasvetovalikkona"
+
+#: framework/includes/classes/widget-categories.php:331
+msgctxt "categories widget"
+msgid "Blog Categories"
+msgstr "Blogikategoriat"
+
+#: framework/includes/classes/widget-categories.php:333
+msgctxt "categories widget"
+msgid "Blog Tags"
+msgstr "Blogi tagit"
+
+#: framework/includes/classes/widget-events.php:32
+msgctxt "events widget"
+msgid "CT Events"
+msgstr ""
+
+#: framework/includes/classes/widget-events.php:34
+msgctxt "events widget"
+msgid "Shows upcoming or past events"
+msgstr "Näyttää tulevia tai menneitä tapahtumia"
+
+#: framework/includes/classes/widget-events.php:83
+msgctxt "events widget"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-events.php:95
+msgctxt "events widget title default"
+msgid "Events"
+msgstr "Tapahtumat"
+
+#: framework/includes/classes/widget-events.php:109
+msgctxt "events widget"
+msgid "Period"
+msgstr ""
+
+#: framework/includes/classes/widget-events.php:118
+msgctxt "events widget order"
+msgid "Upcoming"
+msgstr "Tulevat"
+
+#: framework/includes/classes/widget-events.php:119
+msgctxt "events widget order"
+msgid "Past"
+msgstr "Menneet"
+
+#: framework/includes/classes/widget-events.php:138
+msgctxt "events widget"
+msgid "Category"
+msgstr "Kategoria"
+
+#: framework/includes/classes/widget-events.php:147
+msgctxt "sermons widget"
+msgid "All Categories"
+msgstr "Kaikki kategoriat"
+
+#: framework/includes/classes/widget-events.php:166
+msgctxt "events widget"
+msgid "Limit"
+msgstr "Rajoitus"
+
+#: framework/includes/classes/widget-events.php:196
+#: framework/includes/classes/widget-locations.php:197
+msgctxt "events widget"
+msgid "Show image"
+msgstr "Näytä kuva"
+
+#: framework/includes/classes/widget-events.php:225
+msgctxt "events widget"
+msgid "Show date"
+msgstr "Näytä pvm"
+
+#: framework/includes/classes/widget-events.php:248
+msgctxt "events widget"
+msgid "Show time"
+msgstr "Näytä aika"
+
+#: framework/includes/classes/widget-events.php:277
+msgctxt "events widget"
+msgid "Show category"
+msgstr "Näytä kirjoittaja"
+
+#: framework/includes/classes/widget-events.php:300
+msgctxt "events widget"
+msgid "Show excerpt"
+msgstr "Näytä poiminto"
+
+#: framework/includes/classes/widget-events.php:322
+msgctxt "events widget"
+msgid "Image"
+msgstr ""
+
+#: framework/includes/classes/widget-galleries.php:36
+msgctxt "widget"
+msgid "CT Galleries"
+msgstr ""
+
+#: framework/includes/classes/widget-galleries.php:38
+msgid "Shows list of gallery pages"
+msgstr "Näyttää listan galleriasivuista"
+
+#: framework/includes/classes/widget-galleries.php:87
+msgctxt "galleries widget"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-galleries.php:99
+msgctxt "galleries widget title default"
+msgid "Galleries"
+msgstr "Galleriat"
+
+#: framework/includes/classes/widget-galleries.php:113
+msgctxt "galleries widget"
+msgid "Order By"
+msgstr "Järjestä"
+
+#: framework/includes/classes/widget-galleries.php:122
+msgctxt "galleries widget order by"
+msgid "Date Added"
+msgstr "Lisätty"
+
+#: framework/includes/classes/widget-galleries.php:123
+msgctxt "galleries widget order by"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-galleries.php:151
+msgctxt "galleries widget order"
+msgid "Low to High"
+msgstr "Pienimmästä suurimpaan"
+
+#: framework/includes/classes/widget-galleries.php:152
+msgctxt "galleries widget order"
+msgid "High to Low"
+msgstr "Suurimmasta pienimpään"
+
+#: framework/includes/classes/widget-galleries.php:171
+msgctxt "galleries widget"
+msgid "Limit"
+msgstr "Rajoitus"
+
+#: framework/includes/classes/widget-galleries.php:173
+msgctxt "galleries widget"
+msgid "Set to 0 for unlimited."
+msgstr "0 = rajoittamaton."
+
+#: framework/includes/classes/widget-gallery.php:32
+msgctxt "gallery widget"
+msgid "CT Gallery"
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:34
+msgid "Shows gallery thumbnails"
+msgstr "Näyttää gallerian pienoiskuvat"
+
+#: framework/includes/classes/widget-gallery.php:56
+msgctxt "gallery widget"
+msgid "All Galleries"
+msgstr "Kaikki galleriat"
+
+#: framework/includes/classes/widget-gallery.php:94
+msgctxt "gallery widget"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-gallery.php:106
+msgctxt "gallery widget title default"
+msgid "Gallery"
+msgstr "Galleria"
+
+#: framework/includes/classes/widget-gallery.php:120
+msgctxt "gallery widget"
+msgid "Gallery"
+msgstr "Galleria"
+
+#: framework/includes/classes/widget-gallery.php:150
+msgctxt "gallery widget"
+msgid "Show link to gallery"
+msgstr "Näytä linkki galleriaan"
+
+#: framework/includes/classes/widget-gallery.php:172
+msgctxt "gallery widget"
+msgid "Order By"
+msgstr "Järjestä"
+
+#: framework/includes/classes/widget-gallery.php:181
+msgctxt "gallery widget order by"
+msgid "Upload Date"
+msgstr "Lisäys pvm"
+
+#: framework/includes/classes/widget-gallery.php:182
+msgctxt "gallery widget order by"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-gallery.php:183
+msgctxt "gallery widget order by"
+msgid "Comment Count"
+msgstr "Kommenttien lkm"
+
+#: framework/includes/classes/widget-gallery.php:211
+msgctxt "gallery widget order"
+msgid "Low to High"
+msgstr "Pienimmästä suurimpaan"
+
+#: framework/includes/classes/widget-gallery.php:212
+msgctxt "gallery widget order"
+msgid "High to Low"
+msgstr "Suurimmasta pienimpään"
+
+#: framework/includes/classes/widget-gallery.php:231
+msgctxt "gallery widget"
+msgid "Limit"
+msgstr "Rajoitus"
+
+#: framework/includes/classes/widget-gallery.php:257
+msgctxt "gallery widget"
+msgid "Thumbnail Size"
+msgstr "Pienoiskuvan koko"
+
+#: framework/includes/classes/widget-gallery.php:266
+msgctxt "gallery widget"
+msgid "Small"
+msgstr "Pieni"
+
+#: framework/includes/classes/widget-gallery.php:267
+msgctxt "gallery widget"
+msgid "Medium"
+msgstr "Keskikoko"
+
+#: framework/includes/classes/widget-gallery.php:268
+msgctxt "gallery widget"
+msgid "Large"
+msgstr "Suuri"
+
+#: framework/includes/classes/widget-giving.php:32
+msgctxt "widget"
+msgid "CT Giving"
+msgstr ""
+
+#: framework/includes/classes/widget-giving.php:34
+msgid "Shows a message and button"
+msgstr "Näyttää viestin ja painikkeen"
+
+#: framework/includes/classes/widget-giving.php:83
+msgctxt "giving widget"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-giving.php:95
+msgctxt "giving widget default title"
+msgid "Giving"
+msgstr "Antaminen"
+
+#: framework/includes/classes/widget-giving.php:109
+msgctxt "giving widget"
+msgid "Message"
+msgstr "Viesti"
+
+#: framework/includes/classes/widget-giving.php:121
+msgid "You may give online by clicking below."
+msgstr "Voit antaa verkossa painamalla painiketta."
+
+#: framework/includes/classes/widget-giving.php:135
+msgctxt "giving widget"
+msgid "Button Text"
+msgstr "Painikkeen teksti"
+
+#: framework/includes/classes/widget-giving.php:147
+msgctxt "giving widget"
+msgid "Give Now"
+msgstr "Anna nyt"
+
+#: framework/includes/classes/widget-giving.php:161
+msgctxt "giving widget"
+msgid "Button URL"
+msgstr "Painikkeen URL"
+
+#: framework/includes/classes/widget-giving.php:187
+msgctxt "giving widget"
+msgid "Image"
+msgstr ""
+
+#: framework/includes/classes/widget-highlight.php:32
+msgctxt "widget"
+msgid "CT Highlight"
+msgstr ""
+
+#: framework/includes/classes/widget-highlight.php:34
+msgid "Shows a highlight"
+msgstr "Näyttää kohokohdan"
+
+#: framework/includes/classes/widget-highlight.php:83
+msgctxt "highlight widget"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-highlight.php:109
+msgctxt "highlight widget"
+msgid "Description"
+msgstr "Kuvaus"
+
+#: framework/includes/classes/widget-highlight.php:135
+msgctxt "highlight widget"
+msgid "Click URL"
+msgstr "Linkin URL"
+
+#: framework/includes/classes/widget-highlight.php:165
+msgctxt "highlight widget"
+msgid "Open in new tab"
+msgstr "Avaa uudessa tabissa"
+
+#: framework/includes/classes/widget-highlight.php:187
+msgctxt "highlight widget"
+msgid "Image"
+msgstr "Kuva"
+
+#: framework/includes/classes/widget-highlight.php:213
+msgctxt "highlight widget"
+msgid "Brightness"
+msgstr ""
+
+#: framework/includes/classes/widget-highlight.php:214
+#: framework/includes/classes/widget-highlight.php:242
+msgctxt "highlight widget"
+msgid "(Percentage)"
+msgstr ""
+
+#: framework/includes/classes/widget-highlight.php:241
+msgctxt "highlight widget"
+msgid "Opacity"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:32
+msgctxt "widget"
+msgid "CT Locations"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:34
+msgid "Shows church location(s)"
+msgstr "Näyttää seurakunnan sijainnin/sijainnit"
+
+#: framework/includes/classes/widget-locations.php:83
+msgctxt "locations widget"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-locations.php:95
+msgctxt "locations widget title default"
+msgid "Locations"
+msgstr "Sijainnit"
+
+#: framework/includes/classes/widget-locations.php:109
+msgctxt "locations widget"
+msgid "Order By"
+msgstr "Järjestä"
+
+#: framework/includes/classes/widget-locations.php:118
+msgctxt "locations widget order by"
+msgid "Custom Order"
+msgstr "Valinnainen järjestys"
+
+#: framework/includes/classes/widget-locations.php:119
+msgctxt "locations widget order by"
+msgid "Name"
+msgstr "Nimi"
+
+#: framework/includes/classes/widget-locations.php:147
+msgctxt "locations widget order"
+msgid "Low to High"
+msgstr "Pienimmästä suurimpaan"
+
+#: framework/includes/classes/widget-locations.php:148
+msgctxt "locations widget order"
+msgid "High to Low"
+msgstr "Suurimmasta pienimpään"
+
+#: framework/includes/classes/widget-locations.php:167
+msgctxt "locations widget"
+msgid "Limit"
+msgstr "Rajoitus"
+
+#: framework/includes/classes/widget-locations.php:223
+msgctxt "locations widget"
+msgid "Show address"
+msgstr "Näytä osoite"
+
+#: framework/includes/classes/widget-locations.php:249
+msgctxt "locations widget"
+msgid "Show phone number"
+msgstr "Näytä puhelinnumero"
+
+#: framework/includes/classes/widget-locations.php:278
+msgctxt "locations widget"
+msgid "Show email"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:301
+msgctxt "locations widget"
+msgid "Show times"
+msgstr "Näytä ajat"
+
+#: framework/includes/classes/widget-locations.php:327
+msgctxt "locations widget"
+msgid "Show map"
+msgstr "Näytä kartta"
+
+#: framework/includes/classes/widget-locations.php:349
+msgctxt "locations widget"
+msgid "Image"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:32
+msgctxt "widget"
+msgid "CT People"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:34
+msgid "Shows people according to options"
+msgstr "Näyttää ihmiset valinnan mukaan"
+
+#: framework/includes/classes/widget-people.php:83
+msgctxt "people widget"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-people.php:95
+msgctxt "people widget title default"
+msgid "People"
+msgstr "Ihmiset"
+
+#: framework/includes/classes/widget-people.php:109
+msgctxt "people widget"
+msgid "Group"
+msgstr "Ryhmä"
+
+#: framework/includes/classes/widget-people.php:118
+msgctxt "people widget"
+msgid "All Groups"
+msgstr "Kaikki ryhmät"
+
+#: framework/includes/classes/widget-people.php:137
+msgctxt "people widget"
+msgid "Order By"
+msgstr "Järjestys"
+
+#: framework/includes/classes/widget-people.php:146
+msgctxt "people widget order by"
+msgid "Custom Order"
+msgstr "Muokattu järjestys"
+
+#: framework/includes/classes/widget-people.php:147
+msgctxt "people widget order by"
+msgid "Name"
+msgstr "Nimi"
+
+#: framework/includes/classes/widget-people.php:175
+msgctxt "people widget order"
+msgid "Low to High"
+msgstr "Pienimmästä suurimpaan"
+
+#: framework/includes/classes/widget-people.php:176
+msgctxt "people widget order"
+msgid "High to Low"
+msgstr "Suurimmasta pienimpään"
+
+#: framework/includes/classes/widget-people.php:195
+msgctxt "people widget"
+msgid "Limit"
+msgstr "Rajoita"
+
+#: framework/includes/classes/widget-people.php:225
+msgctxt "people widget"
+msgid "Show photo"
+msgstr "Näytä kuva"
+
+#: framework/includes/classes/widget-people.php:251
+msgctxt "people widget"
+msgid "Show position"
+msgstr "Näytä asema"
+
+#: framework/includes/classes/widget-people.php:277
+msgctxt "people widget"
+msgid "Show phone"
+msgstr "Näytä puhelinnro"
+
+#: framework/includes/classes/widget-people.php:303
+msgctxt "people widget"
+msgid "Show email"
+msgstr "Näytä email"
+
+#: framework/includes/classes/widget-people.php:329
+msgctxt "people widget"
+msgid "Show icons"
+msgstr "Näytä ikonit"
+
+#: framework/includes/classes/widget-people.php:355
+#: framework/includes/classes/widget-posts.php:332
+msgctxt "posts widget"
+msgid "Show excerpt"
+msgstr "Näytä ote"
+
+#: framework/includes/classes/widget-people.php:377
+msgctxt "people widget"
+msgid "Image"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:34
+msgctxt "widget"
+msgid "CT Posts"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:36
+msgid "Shows blog posts according to options"
+msgstr "Näyttää blogikirjoitukset valintojen mukaan"
+
+#: framework/includes/classes/widget-posts.php:85
+msgctxt "posts widget"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-posts.php:97
+msgctxt "posts widget title default"
+msgid "Posts"
+msgstr "Kirjoitukset"
+
+#: framework/includes/classes/widget-posts.php:111
+msgctxt "posts widget"
+msgid "Category"
+msgstr "Kategoria"
+
+#: framework/includes/classes/widget-posts.php:120
+msgctxt "posts widget"
+msgid "All Categories"
+msgstr "Kaikki kategoriat"
+
+#: framework/includes/classes/widget-posts.php:139
+msgctxt "posts widget"
+msgid "Order By"
+msgstr "Järjestä"
+
+#: framework/includes/classes/widget-posts.php:148
+msgctxt "posts widget order by"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-posts.php:149
+msgctxt "posts widget order by"
+msgid "Date"
+msgstr "Pvm"
+
+#: framework/includes/classes/widget-posts.php:150
+msgctxt "posts widget order by"
+msgid "Comment Count"
+msgstr "Kommenttien lkm"
+
+#: framework/includes/classes/widget-posts.php:178
+msgctxt "posts widget order"
+msgid "Low to High"
+msgstr "Pienimmästä suurimpaan"
+
+#: framework/includes/classes/widget-posts.php:179
+msgctxt "posts widget order"
+msgid "High to Low"
+msgstr "Suurimmasta pienimpään"
+
+#: framework/includes/classes/widget-posts.php:198
+msgctxt "posts widget"
+msgid "Limit"
+msgstr "Rajoita"
+
+#: framework/includes/classes/widget-posts.php:228
+msgctxt "posts widget"
+msgid "Show image"
+msgstr "Näytä kuva"
+
+#: framework/includes/classes/widget-posts.php:257
+msgctxt "posts widget"
+msgid "Show date"
+msgstr "Näytä pvm"
+
+#: framework/includes/classes/widget-posts.php:283
+msgctxt "posts widget"
+msgid "Show author"
+msgstr "Näytä kirjoittaja"
+
+#: framework/includes/classes/widget-posts.php:309
+msgctxt "posts widget"
+msgid "Show category"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:354
+msgctxt "posts widget"
+msgid "Image"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:34
+msgctxt "widget"
+msgid "CT Section"
+msgstr "Ajo-ohjeet"
+
+#: framework/includes/classes/widget-section.php:36
+msgid "Shows a section"
+msgstr "Näytä asema"
+
+#: framework/includes/classes/widget-section.php:85
+msgctxt "section widget"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-section.php:108
+msgctxt "section widget"
+msgid "Content"
+msgstr "Muokattu sisältö"
+
+#: framework/includes/classes/widget-section.php:131
+msgctxt "section widget"
+msgid "Text Size"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:140
+msgctxt "section widget text size"
+msgid "Small"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:141
+msgctxt "section widget text size"
+msgid "Regular"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:142
+msgctxt "section widget text size"
+msgid "Large"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:168
+msgctxt "sermons widget"
+msgid "Centered"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:187
+msgctxt "section widget"
+msgid "Image"
+msgstr "Kuva"
+
+#: framework/includes/classes/widget-section.php:213
+msgctxt "slide widget"
+msgid "Video"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:214
+msgctxt "widget field"
+msgid "(Optional)"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:222
+msgid "Choose Video"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:223
+msgid "Choose Video for Widget"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:239
+msgctxt "section widget"
+msgid "Brightness"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:240
+#: framework/includes/classes/widget-section.php:268
+msgctxt "section widget"
+msgid "(Percentage)"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:267
+msgctxt "section widget"
+msgid "Opacity"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:295
+msgctxt "section widget"
+msgid "Attachment"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:304
+msgctxt "section widget attachment"
+msgid "Scroll"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:305
+msgctxt "section widget attachment"
+msgid "Fixed"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:324
+msgctxt "section widget"
+msgid "Height"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:325
+msgctxt "widget field"
+msgid "(Percentage)"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:352
+msgctxt "section widget"
+msgid "Orientation"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:361
+msgctxt "section widget orientation"
+msgid "Vertical"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:362
+msgctxt "section widget orientation"
+msgid "Horizontal"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:381
+msgctxt "section widget"
+msgid "Link 1"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:397
+#: framework/includes/classes/widget-section.php:453
+#: framework/includes/classes/widget-section.php:509
+#: framework/includes/classes/widget-section.php:565
+msgctxt "section widget"
+msgid "Text"
+msgstr "Teksti"
+
+#: framework/includes/classes/widget-section.php:411
+msgid "Enter text for link then URL."
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:425
+#: framework/includes/classes/widget-section.php:481
+#: framework/includes/classes/widget-section.php:537
+#: framework/includes/classes/widget-section.php:593
+msgctxt "section widget"
+msgid "URL"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:437
+msgctxt "section widget"
+msgid "Link 2"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:493
+msgctxt "section widget"
+msgid "Link 3"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:549
+msgctxt "section widget"
+msgid "Link 4"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:32
+msgctxt "widget"
+msgid "CT Sermons"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:34
+msgid "Shows sermons according to options"
+msgstr "Näyttää saarnat valintojen mukaan"
+
+#: framework/includes/classes/widget-sermons.php:83
+msgctxt "sermons widget"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-sermons.php:109
+msgctxt "sermons widget"
+msgid "Topic"
+msgstr "Aihe"
+
+#: framework/includes/classes/widget-sermons.php:118
+msgctxt "sermons widget"
+msgid "All Topics"
+msgstr "Kaikki aiheet"
+
+#: framework/includes/classes/widget-sermons.php:137
+msgctxt "sermons widget"
+msgid "Book"
+msgstr "Kirja"
+
+#: framework/includes/classes/widget-sermons.php:146
+msgctxt "sermons widget"
+msgid "All Books"
+msgstr "Kaikki kirjat"
+
+#: framework/includes/classes/widget-sermons.php:165
+msgctxt "sermons widget"
+msgid "Series"
+msgstr "Sarjat"
+
+#: framework/includes/classes/widget-sermons.php:174
+msgctxt "sermons widget"
+msgid "All Series"
+msgstr "Kaikki sarjat"
+
+#: framework/includes/classes/widget-sermons.php:193
+msgctxt "sermons widget"
+msgid "Speaker"
+msgstr "Puhuja"
+
+#: framework/includes/classes/widget-sermons.php:202
+msgctxt "sermons widget"
+msgid "All Speakers"
+msgstr "Kaikki puhujat"
+
+#: framework/includes/classes/widget-sermons.php:221
+msgctxt "sermons widget"
+msgid "Order By"
+msgstr "Järjestä"
+
+#: framework/includes/classes/widget-sermons.php:230
+msgctxt "sermons widget order by"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-sermons.php:231
+msgctxt "sermons widget order by"
+msgid "Date"
+msgstr "Pvm"
+
+#: framework/includes/classes/widget-sermons.php:232
+msgctxt "sermons widget order by"
+msgid "Comment Count"
+msgstr "Kommenttien lkm"
+
+#: framework/includes/classes/widget-sermons.php:260
+msgctxt "sermons widget order"
+msgid "Low to High"
+msgstr "Pienimmästä suurimpaan"
+
+#: framework/includes/classes/widget-sermons.php:261
+msgctxt "sermons widget order"
+msgid "High to Low"
+msgstr "Suurimmasta pienimpään"
+
+#: framework/includes/classes/widget-sermons.php:280
+msgctxt "sermons widget"
+msgid "Limit"
+msgstr "Rajoitus"
+
+#: framework/includes/classes/widget-sermons.php:310
+msgctxt "sermons widget"
+msgid "Show image"
+msgstr "Näytä kuva"
+
+#: framework/includes/classes/widget-sermons.php:339
+msgctxt "sermons widget"
+msgid "Show date"
+msgstr "Näytä pvm"
+
+#: framework/includes/classes/widget-sermons.php:365
+msgctxt "sermons widget"
+msgid "Show topic"
+msgstr "Näytä aihe"
+
+#: framework/includes/classes/widget-sermons.php:391
+msgctxt "sermons widget"
+msgid "Show book"
+msgstr "Näytä kirja"
+
+#: framework/includes/classes/widget-sermons.php:417
+msgctxt "sermons widget"
+msgid "Show series"
+msgstr "Näytä sarjat"
+
+#: framework/includes/classes/widget-sermons.php:443
+msgctxt "sermons widget"
+msgid "Show speaker"
+msgstr "Näytä puhuja"
+
+#: framework/includes/classes/widget-sermons.php:466
+msgctxt "sermons widget"
+msgid "Show media types"
+msgstr "Näytä mediatyypit"
+
+#: framework/includes/classes/widget-sermons.php:492
+msgctxt "sermons widget"
+msgid "Show excerpt"
+msgstr "Näytä ote"
+
+#: framework/includes/classes/widget-sermons.php:514
+msgctxt "sermons widget"
+msgid "Image"
+msgstr ""
+
+#: framework/includes/classes/widget-slide.php:33
+msgctxt "widget"
+msgid "CT Slide"
+msgstr ""
+
+#: framework/includes/classes/widget-slide.php:35
+msgid "A slide to be shown in a slider"
+msgstr "Sliderissa näytettävä dia"
+
+#: framework/includes/classes/widget-slide.php:83
+msgctxt "slide widget"
+msgid "Title"
+msgstr "Otsikko"
+
+#: framework/includes/classes/widget-slide.php:109
+msgctxt "slide widget"
+msgid "Description"
+msgstr "Kuvaus"
+
+#: framework/includes/classes/widget-slide.php:135
+msgctxt "slide widget"
+msgid "Click URL"
+msgstr "Linkin URL"
+
+#: framework/includes/classes/widget-slide.php:165
+msgctxt "slide widget"
+msgid "Open in new tab"
+msgstr "Avaa uudessa tabissa"
+
+#: framework/includes/classes/widget-slide.php:187
+msgctxt "slide widget"
+msgid "Image"
+msgstr "Kuva"
+
+#: framework/includes/classes/widget-slide.php:213
+msgctxt "slide widget"
+msgid "Video URL"
+msgstr "Videon URL"
+
+#: framework/includes/classes/widget.php:322
+msgctxt "widget image field"
+msgid "Choose Image"
+msgstr "Valitse kuva"
+
+#: framework/includes/classes/widget.php:325
+msgctxt "widget image field"
+msgid "Remove Image"
+msgstr "Poista kuva"
+
+#: framework/includes/compatibility.php:63
+#, php-format
+msgid ""
+"<b>Activation Failed:</b> %s requires a newer version of WordPress. Please "
+"update and try again."
+msgstr ""
+"<b>Aktivointi epäonnistui:</b> %s vaatii uudemman version WordPressistä. Ole "
+"hyvä ja päivitä ja yritä uudelleen."
+
+#: framework/includes/compatibility.php:232
+#, php-format
+msgid ""
+"<b>Plugin Required:</b> Please install and activate the <a href=\"%s"
+"\">Church Content</a> plugin to use with the current theme."
+msgstr ""
+
+#: framework/includes/compatibility.php:242
+#, php-format
+msgid ""
+"Please <a href=\"%s\">activate</a> the <b>Church Content</b> plugin required "
+"by the current theme."
+msgstr ""
+"<a href=\"%s\">Aktivoi</a> the <b>Church Content</b> -lisäosa, jonka "
+"nykyinen teema vaatii."
+
+#: framework/includes/compatibility.php:310
+msgid ""
+"You are using an outdated version of Internet Explorer. Please upgrade your "
+"browser to use this site."
+msgstr ""
+"Käytät Internet Explorer -selaimen vanhentunutta versiota. Ole hyvä ja "
+"päivitä selaimesi käyttääksesi tätä sivustoa."
+
+#: framework/includes/content-types.php:750
+msgctxt "content type archives"
+msgid "Months"
+msgstr ""
+
+#: framework/includes/deprecated.php:129
+#, php-format
+msgctxt "head title"
+msgid " (Page %d)"
+msgstr " (Sivu %d)"
+
+#: framework/includes/deprecated.php:150
+msgctxt "head title"
+msgid " - "
+msgstr ""
+
+#: framework/includes/events.php:142
+#, php-format
+msgid "%1$s <span>(%2$s)</span>"
+msgstr ""
+
+#: framework/includes/events.php:257
+#, php-format
+msgctxt "dates"
+msgid "%1$s &ndash; %2$s"
+msgstr ""
+
+#: framework/includes/events.php:285
+#, php-format
+msgctxt "times"
+msgid "%1$s &ndash; %2$s"
+msgstr ""
+
+#: framework/includes/events.php:1254 framework/includes/events.php:1296
+#: framework/includes/events.php:1804
+msgctxt "item list"
+msgid ", "
+msgstr ""
+
+#: framework/includes/events.php:1257 framework/includes/events.php:1299
+#: framework/includes/events.php:1807
+msgctxt "item list"
+msgid " and "
+msgstr ""
+
+#: framework/includes/events.php:1276
+msgctxt "week of month"
+msgid "first"
+msgstr ""
+
+#: framework/includes/events.php:1277
+msgctxt "week of month"
+msgid "second"
+msgstr ""
+
+#: framework/includes/events.php:1278
+msgctxt "week of month"
+msgid "third"
+msgstr ""
+
+#: framework/includes/events.php:1279
+msgctxt "week of month"
+msgid "fourth"
+msgstr ""
+
+#: framework/includes/events.php:1280
+msgctxt "week of month"
+msgid "fifth"
+msgstr ""
+
+#: framework/includes/events.php:1281
+msgctxt "week of month"
+msgid "last"
+msgstr ""
+
+#: framework/includes/events.php:1336
+#, php-format
+msgid "Every week on %2$s until %3$s (excluding %4$s)"
+msgid_plural "Every %1$s weeks on %2$s until %3$s (excluding %4$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1355
+#, php-format
+msgid "Every week on %2$s until %3$s"
+msgid_plural "Every %1$s weeks on %2$s until %3$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1378
+#, php-format
+msgid "Every week on %2$s (excluding %3$s)"
+msgid_plural "Every %1$s weeks on %2$s (excluding %3$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1396
+#, php-format
+msgid "Every week on %2$s"
+msgid_plural "Every %1$s weeks on %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1423
+#, php-format
+msgid "Every week until %2$s (excluding %3$s)"
+msgid_plural "Every %1$s weeks until %2$s (excluding %3$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1441
+#, php-format
+msgid "Every week until %2$s"
+msgid_plural "Every %1$s weeks until %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1463
+#, php-format
+msgid "Every week (excluding %2$s)"
+msgid_plural "Every %1$s weeks (excluding %2$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1480
+#, php-format
+msgid "Every week"
+msgid_plural "Every %1$s weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1498
+#, php-format
+msgid "Every Week"
+msgid_plural "Every %1$s Weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1522
+#, php-format
+msgid "Every month on the %2$s %3$s until %4$s (excluding %5$s)"
+msgid_plural "Every %1$s months on the %2$s %3$s until %4$s (excluding %5$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1542
+#, php-format
+msgid "Every month on the %2$s %3$s until %4$s"
+msgid_plural "Every %1$s months on the %2$s %3$s until %4$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1566
+#, php-format
+msgid "Every month on the %2$s %3$s (excluding %4$s)"
+msgid_plural "Every %1$s months on the %2$s %3$s (excluding %4$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1585
+#, php-format
+msgid "Every month on the %2$s %3$s"
+msgid_plural "Every %1$s months on the %2$s %3$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1611
+#, php-format
+msgid "Every month until %2$s (excluding %3$s)"
+msgid_plural "Every %1$s months until %2$s (excluding %3$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1629
+#, php-format
+msgid "Every month until %2$s"
+msgid_plural "Every %1$s months until %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1651
+#, php-format
+msgid "Every month (excluding %2$s)"
+msgid_plural "Every %1$s months (excluding %2$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1668
+#, php-format
+msgid "Every month"
+msgid_plural "Every %1$s months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1686
+#, php-format
+msgid "Every Month"
+msgid_plural "Every %1$s Months"
+msgstr[0] "Valitse kuukausi"
+msgstr[1] "Every %1$s Months"
+
+#: framework/includes/events.php:1706
+#, php-format
+msgid "Every year until %1$s (excluding %2$s)"
+msgstr ""
+
+#: framework/includes/events.php:1718
+#, php-format
+msgid "Every year until %1$s"
+msgstr ""
+
+#: framework/includes/events.php:1734
+#, php-format
+msgid "Every year (excluding %1$s)"
+msgstr ""
+
+#: framework/includes/events.php:1742
+msgid "Every year"
+msgstr ""
+
+#: framework/includes/events.php:1748
+msgid "Every Year"
+msgstr ""
+
+#: framework/includes/head.php:68 page-templates/events-calendar.php:60
+msgctxt "event calendar"
+msgid "F Y"
+msgstr ""
+
+#: framework/includes/head.php:105
+msgctxt "head title"
+msgid " | "
+msgstr ""
+
+#: framework/includes/helpers.php:333 framework/includes/helpers.php:354
+msgctxt "shortened text"
+msgid "&hellip;"
+msgstr ""
+
+#: framework/includes/images.php:77
+#, php-format
+msgid "The target image size is %s."
+msgstr "Kohdekuvan koko on %s."
+
+#: framework/includes/maps.php:96
+msgid ""
+"<p><b>Google Map Error:</b> <i>latitude</i> and <i>longitude</i> attributes "
+"are required. See documentation for help.</p>"
+msgstr ""
+
+#: framework/includes/mime-types.php:32
+msgctxt "mime type"
+msgid "File"
+msgstr "Tiedosto"
+
+#: framework/includes/sermons.php:36
+msgctxt "singular"
+msgid "Sermon"
+msgstr ""
+
+#: framework/includes/sermons.php:62
+msgctxt "plural"
+msgid "Sermons"
+msgstr ""
+
+#: framework/includes/sermons.php:233
+msgid "Genesis"
+msgstr ""
+
+#: framework/includes/sermons.php:236
+msgid "Exodus"
+msgstr ""
+
+#: framework/includes/sermons.php:239
+msgid "Leviticus"
+msgstr ""
+
+#: framework/includes/sermons.php:242
+msgid "Numbers"
+msgstr ""
+
+#: framework/includes/sermons.php:245
+msgid "Deuteronomy"
+msgstr ""
+
+#: framework/includes/sermons.php:248
+msgid "Joshua"
+msgstr ""
+
+#: framework/includes/sermons.php:251
+msgid "Judges"
+msgstr ""
+
+#: framework/includes/sermons.php:254
+msgid "Ruth"
+msgstr ""
+
+#: framework/includes/sermons.php:257
+msgid "1 Samuel"
+msgstr ""
+
+#: framework/includes/sermons.php:260
+msgid "2 Samuel"
+msgstr ""
+
+#: framework/includes/sermons.php:263
+msgid "1 Kings"
+msgstr ""
+
+#: framework/includes/sermons.php:266
+msgid "2 Kings"
+msgstr ""
+
+#: framework/includes/sermons.php:269
+msgid "1 Chronicles"
+msgstr ""
+
+#: framework/includes/sermons.php:272
+msgid "2 Chronicles"
+msgstr ""
+
+#: framework/includes/sermons.php:275
+msgid "Ezra"
+msgstr ""
+
+#: framework/includes/sermons.php:278
+msgid "Nehemiah"
+msgstr ""
+
+#: framework/includes/sermons.php:281
+msgid "Esther"
+msgstr ""
+
+#: framework/includes/sermons.php:284
+msgid "Job"
+msgstr ""
+
+#: framework/includes/sermons.php:287
+msgid "Psalms"
+msgstr ""
+
+#: framework/includes/sermons.php:290
+msgid "Proverbs"
+msgstr ""
+
+#: framework/includes/sermons.php:293
+msgid "Ecclesiastes"
+msgstr ""
+
+#: framework/includes/sermons.php:296
+msgid "Song of Solomon"
+msgstr ""
+
+#: framework/includes/sermons.php:299
+msgid "Isaiah"
+msgstr ""
+
+#: framework/includes/sermons.php:302
+msgid "Jeremiah"
+msgstr ""
+
+#: framework/includes/sermons.php:305
+msgid "Lamentations"
+msgstr "Sijainnit"
+
+#: framework/includes/sermons.php:308
+msgid "Ezekiel"
+msgstr ""
+
+#: framework/includes/sermons.php:311
+msgid "Daniel"
+msgstr ""
+
+#: framework/includes/sermons.php:314
+msgid "Hosea"
+msgstr ""
+
+#: framework/includes/sermons.php:317
+msgid "Joel"
+msgstr ""
+
+#: framework/includes/sermons.php:320
+msgid "Amos"
+msgstr ""
+
+#: framework/includes/sermons.php:323
+msgid "Obadiah"
+msgstr ""
+
+#: framework/includes/sermons.php:326
+msgid "Jonah"
+msgstr ""
+
+#: framework/includes/sermons.php:329
+msgid "Micah"
+msgstr ""
+
+#: framework/includes/sermons.php:332
+msgid "Nahum"
+msgstr ""
+
+#: framework/includes/sermons.php:335
+msgid "Habakkuk"
+msgstr ""
+
+#: framework/includes/sermons.php:338
+msgid "Zephaniah"
+msgstr ""
+
+#: framework/includes/sermons.php:341
+msgid "Haggai"
+msgstr ""
+
+#: framework/includes/sermons.php:344
+msgid "Zechariah"
+msgstr ""
+
+#: framework/includes/sermons.php:347
+msgid "Malachi"
+msgstr ""
+
+#: framework/includes/sermons.php:353
+msgid "Matthew"
+msgstr ""
+
+#: framework/includes/sermons.php:356
+msgid "Mark"
+msgstr ""
+
+#: framework/includes/sermons.php:359
+msgid "Luke"
+msgstr ""
+
+#: framework/includes/sermons.php:362
+msgid "John"
+msgstr ""
+
+#: framework/includes/sermons.php:365
+msgid "Acts"
+msgstr ""
+
+#: framework/includes/sermons.php:368
+msgid "Romans"
+msgstr ""
+
+#: framework/includes/sermons.php:371
+msgid "1 Corinthians"
+msgstr ""
+
+#: framework/includes/sermons.php:374
+msgid "2 Corinthians"
+msgstr ""
+
+#: framework/includes/sermons.php:377
+msgid "Galatians"
+msgstr ""
+
+#: framework/includes/sermons.php:380
+msgid "Ephesians"
+msgstr ""
+
+#: framework/includes/sermons.php:383
+msgid "Philippians"
+msgstr ""
+
+#: framework/includes/sermons.php:386
+msgid "Colossians"
+msgstr ""
+
+#: framework/includes/sermons.php:389
+msgid "1 Thessalonians"
+msgstr ""
+
+#: framework/includes/sermons.php:392
+msgid "2 Thessalonians"
+msgstr ""
+
+#: framework/includes/sermons.php:395
+msgid "1 Timothy"
+msgstr ""
+
+#: framework/includes/sermons.php:398
+msgid "2 Timothy"
+msgstr ""
+
+#: framework/includes/sermons.php:401
+msgid "Titus"
+msgstr ""
+
+#: framework/includes/sermons.php:404
+msgid "Philemon"
+msgstr ""
+
+#: framework/includes/sermons.php:407
+msgid "Hebrews"
+msgstr ""
+
+#: framework/includes/sermons.php:410
+msgid "James"
+msgstr ""
+
+#: framework/includes/sermons.php:413
+msgid "1 Peter"
+msgstr ""
+
+#: framework/includes/sermons.php:416
+msgid "2 Peter"
+msgstr ""
+
+#: framework/includes/sermons.php:419
+msgid "1 John"
+msgstr ""
+
+#: framework/includes/sermons.php:422
+msgid "2 John"
+msgstr ""
+
+#: framework/includes/sermons.php:425
+msgid "3 John"
+msgstr ""
+
+#: framework/includes/sermons.php:428
+msgid "Jude"
+msgstr ""
+
+#: framework/includes/sermons.php:431
+msgid "Revelation"
+msgstr ""
+
+#: framework/includes/sermons.php:473
+msgid "Old Testament"
+msgstr ""
+
+#: framework/includes/sermons.php:476
+msgid "New Testament"
+msgstr ""
+
+#: framework/includes/sermons.php:480
+msgid "Other Books"
+msgstr ""
+
+#: framework/includes/template-tags.php:71
+msgid "Today"
+msgstr "Tänään"
+
+#: framework/includes/template-tags.php:76
+msgid "Yesterday"
+msgstr "Eilen"
+
+#: header-right.php:83 header-right.php:105
+msgctxt "header right items"
+msgid "Today"
+msgstr "Tänään"
+
+#: header-right.php:85
+msgctxt "header right items"
+msgid "Yesterday"
+msgstr "Eilen"
+
+#: header-right.php:107
+msgctxt "header right items"
+msgid "Tomorrow"
+msgstr "Huomenna"
+
+#: header-right.php:110
+msgctxt "header right items"
+msgid "F j"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:58
+msgid "Options"
+msgstr "Valinnat"
+
+#: includes/admin/meta-boxes.php:73
+msgid "Banner"
+msgstr "Banneri"
+
+#: includes/admin/meta-boxes.php:77
+msgid "Do not show text over featured image"
+msgstr "Älä näytä tekstiä artikkelikuvan päällä"
+
+#: includes/admin/meta-boxes.php:100
+msgid ""
+"Example: Sermons template used. This page's banner shows on all sermon pages."
+msgstr ""
+"Esimerkki: Saarna-mallia käytetty. Tämän sivun banneri näkyy kaikilla saarna-"
+"sivuilla."
+
+#: includes/admin/meta-boxes.php:102
+msgid "Show banner on related content"
+msgstr "Näytä banneri liittyvissä sisällöissä"
+
+#: includes/admin/meta-boxes.php:126
+msgctxt "meta box"
+msgid "Sidebar"
+msgstr "Sivupalkki"
+
+#: includes/admin/meta-boxes.php:130
+#, php-format
+msgid "Hide sidebar <a href=\"%s\" target=\"_blank\">widgets</a>"
+msgstr "Piilota sivupalkin <a href=\"%s\" target=\"_blank\">widgetit</a>"
+
+#: includes/admin/meta-boxes.php:151
+msgctxt "meta box"
+msgid "Gallery"
+msgstr "Galleria"
+
+#: includes/admin/meta-boxes.php:153
+msgid "Applies only when gallery used in content."
+msgstr "Koskee ainostaan sisällöissä käytettyjä gallerioita."
+
+#: includes/admin/meta-boxes.php:155
+msgid "Exclude from gallery widgets/templates"
+msgstr ""
+
+#: includes/customize-defaults.php:143
+msgid "1247 Church Ave, Brooklyn, NY 11218"
+msgstr ""
+
+#: includes/customize-defaults.php:149
+msgid "(817) 555-3462"
+msgstr ""
+
+#: includes/customize-defaults.php:156
+#, php-format
+msgid ""
+"Copyright &copy; [ctcom_current_year] [ctcom_site_name]. Powered by <a href="
+"\"%s\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">ChurchThemes."
+"com</a>"
+msgstr ""
+
+#: includes/customize-defaults.php:164
+msgid ""
+"[ctcom_rss_url]\n"
+"http://www.apple.com/itunes/\n"
+"http://facebook.com\n"
+"http://twitter.com\n"
+"http://youtube.com"
+msgstr ""
+
+#: includes/customize-defaults.php:170
+msgid ""
+"[ctcom_rss_url]\n"
+"http://www.apple.com/itunes/\n"
+"http://facebook.com\n"
+"http://twitter.com\n"
+"https://plus.google.com\n"
+"http://pinterest.com\n"
+"http://youtube.com\n"
+"http://vimeo.com\n"
+"http://flickr.com\n"
+"http://instagram.com\n"
+"http://foursquare.com"
+msgstr ""
+
+#: includes/customize.php:33
+msgctxt "customizer"
+msgid "Preset"
+msgstr "Esivalinta"
+
+#: includes/customize.php:34
+msgctxt "customizer"
+msgid "Upload"
+msgstr "Lataa"
+
+#: includes/customize.php:35
+msgctxt "customizer"
+msgid "None"
+msgstr "Tyhjä"
+
+#: includes/customize.php:52
+msgid "Don't move"
+msgstr "Älä siirrä"
+
+#: includes/customize.php:55
+#, php-format
+msgid "%d pixels right"
+msgstr "%d pikseliä oikealle"
+
+#: includes/customize.php:56
+#, php-format
+msgid "%d pixels left"
+msgstr "%d pikseliä vasemmalle"
+
+#: includes/customize.php:72
+msgctxt "customizer header text"
+msgid "Dark"
+msgstr "Tumma"
+
+#: includes/customize.php:73
+msgctxt "customizer header text"
+msgid "Light"
+msgstr "Vaalea"
+
+#: includes/customize.php:89
+msgctxt "customizer"
+msgid "Image"
+msgstr "Kuva"
+
+#: includes/customize.php:90
+msgctxt "customizer"
+msgid "Text"
+msgstr "Teksti"
+
+#: includes/customize.php:106
+msgctxt "customizer"
+msgid "Extra Small"
+msgstr "Erittäin pieni"
+
+#: includes/customize.php:107
+msgctxt "customizer"
+msgid "Small"
+msgstr "Pieni"
+
+#: includes/customize.php:108
+msgctxt "customizer"
+msgid "Medium"
+msgstr "Keskikokoinen"
+
+#: includes/customize.php:109
+msgctxt "customizer"
+msgid "Large"
+msgstr "Suuri"
+
+#: includes/customize.php:110
+msgctxt "customizer"
+msgid "Extra Large"
+msgstr "Erittäin suuri"
+
+#: includes/customize.php:126
+msgctxt "customizer"
+msgid "Tagline"
+msgstr ""
+
+#: includes/customize.php:129
+#, php-format
+msgctxt "customizer"
+msgid "Latest %1$s"
+msgstr ""
+
+#: includes/customize.php:132
+msgctxt "customizer"
+msgid "Upcoming Events"
+msgstr "Tulevat tapahtumat"
+
+#: includes/customize.php:133
+msgctxt "customizer"
+msgid "Latest Posts"
+msgstr "Viimeisimmät julkaisut"
+
+#: includes/customize.php:134
+msgctxt "customizer"
+msgid "Custom Content"
+msgstr "Muokattu sisältö"
+
+#: includes/customize.php:135
+msgctxt "customizer"
+msgid "Nothing"
+msgstr "Ei mitään"
+
+#: includes/customize.php:151
+msgctxt "customizer header items"
+msgid "One"
+msgstr "Yksi"
+
+#: includes/customize.php:152
+msgctxt "customizer header items"
+msgid "Two"
+msgstr "Kaksi"
+
+#: includes/customize.php:200
+msgid "Color Scheme"
+msgstr "Väriteema"
+
+#: includes/customize.php:216
+msgid "Header Text"
+msgstr "Otsikkoteksti"
+
+#: includes/customize.php:243
+msgctxt "customizer"
+msgid "Background Image"
+msgstr "Taustakuva"
+
+#: includes/customize.php:275
+msgctxt "customizer"
+msgid "Configuration"
+msgstr ""
+
+#: includes/customize.php:297
+msgctxt "customizer"
+msgid "Google Fonts"
+msgstr ""
+
+#: includes/customize.php:312
+msgid "Logo Font"
+msgstr "Logofontti"
+
+#: includes/customize.php:332
+msgid "Heading Font"
+msgstr "Otsikkofontti"
+
+#: includes/customize.php:352
+msgid "Menu Font"
+msgstr "Valikkofontti"
+
+#: includes/customize.php:372
+msgid "Body Font"
+msgstr "Leipätekstin fontti"
+
+#: includes/customize.php:391
+msgid "Character Sets"
+msgstr ""
+
+#: includes/customize.php:401
+msgctxt "customizer"
+msgid "Header & Logo"
+msgstr "Otsikko & logo"
+
+#: includes/customize.php:415
+msgctxt "customizer"
+msgid "Logo Type"
+msgstr "Logotyyppi"
+
+#: includes/customize.php:431
+msgctxt "customizer"
+msgid "Logo Image"
+msgstr "Logokuva"
+
+#: includes/customize.php:433
+#, php-format
+msgid "<b>%1$s maximum</b> (transparent PNG recommended)."
+msgstr ""
+
+#: includes/customize.php:449
+msgctxt "customizer"
+msgid "HiDPI Logo (Optional)"
+msgstr "HiDPI Logo (Valinnainen)"
+
+#: includes/customize.php:450
+msgid ""
+"Also known as \"Retina\", should be exactly double the size of regular image."
+msgstr ""
+
+#: includes/customize.php:467
+msgid "Move Logo"
+msgstr "Siirrä logoa"
+
+#: includes/customize.php:483
+msgid "Logo Text"
+msgstr "Logoteksti"
+
+#: includes/customize.php:498
+msgctxt "customizer"
+msgid "Logo Text Size"
+msgstr "Logotekstin koko"
+
+#: includes/customize.php:521
+msgid "Show tagline under logo"
+msgstr "Näytä lisäteksti logon alla"
+
+#: includes/customize.php:538
+msgid "Move Tagline"
+msgstr "Siirrä lisätekstiä"
+
+#: includes/customize.php:554
+msgctxt "customizer"
+msgid "Show on Right"
+msgstr "Näytä oikealla"
+
+#: includes/customize.php:570
+msgctxt "customizer"
+msgid "Items on Right"
+msgstr ""
+
+#: includes/customize.php:586
+msgid "Custom Content"
+msgstr "Muokattu sisältö"
+
+#: includes/customize.php:601
+msgid "Hide Search Box"
+msgstr ""
+
+#: includes/customize.php:616
+msgid "Show breadcrumb path on subpages"
+msgstr ""
+
+#: includes/customize.php:626
+msgctxt "customizer"
+msgid "Footer Text"
+msgstr ""
+
+#: includes/customize.php:640
+msgid "Address"
+msgstr "Osoite"
+
+#: includes/customize.php:655
+msgid "Phone"
+msgstr "Puhelin"
+
+#: includes/customize.php:670
+msgctxt "customizer"
+msgid "Notice"
+msgstr "Huomio"
+
+#: includes/customize.php:680
+msgctxt "customizer"
+msgid "Social Media Icons"
+msgstr "Some-ikonit"
+
+#: includes/customize.php:694
+msgid "Header URLs"
+msgstr "Otsikko urlit"
+
+#: includes/customize.php:706
+#, php-format
+msgid ""
+"Enter one URL per line for %s. Use <code>[ctcom_rss_url]</code> for RSS."
+msgstr ""
+"Yksi URL per rivi %s varten. Käytä <code>[ctcom_rss_url]</code> RSS-feediä "
+"varten."
+
+#: includes/customize.php:721
+msgid "Footer URLs"
+msgstr ""
+
+#: includes/customize.php:739
+msgctxt "customizer"
+msgid "Homepage Slider"
+msgstr ""
+
+#: includes/customize.php:754
+msgid "Automatically transition to next slide"
+msgstr "Automaattinen siirtyminen seuraavaan slideen"
+
+#: includes/customize.php:769
+msgid "Seconds Between Transitions"
+msgstr "Sekuntia siirron välillä"
+
+#: includes/enqueue-scripts.php:124
+msgctxt "menu dropdown"
+msgid "Menu"
+msgstr ""
+
+#: includes/enqueue-scripts.php:129 includes/enqueue-scripts.php:130
+msgid "Required"
+msgstr "Vaadittu"
+
+#: includes/enqueue-scripts.php:131
+msgid "Invalid Email"
+msgstr "Anna kelvollinen email"
+
+#: includes/enqueue-scripts.php:132
+msgid "Invalid URL"
+msgstr "Anna kelvollinen URL"
+
+#: includes/enqueue-scripts.php:133
+msgid "Comment Required"
+msgstr "Kommentti vaaditaan"
+
+#: includes/icons.php:206
+msgctxt "social icons list"
+msgid ", "
+msgstr ""
+
+#: includes/icons.php:209
+msgctxt "social icons list"
+msgid " or "
+msgstr " tai "
+
+#: includes/icons.php:211
+msgctxt "social icons list"
+msgid " and "
+msgstr " ja "
+
+#: includes/nav-menus.php:28
+msgctxt "menu location"
+msgid "Top"
+msgstr ""
+
+#: includes/nav-menus.php:31
+msgctxt "menu location"
+msgid "Header"
+msgstr ""
+
+#: includes/nav-menus.php:34
+msgctxt "menu location"
+msgid "Footer"
+msgstr ""
+
+#: includes/sidebars.php:33
+msgctxt "widget area"
+msgid "Homepage Slider"
+msgstr ""
+
+#: includes/sidebars.php:34
+msgid "Add CT Slide widgets to show in the homepage slider."
+msgstr ""
+
+#: includes/sidebars.php:44
+msgctxt "widget area"
+msgid "Homepage Highlights"
+msgstr ""
+
+#: includes/sidebars.php:45
+msgid ""
+"Add CT Highlight widgets to show on the homepage by the slider (two can be "
+"shown)."
+msgstr ""
+
+#: includes/sidebars.php:55
+msgctxt "widget area"
+msgid "Homepage Bottom"
+msgstr ""
+
+#: includes/sidebars.php:56
+msgid "These show at the bottom of the homepage."
+msgstr "Nämä näkyvät kotisivun alareunassa."
+
+#: includes/sidebars.php:66
+msgid "Page Sidebar"
+msgstr ""
+
+#: includes/sidebars.php:68
+msgid "These widgets show on the side of pages using the default template."
+msgstr ""
+
+#: includes/sidebars.php:80
+msgid "Sermons Sidebar"
+msgstr ""
+
+#: includes/sidebars.php:81
+msgid "These widgets show on the side of sermon pages."
+msgstr ""
+
+#: includes/sidebars.php:91
+msgid "Events Sidebar"
+msgstr ""
+
+#: includes/sidebars.php:92
+msgid "These widgets show on the side of event pages."
+msgstr ""
+
+#: includes/sidebars.php:102
+msgid "People Sidebar"
+msgstr ""
+
+#: includes/sidebars.php:103
+msgid "These widgets show on the side of people pages."
+msgstr ""
+
+#: includes/sidebars.php:113
+msgid "Locations Sidebar"
+msgstr ""
+
+#: includes/sidebars.php:114
+msgid "These widgets show on the side of locations content."
+msgstr ""
+
+#: includes/sidebars.php:124
+msgid "Gallery Sidebar"
+msgstr ""
+
+#: includes/sidebars.php:125
+msgid "These widgets show on the side of gallery pages."
+msgstr ""
+
+#: includes/sidebars.php:135
+msgid "Blog Sidebar"
+msgstr ""
+
+#: includes/sidebars.php:136
+msgid "These widgets show on the side of blog content."
+msgstr ""
+
+#: includes/sidebars.php:146
+msgid "Contact Sidebar"
+msgstr ""
+
+#: includes/sidebars.php:147
+msgid "These widgets show on the side of the contact page."
+msgstr ""
+
+#: includes/sidebars.php:157
+msgid "Search Sidebar"
+msgstr ""
+
+#: includes/sidebars.php:158
+msgid "These widgets show on the side of search results."
+msgstr ""
+
+#: includes/support-ctc.php:111
+#, php-format
+msgid "Enter one URL per line for %s."
+msgstr ""
+
+#: includes/support-ctc.php:114 includes/support-ctc.php:135
+msgid "Email address will be encoded to help prevent spam."
+msgstr ""
+
+#: includes/support-framework.php:41
+#, php-format
+msgid ""
+"<b>Next Steps:</b> Please continue reading the <a href=\"%s\" target=\"_blank"
+"\">Getting Started</a> guide for the next steps after theme activation."
+msgstr ""
+
+#: includes/support-framework.php:53
+#, php-format
+msgid ""
+"Please activate your license key to enable one-click theme updates and to "
+"get support from <a href=\"%1$s\" target=\"_blank\">ChurchThemes.com</a> for "
+"this site. Read <a href=\"%2$s\" target=\"_blank\">License Keys</a> for more "
+"information."
+msgstr ""
+
+#: includes/support-framework.php:58
+#, php-format
+msgid ""
+"<b>License key could not be activated.</b> Read the <a href=\"%1$s\" target="
+"\"_blank\">License Keys</a> guide for help."
+msgstr ""
+
+#: includes/support-framework.php:61
+#, php-format
+msgid ""
+"<strong>Theme License Expired:</strong> <a href=\"%4$s\" target=\"_blank"
+"\">Renew</a> your <a href=\"%1$s\">Theme License</a> to re-enable updates "
+"and support for the <strong>%2$s</strong> theme (expired on <strong>%3$s</"
+"strong>). <a href=\"%5$s\" target=\"_blank\">Learn More</a>"
+msgstr ""
+
+#: includes/support-framework.php:62
+#, php-format
+msgid ""
+"<strong>Theme License Expiring Soon:</strong> <a href=\"%4$s\" target="
+"\"_blank\">Renew</a> your <a href=\"%1$s\">Theme License</a> to continue "
+"receiving updates and support for the <strong>%2$s</strong> theme (expires "
+"on <strong>%3$s</strong>). <a href=\"%5$s\" target=\"_blank\">Learn More</a>"
+msgstr ""
+
+#: includes/support-framework.php:81
+msgctxt "contact form"
+msgid "Email"
+msgstr ""
+
+#: includes/support-framework.php:82
+msgctxt "contact form"
+msgid "Courriel"
+msgstr ""
+
+#: includes/support-framework.php:203
+#, php-format
+msgid ""
+"Optionally provide an image that is at least %s (it will be cropped/"
+"resized). An image exactly this size is ideal."
+msgstr ""
+
+#: includes/support-framework.php:505
+msgctxt "slide widget image"
+msgid "(Required)"
+msgstr "(Vaadittu)"
+
+#: includes/support-framework.php:506 includes/support-framework.php:525
+#, php-format
+msgid "Image cropped to %s."
+msgstr ""
+
+#: includes/support-framework.php:509
+msgid "To make this a video slide, enter a YouTube or Vimeo video page URL."
+msgstr ""
+
+#: includes/template-tags.php:67
+#, php-format
+msgid "%s <span>(Page %d)</span>"
+msgstr ""
+
+#: includes/template-tags.php:218
+msgid "0 Comments"
+msgstr "0 kommenttia"
+
+#: includes/template-tags.php:219
+msgid "1 Comment"
+msgstr "1 kommentti"
+
+#: includes/template-tags.php:220
+msgid "% Comments"
+msgstr "% kommenttia"
+
+#: loop-author.php:27
+#, php-format
+msgid "About %s"
+msgstr "Lisätietoa %s"
+
+#: loop-author.php:33
+#, php-format
+msgid "More posts by %1$s"
+msgstr "Lisää julkaisuja kirjoittajalta %1$s"
+
+#: loop-header.php:52
+#, php-format
+msgid "'%s' tagged posts"
+msgstr "'%s' tägätyt julkaisut"
+
+#: loop-header.php:68
+#, php-format
+msgctxt "sermon topic"
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: loop-header.php:70
+#, php-format
+msgctxt "sermon book"
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: loop-header.php:72
+#, php-format
+msgctxt "sermon speaker"
+msgid "%1$s by %2$s"
+msgstr ""
+
+#: loop-header.php:74
+#, php-format
+msgctxt "sermon tag"
+msgid "\"%2$s\" Tagged %1$s"
+msgstr ""
+
+#: loop-header.php:106
+#, php-format
+msgid "There are no %s to show."
+msgstr "Ei %s näytettävänä."
+
+#: loop-header.php:121
+#, php-format
+msgid "Posts by %s"
+msgstr "Julkaisut kirjoittajalta %s"
+
+#: loop-header.php:133
+#, php-format
+msgid "Search results for '%s'"
+msgstr "Hakutulokset '%s'"
+
+#: loop-header.php:138
+#, php-format
+msgid "There is %d match for %s."
+msgid_plural "There are %d matches for %s."
+msgstr[0] "%d vastaavuus hakusanalle %s."
+msgstr[1] "%d vastaavuutta hakusanalle %s."
+
+#: loop-header.php:156
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: loop-header.php:158
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: loop-header.php:165
+#, php-format
+msgid "Posts from %1$s"
+msgstr ""
+
+#: loop-header.php:167
+#, php-format
+msgctxt "sermon archive"
+msgid "%2$s from %1$s"
+msgstr ""
+
+#: loop-header.php:204
+msgid "Archives"
+msgstr "Arkistot"
+
+#: loop-header.php:210
+msgid "Not Found"
+msgstr "Ei löytynyt"
+
+#: loop-header.php:213
+msgid "Sorry, the page or file you tried to access was not found."
+msgstr "Valitettavasti hakemaasi sivua tai tiedostoa ei löytynyt."
+
+#: loop-navigation.php:28
+#, php-format
+msgid " %s Back to %s"
+msgstr " %s takaisin %s"
+
+#: loop-navigation.php:63
+#, php-format
+msgctxt "previous post link"
+msgid "%1$s %2$s"
+msgstr ""
+
+#: loop-navigation.php:72
+#, php-format
+msgctxt "next post link"
+msgid "%1$s %2$s"
+msgstr ""
+
+#: loop-navigation.php:105
+#, php-format
+msgctxt "pagination"
+msgid "%s Previous"
+msgstr "%s Edellinen"
+
+#: loop-navigation.php:106
+#, php-format
+msgctxt "pagination"
+msgid "Next %s"
+msgstr "Seuraava %s"
+
+#: page-templates/events-calendar.php:136
+msgctxt "event calendar"
+msgid "Remove Category Filter"
+msgstr ""
+
+#: page-templates/events-calendar.php:150
+#, php-format
+msgid "Previous Month &ndash; %1$s"
+msgstr ""
+
+#: page-templates/events-calendar.php:154
+#, php-format
+msgid "Next Month &ndash; %1$s"
+msgstr ""
+
+#: page-templates/events-calendar.php:157
+msgctxt "event calendar"
+msgid "Choose Month"
+msgstr ""
+
+#: page-templates/events-calendar.php:160
+msgctxt "event calendar"
+msgid "Choose Category"
+msgstr "Kategoria"
+
+#: page-templates/events-calendar.php:284
+msgctxt "event calendar"
+msgid "Today"
+msgstr "Tänään"
+
+#: page-templates/events-calendar.php:441
+msgctxt "event calendar"
+msgid "All Categories"
+msgstr "Kaikki kategoriat"
+
+#: page-templates/events-calendar.php:555
+msgctxt "event calendar"
+msgid "Details"
+msgstr "Lisätiedot"
+
+#: page-templates/galleries.php:66
+#, php-format
+msgid "1 Photo"
+msgid_plural "%d Photos"
+msgstr[0] "1 kuva"
+msgstr[1] "%d kuvaa"
+
+#: page-templates/sermon-books.php:69
+msgid "There are no books to show."
+msgstr ""
+
+#: page-templates/sermon-dates.php:55
+msgctxt "sermon dates index"
+msgid "F"
+msgstr ""
+
+#: page-templates/sermon-dates.php:77
+msgid "There are no dates to show."
+msgstr ""
+
+#: page-templates/sermon-series.php:98
+#, php-format
+msgctxt "series date range"
+msgid "%s &ndash; %s"
+msgstr ""
+
+#: page-templates/sermon-series.php:123
+#, php-format
+msgctxt "sermon count single"
+msgid "%1$s %2$s"
+msgstr ""
+
+#: page-templates/sermon-series.php:135
+#, php-format
+msgctxt "sermon count multiple"
+msgid "%1$s %2$s"
+msgstr ""
+
+#: page-templates/sermon-series.php:159
+msgid "There are no series to show."
+msgstr ""
+
+#: page-templates/sermon-speakers.php:43
+msgid "There are no speakers to show."
+msgstr ""
+
+#: page-templates/sermon-topics.php:42
+msgid "There are no topics to show."
+msgstr ""
+
+#: searchform.php:15 searchform.php:17
+msgid "Search"
+msgstr "Hae"
+
+#: searchform.php:19
+#, fuzzy
+#| msgid "Search"
+msgctxt "search icon"
+msgid "Search"
+msgstr "Hae"
+
+#: sermon-index-header.php:35
+msgctxt "sermon archives"
+msgid "Dates"
+msgstr ""
+
+#: widget-templates/widget-archives.php:38
+#, php-format
+msgctxt "archives widget"
+msgid "%1$s %2$d"
+msgstr ""
+
+#: widget-templates/widget-archives.php:59
+msgctxt "archives widget"
+msgid "Select Month"
+msgstr "Valitse kuukausi"
+
+#: widget-templates/widget-categories.php:39
+msgctxt "categories widget"
+msgid "Select One"
+msgstr "Valitse yksi"
+
+#: widget-templates/widget-events.php:1
+msgctxt "events widget"
+msgid "There are no events to show."
+msgstr "Ei näytettäviä tapahtumia."
+
+#: widget-templates/widget-galleries.php:61
+msgctxt "galleries widget"
+msgid "There are no galleries to show."
+msgstr "Ei näytettäviä gallerioita."
+
+#: widget-templates/widget-gallery.php:1
+msgctxt "gallery widget"
+msgid "View Gallery"
+msgstr "Näytä galleria"
+
+#: widget-templates/widget-gallery.php:1
+msgctxt "gallery widget"
+msgid "There are no images to show."
+msgstr "Ei näytettäviä kuvia."
+
+#: widget-templates/widget-locations.php:113
+msgctxt "locations widget"
+msgid "There are no locations to show."
+msgstr "Ei näytettäviä sijainteja."
+
+#: widget-templates/widget-people.php:96
+msgctxt "people widget"
+msgid "There are no people to show."
+msgstr "Ei näytettäviä ihmisiä."
+
+#: widget-templates/widget-posts.php:63
+#, php-format
+msgctxt "posts widget"
+msgid "by <a href=\"%1$s\">%2$s</a>"
+msgstr "kirjoittajalta <a href=\"%1$s\">%2$s</a>"
+
+#: widget-templates/widget-posts.php:93
+msgctxt "posts widget"
+msgid "There are no posts to show."
+msgstr "Ei näytettäviä julkaisuja."
+
+#: widget-templates/widget-sermons.php:69
+#, php-format
+msgctxt "widget"
+msgid "by %s"
+msgstr "kirjoittajalta %s"
+
+#: widget-templates/widget-sermons.php:98
+msgctxt "sermons widget"
+msgid "Read Online"
+msgstr "Lue"
+
+#: widget-templates/widget-sermons.php:102
+msgctxt "sermons widget"
+msgid "Watch Video"
+msgstr "Katso video"
+
+#: widget-templates/widget-sermons.php:106
+msgctxt "sermons widget"
+msgid "Listen to Audio"
+msgstr "Kuuntele audio"
+
+#: widget-templates/widget-sermons.php:110
+msgctxt "sermons widget"
+msgid "Download PDF"
+msgstr "Lataa PDF"
+
+#: widget-templates/widget-sermons.php:144
+#, php-format
+msgctxt "sermons widget"
+msgid "There are no %1$s to show."
+msgstr ""
+
+#~ msgid "Go back."
+#~ msgstr "Palaa."
+
+#~ msgctxt "sermons widget title default"
+#~ msgid "Sermons"
+#~ msgstr "Saarnat"
+
+#~ msgctxt "customizer"
+#~ msgid "Latest Sermons"
+#~ msgstr "Viimeisimmät saarnat"
+
+#~ msgctxt "archives widget"
+#~ msgid "Sermons"
+#~ msgstr "Saarnat"
+
+#~ msgctxt "sermon topic"
+#~ msgid "Sermons on %s"
+#~ msgstr "Saarnat aiheesta %s"
+
+#~ msgctxt "sermon book"
+#~ msgid "Sermons on %s"
+#~ msgstr "Saarnat liittyen kirjaan %s"
+
+#~ msgid "Sermons by %s"
+#~ msgstr "%s saarnat"
+
+#~ msgid "'%s' tagged sermons"
+#~ msgstr "'%s' tägätyt saarnat"
+
+#~ msgid "Posts from %s"
+#~ msgstr "Julkaisut kirjoittajalta %s"
+
+#~ msgid "Sermons from %s"
+#~ msgstr "Saarnat puhujalta %s"
+
+#~ msgctxt "sermons widget"
+#~ msgid "There are no sermons to show."
+#~ msgstr "Ei näytettäviä saarnoja."
+
+#~ msgid ""
+#~ "Any customizations you have made directly to %s's theme files will be "
+#~ "lost. Please consider using a child theme for modifications."
+#~ msgstr ""
+#~ "Kaikki muutokset mitä olet tehnyt %s-teeman tiedostoihin menetetään. "
+#~ "Harkitse lapsiteeman käyttämistä muokkauksia varten."
+
+#~ msgid "Fullscreen Image"
+#~ msgstr "Kokoruudun kuva"

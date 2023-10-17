@@ -1,0 +1,3207 @@
+# Translation of resurrect in Norwegian (Bokmål)
+# This file is distributed under the same license as the resurrect package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Resurrect\n"
+"POT-Creation-Date: 2021-09-15 14:43-0500\n"
+"PO-Revision-Date: 2021-09-15 14:44-0500\n"
+"Last-Translator: churchthemes.com <contact@churchthemes.com>\n"
+"Language-Team: \n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: comment.php:48
+#, php-format
+msgid "%s Reply"
+msgstr "%s Svar"
+
+#: comment.php:49
+msgid "Log in to Reply"
+msgstr "Logg inn for å svare"
+
+#: comment.php:56
+#, php-format
+msgctxt "comment"
+msgid "%s Edit"
+msgstr "%s Rediger"
+
+#: comment.php:70
+msgctxt "comments"
+msgid "(Author)"
+msgstr "(Forfatter)"
+
+#: comment.php:76
+msgid "(Trackback)"
+msgstr "(Trackback)"
+
+#: comment.php:78
+msgid "(Pingback)"
+msgstr "(Pingback)"
+
+#: comment.php:90
+#, php-format
+msgctxt "comments"
+msgid "%3$s <span class=\"resurrect-comment-time\">at %4$s</span>"
+msgstr "%3$s <span class=\"resurrect-comment-time\">kl. %4$s</span>"
+
+#: comment.php:103
+msgid "Your comment is awaiting moderation."
+msgstr "Kommentaren din venter på moderasjon."
+
+#: comments.php:29
+msgctxt "password protected"
+msgid "Comments"
+msgstr "Kommentarer"
+
+#: comments.php:33
+msgid "Enter the password above to view any comments."
+msgstr "Skriv inn passordet ovenfor for å vise kommentarer."
+
+#: comments.php:44
+#, php-format
+msgid "One Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "Én kommentar"
+msgstr[1] "%1$s kommentarer"
+
+#: comments.php:68
+#, php-format
+msgid " %s Older Comments"
+msgstr " %s Eldre kommentarer"
+
+#: comments.php:69
+#, php-format
+msgid "Newer Comments %s"
+msgstr "Nyere kommentarer %s"
+
+#: comments.php:83
+msgctxt "comment form"
+msgid "Add a Comment"
+msgstr "Legg til en kommentar"
+
+#: comments.php:84
+#, php-format
+msgid "Add a Reply to %s"
+msgstr "Leg til et svar til %s"
+
+#: comments.php:85
+msgctxt "comment form"
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: comments.php:86
+msgctxt "comment form"
+msgid "Add Comment"
+msgstr "Legg til kommentar"
+
+#: comments.php:96
+msgid "Commenting has been turned off."
+msgstr "Kommentarer har blitt slått av."
+
+#: content-attachment-header.php:25
+#, php-format
+msgid "Uploaded %s"
+msgstr "Lastet opp %s"
+
+#: content-attachment.php:46
+#, php-format
+msgid "Download %s"
+msgstr "Last ned %s"
+
+#: content-event-header.php:67
+msgid "Excluded Dates"
+msgstr ""
+
+#: content-event.php:57
+msgctxt "event"
+msgid "Get Directions"
+msgstr "Få beskrevet veien"
+
+#: content-event.php:68 content-footer-short.php:134
+msgctxt "event"
+msgid "Register"
+msgstr ""
+
+#: content-footer-full.php:19 content-footer-full.php:30
+#: content-footer-full.php:36 content-footer-full.php:46
+#: content-post-header.php:39 content-sermon-header.php:34
+#: content-sermon-header.php:41 content-sermon-header.php:48
+#: widget-templates/widget-events.php:1 widget-templates/widget-sermons.php:67
+#: widget-templates/widget-sermons.php:73
+#: widget-templates/widget-sermons.php:79
+#: widget-templates/widget-sermons.php:85
+msgid ", "
+msgstr ", "
+
+#: content-footer-full.php:20 content-footer-full.php:37
+#, php-format
+msgid "Tagged with %s"
+msgstr "Markert med stikkordet %s"
+
+#: content-footer-full.php:31
+#, php-format
+msgid "Series: %s"
+msgstr "Serie: %s"
+
+#: content-footer-full.php:69
+msgid "Pages:"
+msgstr "Sider:"
+
+#: content-footer-full.php:105
+#, php-format
+msgid "%1$s Edit %2$s"
+msgstr "%1$s Rediger %2$s"
+
+#: content-footer-short.php:48
+msgid "Read"
+msgstr "Les"
+
+#: content-footer-short.php:50
+msgctxt "sermon button"
+msgid "Details"
+msgstr "Detaljer"
+
+#: content-footer-short.php:59
+msgid "Watch"
+msgstr "Se"
+
+#: content-footer-short.php:68
+msgid "Listen"
+msgstr "Lytt"
+
+#: content-footer-short.php:75 content-sermon.php:170
+msgid "Download PDF"
+msgstr "Last ned PDF"
+
+#: content-footer-short.php:77
+msgid "PDF"
+msgstr "PDF"
+
+#: content-footer-short.php:97
+msgid "Location Details"
+msgstr "Plasseringsdetaljer"
+
+#: content-footer-short.php:102 content-footer-short.php:126
+#: page-templates/events-calendar.php:560
+msgid "Directions"
+msgstr "Veibeskrivelse"
+
+#: content-footer-short.php:121
+msgid "Event Details"
+msgstr "Arrangementdetaljer"
+
+#: content-footer-short.php:151
+msgid "Read Biography"
+msgstr "Les biografi"
+
+#: content-footer-short.php:165
+msgid "View Gallery"
+msgstr "Se galleri"
+
+#: content-footer-short.php:187
+msgid "Read More"
+msgstr "Les mer"
+
+#: content-footer-short.php:193
+#, php-format
+msgid "View %s"
+msgstr "Se %s"
+
+#: content-location.php:45
+msgctxt "location"
+msgid "Get Directions"
+msgstr "Få beskrevet veien"
+
+#: content-sermon.php:136
+msgid "Show Video Player"
+msgstr "Vis videoavspiller"
+
+#: content-sermon.php:145
+msgid "Show Audio Player"
+msgstr "Vis lydavspiller"
+
+#: content-sermon.php:152
+msgid "Download Video"
+msgstr "Last ned video"
+
+#: content-sermon.php:154
+msgid "Save Video"
+msgstr "Lagre video"
+
+#: content-sermon.php:161
+msgid "Download Audio"
+msgstr "Last ned lydfil"
+
+#: content-sermon.php:163
+msgid "Save Audio"
+msgstr "Lagre lydfil"
+
+#: content-sermon.php:172
+msgid "Save PDF"
+msgstr "Lagre PDF"
+
+#: footer.php:28
+msgid "View Full Site"
+msgstr "Se hele siden"
+
+#: footer.php:32
+msgid "View Mobile Site"
+msgstr "Vis mobilside"
+
+#: framework/includes/admin/admin-taxonomies.php:80
+#, fuzzy, php-format
+#| msgid ""
+#| "<b>Custom Ordering:</b> Try <a href=\"%s\" target=\"_blank\">this plugin</"
+#| "a> for custom ordering your %s."
+msgid ""
+"<b>Custom Ordering:</b> Try <a href=\"%s\" target=\"_blank\" rel=\"noopener "
+"noreferrer\">this plugin</a> for custom ordering your %s."
+msgstr ""
+"<b>Egendefinert sortering:</b> Prøv <a href=\"%s\" target=\"_blank\">denne "
+"utvidelsen</a> for å definere din egen sortering for %s."
+
+#: framework/includes/admin/admin-widgets.php:33
+msgctxt "widget image library"
+msgid "Choose Image for Widget"
+msgstr "Velg bilde for widget"
+
+#: framework/includes/admin/admin-widgets.php:34
+msgctxt "widget image library"
+msgid "Use in Widget"
+msgstr "Bruk i widget"
+
+#: framework/includes/admin/admin-widgets.php:64
+msgid "Sorry, this widget is not made for use in this area. Please delete."
+msgstr ""
+"Beklager, denne widgeten er ikke lagd for bruk i dette området. Vennligst "
+"slett."
+
+#: framework/includes/admin/edd-license.php:76
+msgid "<strong>License key could not be activated.</strong>"
+msgstr "<strong>Lisensnøkkel kunne ikke bli aktivert.</strong>"
+
+#: framework/includes/admin/edd-license.php:77
+#, php-format
+msgid ""
+"<strong>Theme License Inactive:</strong> <a href=\"%1$s\">Activate Your "
+"Theme License</a> to enable updates for the <strong>%2$s</strong> theme."
+msgstr ""
+"<strong>Temalisensen er inaktiv:</strong> <a href=\"%1$s\">Aktiver "
+"temalisemsen din</a> for å aktivere oppdateringer for <strong>%2$s</strong>-"
+"temaet."
+
+#: framework/includes/admin/edd-license.php:78
+#, php-format
+msgid ""
+"<strong>Theme License Expired:</strong> <a href=\"%1$s\">Renew Your Theme "
+"License</a> to re-enable updates for the <strong>%2$s</strong> theme "
+"(expired on <strong>%3$s</strong>)."
+msgstr ""
+"<strong>Temalisensen er utgått:</strong> <a href=\"%1$s\">Forny din "
+"temalisens</a> for å reaktivere oppdateringer for <strong>%2$s</strong>-"
+"temaet (utløpt <strong>%3$s</strong>)."
+
+#: framework/includes/admin/edd-license.php:79
+#, php-format
+msgid ""
+"<strong>Theme License Expired:</strong> Ask %6$s to renew their <a href="
+"\"%1$s\">Theme License</a> for <strong>%2$s</strong> to re-enable updates "
+"for your site (expired <strong>%3$s</strong>)."
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:80
+#, php-format
+msgid ""
+"<strong>Theme License Expiring Soon:</strong> <a href=\"%1$s\">Renew Your "
+"Theme License</a> to continue receiving updates for the <strong>%2$s</"
+"strong> theme (expires on <strong>%3$s</strong>)."
+msgstr ""
+"<strong>Temalisens går snart ut:</strong> <a href=\"%1$s\">Forny din "
+"temalisens</a>for å fortsette å få oppdateringer for <strong>%2$s</strong>-"
+"temaet (utløper <strong>%3$s</strong>)."
+
+#: framework/includes/admin/edd-license.php:125
+msgid ""
+"If you have modified theme files directly (not common), your changes will be "
+"overwritten (make a child theme instead). Click \"Cancel\" to stop or \"OK\" "
+"to update the theme."
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:126
+#, fuzzy, php-format
+#| msgid ""
+#| "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\"%4$s>Update Now</"
+#| "a> or read the <a href=\"%5$s\" target=\"_blank\">Changelog</a>."
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" target=\"_blank\" "
+"rel=\"noopener noreferrer\">Check out what's new</a> or <a href=\"%5$s"
+"\"%6$s>update now</a>."
+msgstr ""
+"<strong>%1$s %2$s</strong> er tilgjengelig. <a href=\"%3$s\"%4$s>Oppdater "
+"np</a> eller les <a href=\"%5$s\" target=\"_blank\">forandringsloggen</a>."
+
+#: framework/includes/admin/edd-license.php:403
+msgctxt "license expiration"
+msgid "unknown date"
+msgstr "ukjent dato"
+
+#: framework/includes/admin/edd-license.php:429
+#: framework/includes/admin/edd-license.php:455
+msgctxt "page title"
+msgid "Theme License"
+msgstr "Temalisens"
+
+#: framework/includes/admin/edd-license.php:430
+msgctxt "menu title"
+msgid "Theme License"
+msgstr "Temalisens"
+
+#: framework/includes/admin/edd-license.php:472
+msgctxt "heading"
+msgid "License Key"
+msgstr "Lisensnøkkel"
+
+#: framework/includes/admin/edd-license.php:481
+msgid "License Key"
+msgstr "Lisensnøkkel"
+
+#: framework/includes/admin/edd-license.php:495
+msgid "Save Key"
+msgstr "Lagre nøkkel"
+
+#: framework/includes/admin/edd-license.php:499
+#: framework/includes/admin/edd-license.php:508
+msgid "License Status"
+msgstr "Lisensstatus"
+
+#: framework/includes/admin/edd-license.php:515
+msgctxt "license key"
+msgid "Active"
+msgstr "Aktiv"
+
+#: framework/includes/admin/edd-license.php:518
+msgctxt "license status"
+msgid "Expiring Soon"
+msgstr "Utløper snart"
+
+#: framework/includes/admin/edd-license.php:523
+msgctxt "license key"
+msgid "Expired"
+msgstr "Utgått"
+
+#: framework/includes/admin/edd-license.php:527
+msgctxt "license key"
+msgid "Inactive"
+msgstr "Inaktiv"
+
+#: framework/includes/admin/edd-license.php:540
+msgid "License Expiration"
+msgstr "Lisensutløp"
+
+#: framework/includes/admin/edd-license.php:561
+msgid "Deactivate License"
+msgstr "Deaktiver lisens"
+
+#: framework/includes/admin/edd-license.php:565
+msgid "Activate License"
+msgstr "Aktiver lisens"
+
+#: framework/includes/admin/edd-license.php:572
+msgid "Renew License"
+msgstr "Forny lisens"
+
+#: framework/includes/admin/edd-license.php:862
+msgid "your website provider"
+msgstr ""
+
+#: framework/includes/archives.php:281 framework/includes/content-types.php:684
+#, php-format
+msgctxt "month archive"
+msgid "%1$s %2$d"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:55
+msgctxt "breadcrumb separator"
+msgid " > "
+msgstr " > "
+
+#: framework/includes/classes/breadcrumbs.php:242
+msgctxt "breadcrumb year format"
+msgid "Y"
+msgstr "Y"
+
+#: framework/includes/classes/breadcrumbs.php:259
+msgctxt "breadcrumb month format"
+msgid "F"
+msgstr "F"
+
+#: framework/includes/classes/breadcrumbs.php:276
+msgctxt "breadcrumb day format"
+msgid "jS"
+msgstr "jS"
+
+#: framework/includes/classes/breadcrumbs.php:326
+msgctxt "sermon breadcrumb"
+msgid "Sermons"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:327
+msgctxt "sermon breadcrumb"
+msgid "Topics"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:328
+msgctxt "sermon breadcrumb"
+msgid "Series"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:329
+msgctxt "sermon breadcrumb"
+msgid "Books"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:330
+msgctxt "sermon breadcrumb"
+msgid "Speakers"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:331
+msgctxt "sermon breadcrumb"
+msgid "Dates"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:366
+#, php-format
+msgctxt "breadcrumb"
+msgid "Page %s"
+msgstr "Side %s"
+
+#: framework/includes/classes/breadcrumbs.php:377
+msgctxt "breadcrumb"
+msgid "Search Results"
+msgstr "Søkeresultater"
+
+#: framework/includes/classes/breadcrumbs.php:571
+msgctxt "breadcrumbs"
+msgid "Home"
+msgstr "Hjem"
+
+#: framework/includes/classes/customize-controls.php:71
+#: framework/includes/classes/customize-controls.php:147
+msgid "Colorable"
+msgstr "Fargbart"
+
+#: framework/includes/classes/customize-controls.php:87
+msgid "The selected image is <strong>colorable</strong>."
+msgstr "Det utvalgte bildet er <strong>fargbart</strong>."
+
+#: framework/includes/classes/customize-controls.php:124
+msgctxt "customizer"
+msgid "Presets"
+msgstr "Forhåndsinnstillinger"
+
+#: framework/includes/classes/widget-archives.php:34
+msgctxt "widget"
+msgid "CT Archives"
+msgstr "CT Arkiv"
+
+#: framework/includes/classes/widget-archives.php:36
+msgid "Monthly archive for chosen post type"
+msgstr "Månedlig arkiv for valgt innleggtype"
+
+#: framework/includes/classes/widget-archives.php:85
+msgctxt "archives widget"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-archives.php:97
+msgctxt "archives widget title default"
+msgid "Archives"
+msgstr "Arkiv"
+
+#: framework/includes/classes/widget-archives.php:111
+msgctxt "archives widget"
+msgid "Type"
+msgstr "Type"
+
+#: framework/includes/classes/widget-archives.php:137
+msgctxt "archives widget"
+msgid "Limit"
+msgstr "Begrensning"
+
+#: framework/includes/classes/widget-archives.php:139
+msgctxt "archives widget"
+msgid "Set to 0 for no limit."
+msgstr "Sett til 0 for ingen begrensning."
+
+#: framework/includes/classes/widget-archives.php:170
+msgctxt "archives widget"
+msgid "Show counts"
+msgstr "Vis antall"
+
+#: framework/includes/classes/widget-archives.php:193
+msgctxt "archives widget"
+msgid "Show as dropdown"
+msgstr "Vis som nedtrekksliste"
+
+#: framework/includes/classes/widget-archives.php:250
+msgctxt "archives widget"
+msgid "Blog"
+msgstr "Blogg"
+
+#: framework/includes/classes/widget-categories.php:34
+msgctxt "widget"
+msgid "CT Categories"
+msgstr "CT Kategorier"
+
+#: framework/includes/classes/widget-categories.php:36
+msgid "Shows categories of various types"
+msgstr "Viser kategorier av forskjellige typer"
+
+#: framework/includes/classes/widget-categories.php:88
+msgctxt "categories widget"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-categories.php:100
+msgctxt "categories widget title default"
+msgid "Categories"
+msgstr "Kategorier"
+
+#: framework/includes/classes/widget-categories.php:114
+msgctxt "categories widget"
+msgid "Type"
+msgstr "Type"
+
+#: framework/includes/classes/widget-categories.php:140
+msgctxt "categories widget"
+msgid "Order By"
+msgstr "Sorter etter"
+
+#: framework/includes/classes/widget-categories.php:149
+msgctxt "categories widget order by"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-categories.php:150
+msgctxt "categories widget order by"
+msgid "Date"
+msgstr "Dato"
+
+#: framework/includes/classes/widget-categories.php:151
+msgctxt "categories widget order by"
+msgid "Post Count"
+msgstr "Antall innlegg"
+
+#: framework/includes/classes/widget-categories.php:179
+msgctxt "categories widget order"
+msgid "Low to High"
+msgstr "Stigende"
+
+#: framework/includes/classes/widget-categories.php:180
+msgctxt "categories widget order"
+msgid "High to Low"
+msgstr "Synkende"
+
+#: framework/includes/classes/widget-categories.php:199
+msgctxt "categories widget"
+msgid "Limit"
+msgstr "Grense"
+
+#: framework/includes/classes/widget-categories.php:201
+msgctxt "categories widget"
+msgid "Set to 0 for unlimited."
+msgstr "Sett til 0 for ubegrenset."
+
+#: framework/includes/classes/widget-categories.php:232
+msgctxt "categories widget"
+msgid "Show counts"
+msgstr "Vis antall"
+
+#: framework/includes/classes/widget-categories.php:258
+msgctxt "categories widget"
+msgid "Show hierarchy"
+msgstr "Vis hierarki"
+
+#: framework/includes/classes/widget-categories.php:281
+msgctxt "categories widget"
+msgid "Show as dropdown"
+msgstr "Vis som nedtrekksliste"
+
+#: framework/includes/classes/widget-categories.php:331
+msgctxt "categories widget"
+msgid "Blog Categories"
+msgstr "Bloggkategorier"
+
+#: framework/includes/classes/widget-categories.php:333
+msgctxt "categories widget"
+msgid "Blog Tags"
+msgstr "Blogmarkeringer"
+
+#: framework/includes/classes/widget-events.php:32
+msgctxt "events widget"
+msgid "CT Events"
+msgstr "CT Arrangementer"
+
+#: framework/includes/classes/widget-events.php:34
+msgctxt "events widget"
+msgid "Shows upcoming or past events"
+msgstr "Viser kommende eller tidligere arrangementer"
+
+#: framework/includes/classes/widget-events.php:83
+msgctxt "events widget"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-events.php:95
+msgctxt "events widget title default"
+msgid "Events"
+msgstr "Hendelser"
+
+#: framework/includes/classes/widget-events.php:109
+msgctxt "events widget"
+msgid "Period"
+msgstr "Periode"
+
+#: framework/includes/classes/widget-events.php:118
+msgctxt "events widget order"
+msgid "Upcoming"
+msgstr "Kommende"
+
+#: framework/includes/classes/widget-events.php:119
+msgctxt "events widget order"
+msgid "Past"
+msgstr "Tidligere"
+
+#: framework/includes/classes/widget-events.php:138
+msgctxt "events widget"
+msgid "Category"
+msgstr "Kategori"
+
+#: framework/includes/classes/widget-events.php:147
+msgctxt "sermons widget"
+msgid "All Categories"
+msgstr "Alle kategorier"
+
+#: framework/includes/classes/widget-events.php:166
+msgctxt "events widget"
+msgid "Limit"
+msgstr "Grense"
+
+#: framework/includes/classes/widget-events.php:196
+#: framework/includes/classes/widget-locations.php:197
+msgctxt "events widget"
+msgid "Show image"
+msgstr "Vis bilde"
+
+#: framework/includes/classes/widget-events.php:225
+msgctxt "events widget"
+msgid "Show date"
+msgstr "Vis dato"
+
+#: framework/includes/classes/widget-events.php:248
+msgctxt "events widget"
+msgid "Show time"
+msgstr "Vis tid"
+
+#: framework/includes/classes/widget-events.php:277
+msgctxt "events widget"
+msgid "Show category"
+msgstr "Vis kategori"
+
+#: framework/includes/classes/widget-events.php:300
+msgctxt "events widget"
+msgid "Show excerpt"
+msgstr "Vis utdrag"
+
+#: framework/includes/classes/widget-events.php:322
+msgctxt "events widget"
+msgid "Image"
+msgstr ""
+
+#: framework/includes/classes/widget-galleries.php:36
+msgctxt "widget"
+msgid "CT Galleries"
+msgstr "CT Gallerier"
+
+#: framework/includes/classes/widget-galleries.php:38
+msgid "Shows list of gallery pages"
+msgstr "Viser liste over gallerisider"
+
+#: framework/includes/classes/widget-galleries.php:87
+msgctxt "galleries widget"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-galleries.php:99
+msgctxt "galleries widget title default"
+msgid "Galleries"
+msgstr "Gallerier"
+
+#: framework/includes/classes/widget-galleries.php:113
+msgctxt "galleries widget"
+msgid "Order By"
+msgstr "Sorter etter"
+
+#: framework/includes/classes/widget-galleries.php:122
+msgctxt "galleries widget order by"
+msgid "Date Added"
+msgstr "Dato lagt til"
+
+#: framework/includes/classes/widget-galleries.php:123
+msgctxt "galleries widget order by"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-galleries.php:151
+msgctxt "galleries widget order"
+msgid "Low to High"
+msgstr "Stigende"
+
+#: framework/includes/classes/widget-galleries.php:152
+msgctxt "galleries widget order"
+msgid "High to Low"
+msgstr "Synkende"
+
+#: framework/includes/classes/widget-galleries.php:171
+msgctxt "galleries widget"
+msgid "Limit"
+msgstr "Begrensning"
+
+#: framework/includes/classes/widget-galleries.php:173
+msgctxt "galleries widget"
+msgid "Set to 0 for unlimited."
+msgstr "Sett til 0 for ubegrenset."
+
+#: framework/includes/classes/widget-gallery.php:32
+msgctxt "gallery widget"
+msgid "CT Gallery"
+msgstr "CT Galleri"
+
+#: framework/includes/classes/widget-gallery.php:34
+msgid "Shows gallery thumbnails"
+msgstr "Viser galleri-miniatyrbilder"
+
+#: framework/includes/classes/widget-gallery.php:56
+msgctxt "gallery widget"
+msgid "All Galleries"
+msgstr "Alle gallerier"
+
+#: framework/includes/classes/widget-gallery.php:94
+msgctxt "gallery widget"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-gallery.php:106
+msgctxt "gallery widget title default"
+msgid "Gallery"
+msgstr "Galleri"
+
+#: framework/includes/classes/widget-gallery.php:120
+msgctxt "gallery widget"
+msgid "Gallery"
+msgstr "Galleri"
+
+#: framework/includes/classes/widget-gallery.php:150
+msgctxt "gallery widget"
+msgid "Show link to gallery"
+msgstr "Vis lenke til galleri"
+
+#: framework/includes/classes/widget-gallery.php:172
+msgctxt "gallery widget"
+msgid "Order By"
+msgstr "Sorter etter"
+
+#: framework/includes/classes/widget-gallery.php:181
+msgctxt "gallery widget order by"
+msgid "Upload Date"
+msgstr "Opplastningsdato"
+
+#: framework/includes/classes/widget-gallery.php:182
+msgctxt "gallery widget order by"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-gallery.php:183
+msgctxt "gallery widget order by"
+msgid "Comment Count"
+msgstr "Antall kommentarer"
+
+#: framework/includes/classes/widget-gallery.php:211
+msgctxt "gallery widget order"
+msgid "Low to High"
+msgstr "Stigende"
+
+#: framework/includes/classes/widget-gallery.php:212
+msgctxt "gallery widget order"
+msgid "High to Low"
+msgstr "Synkende"
+
+#: framework/includes/classes/widget-gallery.php:231
+msgctxt "gallery widget"
+msgid "Limit"
+msgstr "Begrensning"
+
+#: framework/includes/classes/widget-gallery.php:257
+msgctxt "gallery widget"
+msgid "Thumbnail Size"
+msgstr "Miniatyrbildestørrelse"
+
+#: framework/includes/classes/widget-gallery.php:266
+msgctxt "gallery widget"
+msgid "Small"
+msgstr "Liten"
+
+#: framework/includes/classes/widget-gallery.php:267
+msgctxt "gallery widget"
+msgid "Medium"
+msgstr "Medium"
+
+#: framework/includes/classes/widget-gallery.php:268
+msgctxt "gallery widget"
+msgid "Large"
+msgstr "Stor"
+
+#: framework/includes/classes/widget-giving.php:32
+msgctxt "widget"
+msgid "CT Giving"
+msgstr "CT Givertjeneste"
+
+#: framework/includes/classes/widget-giving.php:34
+msgid "Shows a message and button"
+msgstr "Viser en melding og knapp"
+
+#: framework/includes/classes/widget-giving.php:83
+msgctxt "giving widget"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-giving.php:95
+msgctxt "giving widget default title"
+msgid "Giving"
+msgstr "Givertjeneste"
+
+#: framework/includes/classes/widget-giving.php:109
+msgctxt "giving widget"
+msgid "Message"
+msgstr "Melding"
+
+#: framework/includes/classes/widget-giving.php:121
+msgid "You may give online by clicking below."
+msgstr "Du kan gi en gave online ved å klikke nedenfor."
+
+#: framework/includes/classes/widget-giving.php:135
+msgctxt "giving widget"
+msgid "Button Text"
+msgstr "Knapptekst"
+
+#: framework/includes/classes/widget-giving.php:147
+msgctxt "giving widget"
+msgid "Give Now"
+msgstr "Gi nå"
+
+#: framework/includes/classes/widget-giving.php:161
+msgctxt "giving widget"
+msgid "Button URL"
+msgstr "Knapp-URL"
+
+#: framework/includes/classes/widget-giving.php:187
+msgctxt "giving widget"
+msgid "Image"
+msgstr ""
+
+#: framework/includes/classes/widget-highlight.php:32
+msgctxt "widget"
+msgid "CT Highlight"
+msgstr "CT Hovedoppslag"
+
+#: framework/includes/classes/widget-highlight.php:34
+msgid "Shows a highlight"
+msgstr "Viser et hovedoppslag"
+
+#: framework/includes/classes/widget-highlight.php:83
+msgctxt "highlight widget"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-highlight.php:109
+msgctxt "highlight widget"
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: framework/includes/classes/widget-highlight.php:135
+msgctxt "highlight widget"
+msgid "Click URL"
+msgstr "Klikk lenken"
+
+#: framework/includes/classes/widget-highlight.php:165
+msgctxt "highlight widget"
+msgid "Open in new tab"
+msgstr "Åpne i ny fane"
+
+#: framework/includes/classes/widget-highlight.php:187
+msgctxt "highlight widget"
+msgid "Image"
+msgstr "Bilde"
+
+#: framework/includes/classes/widget-highlight.php:213
+msgctxt "highlight widget"
+msgid "Brightness"
+msgstr ""
+
+#: framework/includes/classes/widget-highlight.php:214
+#: framework/includes/classes/widget-highlight.php:242
+msgctxt "highlight widget"
+msgid "(Percentage)"
+msgstr ""
+
+#: framework/includes/classes/widget-highlight.php:241
+msgctxt "highlight widget"
+msgid "Opacity"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:32
+msgctxt "widget"
+msgid "CT Locations"
+msgstr "CT Lokasjoner"
+
+#: framework/includes/classes/widget-locations.php:34
+msgid "Shows church location(s)"
+msgstr "Viser menighetslokasjon(er)"
+
+#: framework/includes/classes/widget-locations.php:83
+msgctxt "locations widget"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-locations.php:95
+msgctxt "locations widget title default"
+msgid "Locations"
+msgstr "Plasseringer"
+
+#: framework/includes/classes/widget-locations.php:109
+msgctxt "locations widget"
+msgid "Order By"
+msgstr "Sorter etter"
+
+#: framework/includes/classes/widget-locations.php:118
+msgctxt "locations widget order by"
+msgid "Custom Order"
+msgstr "Tilpass sortering"
+
+#: framework/includes/classes/widget-locations.php:119
+msgctxt "locations widget order by"
+msgid "Name"
+msgstr "Navn"
+
+#: framework/includes/classes/widget-locations.php:147
+msgctxt "locations widget order"
+msgid "Low to High"
+msgstr "Stigende"
+
+#: framework/includes/classes/widget-locations.php:148
+msgctxt "locations widget order"
+msgid "High to Low"
+msgstr "Synkende"
+
+#: framework/includes/classes/widget-locations.php:167
+msgctxt "locations widget"
+msgid "Limit"
+msgstr "Begrensning"
+
+#: framework/includes/classes/widget-locations.php:223
+msgctxt "locations widget"
+msgid "Show address"
+msgstr "Vis adresse"
+
+#: framework/includes/classes/widget-locations.php:249
+msgctxt "locations widget"
+msgid "Show phone number"
+msgstr "Vis telefonnummer"
+
+#: framework/includes/classes/widget-locations.php:278
+msgctxt "locations widget"
+msgid "Show email"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:301
+msgctxt "locations widget"
+msgid "Show times"
+msgstr "Vis tidspunkt"
+
+#: framework/includes/classes/widget-locations.php:327
+msgctxt "locations widget"
+msgid "Show map"
+msgstr "Vis kart"
+
+#: framework/includes/classes/widget-locations.php:349
+msgctxt "locations widget"
+msgid "Image"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:32
+msgctxt "widget"
+msgid "CT People"
+msgstr "CT Personer"
+
+#: framework/includes/classes/widget-people.php:34
+msgid "Shows people according to options"
+msgstr "Viser personer i henhold til innstillinger"
+
+#: framework/includes/classes/widget-people.php:83
+msgctxt "people widget"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-people.php:95
+msgctxt "people widget title default"
+msgid "People"
+msgstr "Personer"
+
+#: framework/includes/classes/widget-people.php:109
+msgctxt "people widget"
+msgid "Group"
+msgstr "Gruppe"
+
+#: framework/includes/classes/widget-people.php:118
+msgctxt "people widget"
+msgid "All Groups"
+msgstr "Alle grupper"
+
+#: framework/includes/classes/widget-people.php:137
+msgctxt "people widget"
+msgid "Order By"
+msgstr "Sorter etter"
+
+#: framework/includes/classes/widget-people.php:146
+msgctxt "people widget order by"
+msgid "Custom Order"
+msgstr "Tilpass rekkefølge"
+
+#: framework/includes/classes/widget-people.php:147
+msgctxt "people widget order by"
+msgid "Name"
+msgstr "Navn"
+
+#: framework/includes/classes/widget-people.php:175
+msgctxt "people widget order"
+msgid "Low to High"
+msgstr "Stigende"
+
+#: framework/includes/classes/widget-people.php:176
+msgctxt "people widget order"
+msgid "High to Low"
+msgstr "Synkende"
+
+#: framework/includes/classes/widget-people.php:195
+msgctxt "people widget"
+msgid "Limit"
+msgstr "Begrensning"
+
+#: framework/includes/classes/widget-people.php:225
+msgctxt "people widget"
+msgid "Show photo"
+msgstr "Vis bilde"
+
+#: framework/includes/classes/widget-people.php:251
+msgctxt "people widget"
+msgid "Show position"
+msgstr "Vis stilling"
+
+#: framework/includes/classes/widget-people.php:277
+msgctxt "people widget"
+msgid "Show phone"
+msgstr "Vis telefon"
+
+#: framework/includes/classes/widget-people.php:303
+msgctxt "people widget"
+msgid "Show email"
+msgstr "Vis e-post"
+
+#: framework/includes/classes/widget-people.php:329
+msgctxt "people widget"
+msgid "Show icons"
+msgstr "Vis ikoner"
+
+#: framework/includes/classes/widget-people.php:355
+#: framework/includes/classes/widget-posts.php:332
+msgctxt "posts widget"
+msgid "Show excerpt"
+msgstr "Vis utdrag"
+
+#: framework/includes/classes/widget-people.php:377
+msgctxt "people widget"
+msgid "Image"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:34
+msgctxt "widget"
+msgid "CT Posts"
+msgstr "CT Inlegg"
+
+#: framework/includes/classes/widget-posts.php:36
+msgid "Shows blog posts according to options"
+msgstr "Viser blogginlegg i henhold til innstillinger"
+
+#: framework/includes/classes/widget-posts.php:85
+msgctxt "posts widget"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-posts.php:97
+msgctxt "posts widget title default"
+msgid "Posts"
+msgstr "Innlegg"
+
+#: framework/includes/classes/widget-posts.php:111
+msgctxt "posts widget"
+msgid "Category"
+msgstr "Kategori"
+
+#: framework/includes/classes/widget-posts.php:120
+msgctxt "posts widget"
+msgid "All Categories"
+msgstr "Alle kategorier"
+
+#: framework/includes/classes/widget-posts.php:139
+msgctxt "posts widget"
+msgid "Order By"
+msgstr "Sorter etter"
+
+#: framework/includes/classes/widget-posts.php:148
+msgctxt "posts widget order by"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-posts.php:149
+msgctxt "posts widget order by"
+msgid "Date"
+msgstr "Dato"
+
+#: framework/includes/classes/widget-posts.php:150
+msgctxt "posts widget order by"
+msgid "Comment Count"
+msgstr "Antall kommentarer"
+
+#: framework/includes/classes/widget-posts.php:178
+msgctxt "posts widget order"
+msgid "Low to High"
+msgstr "Stigende"
+
+#: framework/includes/classes/widget-posts.php:179
+msgctxt "posts widget order"
+msgid "High to Low"
+msgstr "Synkende"
+
+#: framework/includes/classes/widget-posts.php:198
+msgctxt "posts widget"
+msgid "Limit"
+msgstr "Begrensning"
+
+#: framework/includes/classes/widget-posts.php:228
+msgctxt "posts widget"
+msgid "Show image"
+msgstr "Vis bilde"
+
+#: framework/includes/classes/widget-posts.php:257
+msgctxt "posts widget"
+msgid "Show date"
+msgstr "Vis dato"
+
+#: framework/includes/classes/widget-posts.php:283
+msgctxt "posts widget"
+msgid "Show author"
+msgstr "Vis forfatter"
+
+#: framework/includes/classes/widget-posts.php:309
+msgctxt "posts widget"
+msgid "Show category"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:354
+msgctxt "posts widget"
+msgid "Image"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:34
+msgctxt "widget"
+msgid "CT Section"
+msgstr "CT Seksjon"
+
+#: framework/includes/classes/widget-section.php:36
+msgid "Shows a section"
+msgstr "Viser en seksjon"
+
+#: framework/includes/classes/widget-section.php:85
+msgctxt "section widget"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-section.php:108
+msgctxt "section widget"
+msgid "Content"
+msgstr "Innhold"
+
+#: framework/includes/classes/widget-section.php:131
+msgctxt "section widget"
+msgid "Text Size"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:140
+msgctxt "section widget text size"
+msgid "Small"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:141
+msgctxt "section widget text size"
+msgid "Regular"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:142
+msgctxt "section widget text size"
+msgid "Large"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:168
+msgctxt "sermons widget"
+msgid "Centered"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:187
+msgctxt "section widget"
+msgid "Image"
+msgstr "Bilde"
+
+#: framework/includes/classes/widget-section.php:213
+msgctxt "slide widget"
+msgid "Video"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:214
+msgctxt "widget field"
+msgid "(Optional)"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:222
+msgid "Choose Video"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:223
+msgid "Choose Video for Widget"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:239
+msgctxt "section widget"
+msgid "Brightness"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:240
+#: framework/includes/classes/widget-section.php:268
+msgctxt "section widget"
+msgid "(Percentage)"
+msgstr "(Prosent)"
+
+#: framework/includes/classes/widget-section.php:267
+msgctxt "section widget"
+msgid "Opacity"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:295
+msgctxt "section widget"
+msgid "Attachment"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:304
+msgctxt "section widget attachment"
+msgid "Scroll"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:305
+msgctxt "section widget attachment"
+msgid "Fixed"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:324
+msgctxt "section widget"
+msgid "Height"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:325
+msgctxt "widget field"
+msgid "(Percentage)"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:352
+msgctxt "section widget"
+msgid "Orientation"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:361
+msgctxt "section widget orientation"
+msgid "Vertical"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:362
+msgctxt "section widget orientation"
+msgid "Horizontal"
+msgstr ""
+
+#: framework/includes/classes/widget-section.php:381
+msgctxt "section widget"
+msgid "Link 1"
+msgstr "Lenke 1"
+
+#: framework/includes/classes/widget-section.php:397
+#: framework/includes/classes/widget-section.php:453
+#: framework/includes/classes/widget-section.php:509
+#: framework/includes/classes/widget-section.php:565
+msgctxt "section widget"
+msgid "Text"
+msgstr "Tekst"
+
+#: framework/includes/classes/widget-section.php:411
+msgid "Enter text for link then URL."
+msgstr "Sett inn teksten for lenken og deretter URL."
+
+#: framework/includes/classes/widget-section.php:425
+#: framework/includes/classes/widget-section.php:481
+#: framework/includes/classes/widget-section.php:537
+#: framework/includes/classes/widget-section.php:593
+msgctxt "section widget"
+msgid "URL"
+msgstr "URL"
+
+#: framework/includes/classes/widget-section.php:437
+msgctxt "section widget"
+msgid "Link 2"
+msgstr "Lenke 2"
+
+#: framework/includes/classes/widget-section.php:493
+msgctxt "section widget"
+msgid "Link 3"
+msgstr "Lenke 3"
+
+#: framework/includes/classes/widget-section.php:549
+msgctxt "section widget"
+msgid "Link 4"
+msgstr "Lenke 4"
+
+#: framework/includes/classes/widget-sermons.php:32
+msgctxt "widget"
+msgid "CT Sermons"
+msgstr "CT Taler"
+
+#: framework/includes/classes/widget-sermons.php:34
+msgid "Shows sermons according to options"
+msgstr "Viser taler i henhold til innstillinger"
+
+#: framework/includes/classes/widget-sermons.php:83
+msgctxt "sermons widget"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-sermons.php:109
+msgctxt "sermons widget"
+msgid "Topic"
+msgstr "Emne"
+
+#: framework/includes/classes/widget-sermons.php:118
+msgctxt "sermons widget"
+msgid "All Topics"
+msgstr "Alle emner"
+
+#: framework/includes/classes/widget-sermons.php:137
+msgctxt "sermons widget"
+msgid "Book"
+msgstr "Bok"
+
+#: framework/includes/classes/widget-sermons.php:146
+msgctxt "sermons widget"
+msgid "All Books"
+msgstr "Alle bøker"
+
+#: framework/includes/classes/widget-sermons.php:165
+msgctxt "sermons widget"
+msgid "Series"
+msgstr "Serier"
+
+#: framework/includes/classes/widget-sermons.php:174
+msgctxt "sermons widget"
+msgid "All Series"
+msgstr "Alle serier"
+
+#: framework/includes/classes/widget-sermons.php:193
+msgctxt "sermons widget"
+msgid "Speaker"
+msgstr "Taler"
+
+#: framework/includes/classes/widget-sermons.php:202
+msgctxt "sermons widget"
+msgid "All Speakers"
+msgstr "Alle talere"
+
+#: framework/includes/classes/widget-sermons.php:221
+msgctxt "sermons widget"
+msgid "Order By"
+msgstr "Sorter etter"
+
+#: framework/includes/classes/widget-sermons.php:230
+msgctxt "sermons widget order by"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-sermons.php:231
+msgctxt "sermons widget order by"
+msgid "Date"
+msgstr "Dato"
+
+#: framework/includes/classes/widget-sermons.php:232
+msgctxt "sermons widget order by"
+msgid "Comment Count"
+msgstr "Antall kommentarer"
+
+#: framework/includes/classes/widget-sermons.php:260
+msgctxt "sermons widget order"
+msgid "Low to High"
+msgstr "Stigende"
+
+#: framework/includes/classes/widget-sermons.php:261
+msgctxt "sermons widget order"
+msgid "High to Low"
+msgstr "Synkende"
+
+#: framework/includes/classes/widget-sermons.php:280
+msgctxt "sermons widget"
+msgid "Limit"
+msgstr "Grense"
+
+#: framework/includes/classes/widget-sermons.php:310
+msgctxt "sermons widget"
+msgid "Show image"
+msgstr "Vis bilde"
+
+#: framework/includes/classes/widget-sermons.php:339
+msgctxt "sermons widget"
+msgid "Show date"
+msgstr "Vis dato"
+
+#: framework/includes/classes/widget-sermons.php:365
+msgctxt "sermons widget"
+msgid "Show topic"
+msgstr "Vis emne"
+
+#: framework/includes/classes/widget-sermons.php:391
+msgctxt "sermons widget"
+msgid "Show book"
+msgstr "Vis bok"
+
+#: framework/includes/classes/widget-sermons.php:417
+msgctxt "sermons widget"
+msgid "Show series"
+msgstr "Vis serie"
+
+#: framework/includes/classes/widget-sermons.php:443
+msgctxt "sermons widget"
+msgid "Show speaker"
+msgstr "Vis taler"
+
+#: framework/includes/classes/widget-sermons.php:466
+msgctxt "sermons widget"
+msgid "Show media types"
+msgstr "Vis type media"
+
+#: framework/includes/classes/widget-sermons.php:492
+msgctxt "sermons widget"
+msgid "Show excerpt"
+msgstr "Vis utdrag"
+
+#: framework/includes/classes/widget-sermons.php:514
+msgctxt "sermons widget"
+msgid "Image"
+msgstr ""
+
+#: framework/includes/classes/widget-slide.php:33
+msgctxt "widget"
+msgid "CT Slide"
+msgstr "CT Slide"
+
+#: framework/includes/classes/widget-slide.php:35
+msgid "A slide to be shown in a slider"
+msgstr "En slide som vises i en slider"
+
+#: framework/includes/classes/widget-slide.php:83
+msgctxt "slide widget"
+msgid "Title"
+msgstr "Tittel"
+
+#: framework/includes/classes/widget-slide.php:109
+msgctxt "slide widget"
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: framework/includes/classes/widget-slide.php:135
+msgctxt "slide widget"
+msgid "Click URL"
+msgstr "Klikk URL"
+
+#: framework/includes/classes/widget-slide.php:165
+msgctxt "slide widget"
+msgid "Open in new tab"
+msgstr "Åpne i ny fane"
+
+#: framework/includes/classes/widget-slide.php:187
+msgctxt "slide widget"
+msgid "Image"
+msgstr "bilde"
+
+#: framework/includes/classes/widget-slide.php:213
+msgctxt "slide widget"
+msgid "Video URL"
+msgstr "Video-URL"
+
+#: framework/includes/classes/widget.php:322
+msgctxt "widget image field"
+msgid "Choose Image"
+msgstr "Velg et bilde"
+
+#: framework/includes/classes/widget.php:325
+msgctxt "widget image field"
+msgid "Remove Image"
+msgstr "Fjern bilde"
+
+#: framework/includes/compatibility.php:63
+#, php-format
+msgid ""
+"<b>Activation Failed:</b> %s requires a newer version of WordPress. Please "
+"update and try again."
+msgstr ""
+"<b>Aktivering mislykket:</b> %s trenger en nyere versjon av Wordpress. "
+"Vennligst oppdater og prøv igjen."
+
+#: framework/includes/compatibility.php:232
+#, php-format
+msgid ""
+"<b>Plugin Required:</b> Please install and activate the <a href=\"%s"
+"\">Church Content</a> plugin to use with the current theme."
+msgstr ""
+"<b>Utvidelse nødvendig:</b> Vennligst installer og aktiver <a href=\"%s"
+"\">Church Content</a>-utvidelsen for å bruke med det nåværende temaet."
+
+#: framework/includes/compatibility.php:242
+#, php-format
+msgid ""
+"Please <a href=\"%s\">activate</a> the <b>Church Content</b> plugin required "
+"by the current theme."
+msgstr ""
+"Vennligst <a href=\"%s\">aktiver</a> <b>Church Content</b>-utvidelsen som "
+"kreves av det nåværende temaet."
+
+#: framework/includes/compatibility.php:310
+msgid ""
+"You are using an outdated version of Internet Explorer. Please upgrade your "
+"browser to use this site."
+msgstr ""
+"Du bruker en utdatert versjon av Internet Explorer. Vennligst oppgrader din "
+"nettleser for å bruke dette nettstedet."
+
+#: framework/includes/content-types.php:750
+msgctxt "content type archives"
+msgid "Months"
+msgstr ""
+
+#: framework/includes/deprecated.php:129
+#, php-format
+msgctxt "head title"
+msgid " (Page %d)"
+msgstr " (Side %d)"
+
+#: framework/includes/deprecated.php:150
+msgctxt "head title"
+msgid " - "
+msgstr " - "
+
+#: framework/includes/events.php:142
+#, php-format
+msgid "%1$s <span>(%2$s)</span>"
+msgstr "%1$s <span>(%2$s)</span>"
+
+#: framework/includes/events.php:257
+#, php-format
+msgctxt "dates"
+msgid "%1$s &ndash; %2$s"
+msgstr "%1$s &ndash; %2$s"
+
+#: framework/includes/events.php:285
+#, php-format
+msgctxt "times"
+msgid "%1$s &ndash; %2$s"
+msgstr "%1$s &ndash; %2$s"
+
+#: framework/includes/events.php:1254 framework/includes/events.php:1296
+#: framework/includes/events.php:1804
+msgctxt "item list"
+msgid ", "
+msgstr ""
+
+#: framework/includes/events.php:1257 framework/includes/events.php:1299
+#: framework/includes/events.php:1807
+msgctxt "item list"
+msgid " and "
+msgstr ""
+
+#: framework/includes/events.php:1276
+msgctxt "week of month"
+msgid "first"
+msgstr "første"
+
+#: framework/includes/events.php:1277
+msgctxt "week of month"
+msgid "second"
+msgstr "sekund"
+
+#: framework/includes/events.php:1278
+msgctxt "week of month"
+msgid "third"
+msgstr "tredje"
+
+#: framework/includes/events.php:1279
+msgctxt "week of month"
+msgid "fourth"
+msgstr "fjerde"
+
+#: framework/includes/events.php:1280
+msgctxt "week of month"
+msgid "fifth"
+msgstr ""
+
+#: framework/includes/events.php:1281
+msgctxt "week of month"
+msgid "last"
+msgstr "siste"
+
+#: framework/includes/events.php:1336
+#, php-format
+msgid "Every week on %2$s until %3$s (excluding %4$s)"
+msgid_plural "Every %1$s weeks on %2$s until %3$s (excluding %4$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1355
+#, php-format
+msgid "Every week on %2$s until %3$s"
+msgid_plural "Every %1$s weeks on %2$s until %3$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1378
+#, php-format
+msgid "Every week on %2$s (excluding %3$s)"
+msgid_plural "Every %1$s weeks on %2$s (excluding %3$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1396
+#, php-format
+msgid "Every week on %2$s"
+msgid_plural "Every %1$s weeks on %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1423
+#, php-format
+msgid "Every week until %2$s (excluding %3$s)"
+msgid_plural "Every %1$s weeks until %2$s (excluding %3$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1441
+#, php-format
+msgid "Every week until %2$s"
+msgid_plural "Every %1$s weeks until %2$s"
+msgstr[0] "Hver uke til %2$s"
+msgstr[1] "Hver %1$s uke til %2$s"
+
+#: framework/includes/events.php:1463
+#, php-format
+msgid "Every week (excluding %2$s)"
+msgid_plural "Every %1$s weeks (excluding %2$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1480
+#, php-format
+msgid "Every week"
+msgid_plural "Every %1$s weeks"
+msgstr[0] "Hver uke"
+msgstr[1] "Hver %1$s uke"
+
+#: framework/includes/events.php:1498
+#, php-format
+msgid "Every Week"
+msgid_plural "Every %1$s Weeks"
+msgstr[0] "Hver uke"
+msgstr[1] "Hver %1$s uke"
+
+#: framework/includes/events.php:1522
+#, php-format
+msgid "Every month on the %2$s %3$s until %4$s (excluding %5$s)"
+msgid_plural "Every %1$s months on the %2$s %3$s until %4$s (excluding %5$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1542
+#, php-format
+msgid "Every month on the %2$s %3$s until %4$s"
+msgid_plural "Every %1$s months on the %2$s %3$s until %4$s"
+msgstr[0] "Hver måned den %2$s %3$s til %4$s"
+msgstr[1] "Hver %1$s måned den %2$s %3$s til %4$s"
+
+#: framework/includes/events.php:1566
+#, php-format
+msgid "Every month on the %2$s %3$s (excluding %4$s)"
+msgid_plural "Every %1$s months on the %2$s %3$s (excluding %4$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1585
+#, php-format
+msgid "Every month on the %2$s %3$s"
+msgid_plural "Every %1$s months on the %2$s %3$s"
+msgstr[0] "Hver måned den %2$s %3$s"
+msgstr[1] "Hver %1$s måned den %2$s %3$s"
+
+#: framework/includes/events.php:1611
+#, php-format
+msgid "Every month until %2$s (excluding %3$s)"
+msgid_plural "Every %1$s months until %2$s (excluding %3$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1629
+#, php-format
+msgid "Every month until %2$s"
+msgid_plural "Every %1$s months until %2$s"
+msgstr[0] "Hver måned til %2$s"
+msgstr[1] "Hver %1$s måned til %2$s"
+
+#: framework/includes/events.php:1651
+#, php-format
+msgid "Every month (excluding %2$s)"
+msgid_plural "Every %1$s months (excluding %2$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/includes/events.php:1668
+#, php-format
+msgid "Every month"
+msgid_plural "Every %1$s months"
+msgstr[0] "Hver måned"
+msgstr[1] "Hver %1$s måned"
+
+#: framework/includes/events.php:1686
+#, php-format
+msgid "Every Month"
+msgid_plural "Every %1$s Months"
+msgstr[0] "Hver måned"
+msgstr[1] "Hver %1$s måned"
+
+#: framework/includes/events.php:1706
+#, php-format
+msgid "Every year until %1$s (excluding %2$s)"
+msgstr ""
+
+#: framework/includes/events.php:1718
+#, php-format
+msgid "Every year until %1$s"
+msgstr "Hvert år til %1$s"
+
+#: framework/includes/events.php:1734
+#, php-format
+msgid "Every year (excluding %1$s)"
+msgstr ""
+
+#: framework/includes/events.php:1742
+msgid "Every year"
+msgstr "Hvert år"
+
+#: framework/includes/events.php:1748
+msgid "Every Year"
+msgstr "Hvert år"
+
+#: framework/includes/head.php:68 page-templates/events-calendar.php:60
+msgctxt "event calendar"
+msgid "F Y"
+msgstr "F Y"
+
+#: framework/includes/head.php:105
+msgctxt "head title"
+msgid " | "
+msgstr ""
+
+#: framework/includes/helpers.php:333 framework/includes/helpers.php:354
+msgctxt "shortened text"
+msgid "&hellip;"
+msgstr "&hellip;"
+
+#: framework/includes/images.php:77
+#, php-format
+msgid "The target image size is %s."
+msgstr "Målet for bildestørrelsen er %s."
+
+#: framework/includes/maps.php:96
+msgid ""
+"<p><b>Google Map Error:</b> <i>latitude</i> and <i>longitude</i> attributes "
+"are required. See documentation for help.</p>"
+msgstr ""
+"<p><b>Google Maps-feil:</b> <i>breddegrad-</i> og <i>lengdegrad</i>-"
+"attributter er nødvendige. Se dokumentasjon for hjelp.</p>"
+
+#: framework/includes/mime-types.php:32
+msgctxt "mime type"
+msgid "File"
+msgstr "Fil"
+
+#: framework/includes/sermons.php:36
+msgctxt "singular"
+msgid "Sermon"
+msgstr ""
+
+#: framework/includes/sermons.php:62
+msgctxt "plural"
+msgid "Sermons"
+msgstr ""
+
+#: framework/includes/sermons.php:233
+msgid "Genesis"
+msgstr ""
+
+#: framework/includes/sermons.php:236
+msgid "Exodus"
+msgstr ""
+
+#: framework/includes/sermons.php:239
+msgid "Leviticus"
+msgstr ""
+
+#: framework/includes/sermons.php:242
+msgid "Numbers"
+msgstr ""
+
+#: framework/includes/sermons.php:245
+msgid "Deuteronomy"
+msgstr ""
+
+#: framework/includes/sermons.php:248
+msgid "Joshua"
+msgstr ""
+
+#: framework/includes/sermons.php:251
+msgid "Judges"
+msgstr ""
+
+#: framework/includes/sermons.php:254
+msgid "Ruth"
+msgstr ""
+
+#: framework/includes/sermons.php:257
+msgid "1 Samuel"
+msgstr ""
+
+#: framework/includes/sermons.php:260
+msgid "2 Samuel"
+msgstr ""
+
+#: framework/includes/sermons.php:263
+msgid "1 Kings"
+msgstr ""
+
+#: framework/includes/sermons.php:266
+msgid "2 Kings"
+msgstr ""
+
+#: framework/includes/sermons.php:269
+msgid "1 Chronicles"
+msgstr ""
+
+#: framework/includes/sermons.php:272
+msgid "2 Chronicles"
+msgstr ""
+
+#: framework/includes/sermons.php:275
+msgid "Ezra"
+msgstr ""
+
+#: framework/includes/sermons.php:278
+msgid "Nehemiah"
+msgstr ""
+
+#: framework/includes/sermons.php:281
+msgid "Esther"
+msgstr ""
+
+#: framework/includes/sermons.php:284
+msgid "Job"
+msgstr ""
+
+#: framework/includes/sermons.php:287
+msgid "Psalms"
+msgstr ""
+
+#: framework/includes/sermons.php:290
+msgid "Proverbs"
+msgstr ""
+
+#: framework/includes/sermons.php:293
+msgid "Ecclesiastes"
+msgstr ""
+
+#: framework/includes/sermons.php:296
+msgid "Song of Solomon"
+msgstr ""
+
+#: framework/includes/sermons.php:299
+msgid "Isaiah"
+msgstr ""
+
+#: framework/includes/sermons.php:302
+msgid "Jeremiah"
+msgstr ""
+
+#: framework/includes/sermons.php:305
+msgid "Lamentations"
+msgstr ""
+
+#: framework/includes/sermons.php:308
+msgid "Ezekiel"
+msgstr ""
+
+#: framework/includes/sermons.php:311
+msgid "Daniel"
+msgstr ""
+
+#: framework/includes/sermons.php:314
+msgid "Hosea"
+msgstr ""
+
+#: framework/includes/sermons.php:317
+msgid "Joel"
+msgstr ""
+
+#: framework/includes/sermons.php:320
+msgid "Amos"
+msgstr ""
+
+#: framework/includes/sermons.php:323
+msgid "Obadiah"
+msgstr ""
+
+#: framework/includes/sermons.php:326
+msgid "Jonah"
+msgstr ""
+
+#: framework/includes/sermons.php:329
+msgid "Micah"
+msgstr ""
+
+#: framework/includes/sermons.php:332
+msgid "Nahum"
+msgstr ""
+
+#: framework/includes/sermons.php:335
+msgid "Habakkuk"
+msgstr ""
+
+#: framework/includes/sermons.php:338
+msgid "Zephaniah"
+msgstr ""
+
+#: framework/includes/sermons.php:341
+msgid "Haggai"
+msgstr ""
+
+#: framework/includes/sermons.php:344
+msgid "Zechariah"
+msgstr ""
+
+#: framework/includes/sermons.php:347
+msgid "Malachi"
+msgstr ""
+
+#: framework/includes/sermons.php:353
+msgid "Matthew"
+msgstr ""
+
+#: framework/includes/sermons.php:356
+msgid "Mark"
+msgstr ""
+
+#: framework/includes/sermons.php:359
+msgid "Luke"
+msgstr ""
+
+#: framework/includes/sermons.php:362
+msgid "John"
+msgstr ""
+
+#: framework/includes/sermons.php:365
+msgid "Acts"
+msgstr ""
+
+#: framework/includes/sermons.php:368
+msgid "Romans"
+msgstr ""
+
+#: framework/includes/sermons.php:371
+msgid "1 Corinthians"
+msgstr ""
+
+#: framework/includes/sermons.php:374
+msgid "2 Corinthians"
+msgstr ""
+
+#: framework/includes/sermons.php:377
+msgid "Galatians"
+msgstr ""
+
+#: framework/includes/sermons.php:380
+msgid "Ephesians"
+msgstr ""
+
+#: framework/includes/sermons.php:383
+msgid "Philippians"
+msgstr ""
+
+#: framework/includes/sermons.php:386
+msgid "Colossians"
+msgstr ""
+
+#: framework/includes/sermons.php:389
+msgid "1 Thessalonians"
+msgstr ""
+
+#: framework/includes/sermons.php:392
+msgid "2 Thessalonians"
+msgstr ""
+
+#: framework/includes/sermons.php:395
+msgid "1 Timothy"
+msgstr ""
+
+#: framework/includes/sermons.php:398
+msgid "2 Timothy"
+msgstr ""
+
+#: framework/includes/sermons.php:401
+msgid "Titus"
+msgstr ""
+
+#: framework/includes/sermons.php:404
+msgid "Philemon"
+msgstr ""
+
+#: framework/includes/sermons.php:407
+msgid "Hebrews"
+msgstr ""
+
+#: framework/includes/sermons.php:410
+msgid "James"
+msgstr ""
+
+#: framework/includes/sermons.php:413
+msgid "1 Peter"
+msgstr ""
+
+#: framework/includes/sermons.php:416
+msgid "2 Peter"
+msgstr ""
+
+#: framework/includes/sermons.php:419
+msgid "1 John"
+msgstr ""
+
+#: framework/includes/sermons.php:422
+msgid "2 John"
+msgstr ""
+
+#: framework/includes/sermons.php:425
+msgid "3 John"
+msgstr ""
+
+#: framework/includes/sermons.php:428
+msgid "Jude"
+msgstr ""
+
+#: framework/includes/sermons.php:431
+msgid "Revelation"
+msgstr ""
+
+#: framework/includes/sermons.php:473
+msgid "Old Testament"
+msgstr ""
+
+#: framework/includes/sermons.php:476
+msgid "New Testament"
+msgstr ""
+
+#: framework/includes/sermons.php:480
+msgid "Other Books"
+msgstr ""
+
+#: framework/includes/template-tags.php:71
+msgid "Today"
+msgstr "I dag"
+
+#: framework/includes/template-tags.php:76
+msgid "Yesterday"
+msgstr "I går"
+
+#: header-right.php:83 header-right.php:105
+msgctxt "header right items"
+msgid "Today"
+msgstr "I dag"
+
+#: header-right.php:85
+msgctxt "header right items"
+msgid "Yesterday"
+msgstr "I går"
+
+#: header-right.php:107
+msgctxt "header right items"
+msgid "Tomorrow"
+msgstr "I morgen"
+
+#: header-right.php:110
+msgctxt "header right items"
+msgid "F j"
+msgstr "j. F"
+
+#: includes/admin/meta-boxes.php:58
+msgid "Options"
+msgstr "Innstillinger"
+
+#: includes/admin/meta-boxes.php:73
+msgid "Banner"
+msgstr "Banner"
+
+#: includes/admin/meta-boxes.php:77
+msgid "Do not show text over featured image"
+msgstr "Ikke vis tekst over fremhevet bilde"
+
+#: includes/admin/meta-boxes.php:100
+msgid ""
+"Example: Sermons template used. This page's banner shows on all sermon pages."
+msgstr ""
+"Eksempel: Talemal brukt. Banneret til denne siden vises på alle talesider."
+
+#: includes/admin/meta-boxes.php:102
+msgid "Show banner on related content"
+msgstr "Vis banner på relatert innhold"
+
+#: includes/admin/meta-boxes.php:126
+msgctxt "meta box"
+msgid "Sidebar"
+msgstr "Sidekolonne"
+
+#: includes/admin/meta-boxes.php:130
+#, php-format
+msgid "Hide sidebar <a href=\"%s\" target=\"_blank\">widgets</a>"
+msgstr "Skjul sidekolonne <a href=\"%s\" target=\"_blank\">widgeter</a>"
+
+#: includes/admin/meta-boxes.php:151
+msgctxt "meta box"
+msgid "Gallery"
+msgstr "Galleri"
+
+#: includes/admin/meta-boxes.php:153
+msgid "Applies only when gallery used in content."
+msgstr "Gjelder kun når galleriet blir brukt i innhold."
+
+#: includes/admin/meta-boxes.php:155
+msgid "Exclude from gallery widgets/templates"
+msgstr "Ekskluder fra galleriwidgeter/-maler"
+
+#: includes/customize-defaults.php:143
+msgid "1247 Church Ave, Brooklyn, NY 11218"
+msgstr ""
+
+#: includes/customize-defaults.php:149
+msgid "(817) 555-3462"
+msgstr ""
+
+#: includes/customize-defaults.php:156
+#, php-format
+msgid ""
+"Copyright &copy; [ctcom_current_year] [ctcom_site_name]. Powered by <a href="
+"\"%s\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">ChurchThemes."
+"com</a>"
+msgstr ""
+
+#: includes/customize-defaults.php:164
+msgid ""
+"[ctcom_rss_url]\n"
+"http://www.apple.com/itunes/\n"
+"http://facebook.com\n"
+"http://twitter.com\n"
+"http://youtube.com"
+msgstr ""
+
+#: includes/customize-defaults.php:170
+msgid ""
+"[ctcom_rss_url]\n"
+"http://www.apple.com/itunes/\n"
+"http://facebook.com\n"
+"http://twitter.com\n"
+"https://plus.google.com\n"
+"http://pinterest.com\n"
+"http://youtube.com\n"
+"http://vimeo.com\n"
+"http://flickr.com\n"
+"http://instagram.com\n"
+"http://foursquare.com"
+msgstr ""
+
+#: includes/customize.php:33
+msgctxt "customizer"
+msgid "Preset"
+msgstr "Forhåndsinnstiling"
+
+#: includes/customize.php:34
+msgctxt "customizer"
+msgid "Upload"
+msgstr "Last opp"
+
+#: includes/customize.php:35
+msgctxt "customizer"
+msgid "None"
+msgstr "Ingen"
+
+#: includes/customize.php:52
+msgid "Don't move"
+msgstr "Ikke flytt"
+
+#: includes/customize.php:55
+#, php-format
+msgid "%d pixels right"
+msgstr "%d piksler mot høyre"
+
+#: includes/customize.php:56
+#, php-format
+msgid "%d pixels left"
+msgstr "%d piksler mot venstre"
+
+#: includes/customize.php:72
+msgctxt "customizer header text"
+msgid "Dark"
+msgstr "Mørk"
+
+#: includes/customize.php:73
+msgctxt "customizer header text"
+msgid "Light"
+msgstr "Lys"
+
+#: includes/customize.php:89
+msgctxt "customizer"
+msgid "Image"
+msgstr "Bilde"
+
+#: includes/customize.php:90
+msgctxt "customizer"
+msgid "Text"
+msgstr "Tekst"
+
+#: includes/customize.php:106
+msgctxt "customizer"
+msgid "Extra Small"
+msgstr "Ekstra liten"
+
+#: includes/customize.php:107
+msgctxt "customizer"
+msgid "Small"
+msgstr "Liten"
+
+#: includes/customize.php:108
+msgctxt "customizer"
+msgid "Medium"
+msgstr "Medium"
+
+#: includes/customize.php:109
+msgctxt "customizer"
+msgid "Large"
+msgstr "Stor"
+
+#: includes/customize.php:110
+msgctxt "customizer"
+msgid "Extra Large"
+msgstr "Ekstra stor"
+
+#: includes/customize.php:126
+msgctxt "customizer"
+msgid "Tagline"
+msgstr "Slagord"
+
+#: includes/customize.php:129
+#, php-format
+msgctxt "customizer"
+msgid "Latest %1$s"
+msgstr ""
+
+#: includes/customize.php:132
+msgctxt "customizer"
+msgid "Upcoming Events"
+msgstr "Kommende arrangementer"
+
+#: includes/customize.php:133
+msgctxt "customizer"
+msgid "Latest Posts"
+msgstr "Siste innlegg"
+
+#: includes/customize.php:134
+msgctxt "customizer"
+msgid "Custom Content"
+msgstr "Tilpassbart innhold"
+
+#: includes/customize.php:135
+msgctxt "customizer"
+msgid "Nothing"
+msgstr "Ingenting"
+
+#: includes/customize.php:151
+msgctxt "customizer header items"
+msgid "One"
+msgstr "En"
+
+#: includes/customize.php:152
+msgctxt "customizer header items"
+msgid "Two"
+msgstr "To"
+
+#: includes/customize.php:200
+msgid "Color Scheme"
+msgstr "Fargeskjema"
+
+#: includes/customize.php:216
+msgid "Header Text"
+msgstr "Toppområdetekst"
+
+#: includes/customize.php:243
+msgctxt "customizer"
+msgid "Background Image"
+msgstr "Bakgrunnsbilde"
+
+#: includes/customize.php:275
+msgctxt "customizer"
+msgid "Configuration"
+msgstr ""
+
+#: includes/customize.php:297
+msgctxt "customizer"
+msgid "Google Fonts"
+msgstr "Google-skrifttyper"
+
+#: includes/customize.php:312
+msgid "Logo Font"
+msgstr "Skrifttype logo"
+
+#: includes/customize.php:332
+msgid "Heading Font"
+msgstr "Skrifttype overskrift"
+
+#: includes/customize.php:352
+msgid "Menu Font"
+msgstr "Skrifttype meny"
+
+#: includes/customize.php:372
+msgid "Body Font"
+msgstr "Skrifttype brødtekst"
+
+#: includes/customize.php:391
+msgid "Character Sets"
+msgstr "Tegnsett"
+
+#: includes/customize.php:401
+msgctxt "customizer"
+msgid "Header & Logo"
+msgstr "Toppområde og logo"
+
+#: includes/customize.php:415
+msgctxt "customizer"
+msgid "Logo Type"
+msgstr "Logotype"
+
+#: includes/customize.php:431
+msgctxt "customizer"
+msgid "Logo Image"
+msgstr "Logobilde"
+
+#: includes/customize.php:433
+#, php-format
+msgid "<b>%1$s maximum</b> (transparent PNG recommended)."
+msgstr ""
+
+#: includes/customize.php:449
+msgctxt "customizer"
+msgid "HiDPI Logo (Optional)"
+msgstr "Logo høy DPI"
+
+#: includes/customize.php:450
+msgid ""
+"Also known as \"Retina\", should be exactly double the size of regular image."
+msgstr ""
+
+#: includes/customize.php:467
+msgid "Move Logo"
+msgstr "Flytt logo"
+
+#: includes/customize.php:483
+msgid "Logo Text"
+msgstr "Logotekst"
+
+#: includes/customize.php:498
+msgctxt "customizer"
+msgid "Logo Text Size"
+msgstr "Skriftstørrelse logo"
+
+#: includes/customize.php:521
+msgid "Show tagline under logo"
+msgstr "Vis slagord under logo"
+
+#: includes/customize.php:538
+msgid "Move Tagline"
+msgstr "Flytt slagord"
+
+#: includes/customize.php:554
+msgctxt "customizer"
+msgid "Show on Right"
+msgstr "Vis på høyre side"
+
+#: includes/customize.php:570
+msgctxt "customizer"
+msgid "Items on Right"
+msgstr "Objeker til høyre"
+
+#: includes/customize.php:586
+msgid "Custom Content"
+msgstr "Egendefinert innhold"
+
+#: includes/customize.php:601
+msgid "Hide Search Box"
+msgstr "Skjul søkeboks"
+
+#: includes/customize.php:616
+msgid "Show breadcrumb path on subpages"
+msgstr "Vis brødsmuler på undersider"
+
+#: includes/customize.php:626
+msgctxt "customizer"
+msgid "Footer Text"
+msgstr "Bunntekst"
+
+#: includes/customize.php:640
+msgid "Address"
+msgstr "Adresse"
+
+#: includes/customize.php:655
+msgid "Phone"
+msgstr "Telefon"
+
+#: includes/customize.php:670
+msgctxt "customizer"
+msgid "Notice"
+msgstr "Notis"
+
+#: includes/customize.php:680
+msgctxt "customizer"
+msgid "Social Media Icons"
+msgstr "Ikoner for sosiale medier"
+
+#: includes/customize.php:694
+msgid "Header URLs"
+msgstr "Toppområde-URLer"
+
+#: includes/customize.php:706
+#, php-format
+msgid ""
+"Enter one URL per line for %s. Use <code>[ctcom_rss_url]</code> for RSS."
+msgstr ""
+"Skriv inn en URL per linje for %s. Bruk <code>[ctcom_rss_url]</code> for RSS."
+
+#: includes/customize.php:721
+msgid "Footer URLs"
+msgstr "Bunnområde-URLer"
+
+#: includes/customize.php:739
+msgctxt "customizer"
+msgid "Homepage Slider"
+msgstr "Hjemmeside-slider"
+
+#: includes/customize.php:754
+msgid "Automatically transition to next slide"
+msgstr "Automatisk overgang til neste slide"
+
+#: includes/customize.php:769
+msgid "Seconds Between Transitions"
+msgstr "Sekunder mellom overganger"
+
+#: includes/enqueue-scripts.php:124
+msgctxt "menu dropdown"
+msgid "Menu"
+msgstr "Meny"
+
+#: includes/enqueue-scripts.php:129 includes/enqueue-scripts.php:130
+msgid "Required"
+msgstr "Påkrevd"
+
+#: includes/enqueue-scripts.php:131
+msgid "Invalid Email"
+msgstr "Ugyldig e-post"
+
+#: includes/enqueue-scripts.php:132
+msgid "Invalid URL"
+msgstr "Ugyldig URL"
+
+#: includes/enqueue-scripts.php:133
+msgid "Comment Required"
+msgstr "Kommentar påkrevd"
+
+#: includes/icons.php:206
+msgctxt "social icons list"
+msgid ", "
+msgstr ", "
+
+#: includes/icons.php:209
+msgctxt "social icons list"
+msgid " or "
+msgstr " eller "
+
+#: includes/icons.php:211
+msgctxt "social icons list"
+msgid " and "
+msgstr " og "
+
+#: includes/nav-menus.php:28
+msgctxt "menu location"
+msgid "Top"
+msgstr "Topp"
+
+#: includes/nav-menus.php:31
+msgctxt "menu location"
+msgid "Header"
+msgstr "Toppområde"
+
+#: includes/nav-menus.php:34
+msgctxt "menu location"
+msgid "Footer"
+msgstr "Bunnområde"
+
+#: includes/sidebars.php:33
+msgctxt "widget area"
+msgid "Homepage Slider"
+msgstr "Hjemmeside-slider"
+
+#: includes/sidebars.php:34
+msgid "Add CT Slide widgets to show in the homepage slider."
+msgstr "Legg til CT Lysbilde-widgeter for å vise i hjemmeside-sliden."
+
+#: includes/sidebars.php:44
+msgctxt "widget area"
+msgid "Homepage Highlights"
+msgstr "Hovedoppslag hjemmeside"
+
+#: includes/sidebars.php:45
+msgid ""
+"Add CT Highlight widgets to show on the homepage by the slider (two can be "
+"shown)."
+msgstr ""
+"Legg til CT Hovedoppslag-widgeter for å vises på hjemmesiden ved slideren "
+"(to kan bli vist)."
+
+#: includes/sidebars.php:55
+msgctxt "widget area"
+msgid "Homepage Bottom"
+msgstr "Bunnområde hjemmeside"
+
+#: includes/sidebars.php:56
+msgid "These show at the bottom of the homepage."
+msgstr "Disse vises ved bunnen av hjemmesiden."
+
+#: includes/sidebars.php:66
+msgid "Page Sidebar"
+msgstr "Sidekolonne side"
+
+#: includes/sidebars.php:68
+msgid "These widgets show on the side of pages using the default template."
+msgstr "Disse widgetsene vises ved siden av sidene som bruker standardmalen."
+
+#: includes/sidebars.php:80
+msgid "Sermons Sidebar"
+msgstr "Sidekolonne Taler"
+
+#: includes/sidebars.php:81
+msgid "These widgets show on the side of sermon pages."
+msgstr "Disse widgetsene vises ved siden av talesidene."
+
+#: includes/sidebars.php:91
+msgid "Events Sidebar"
+msgstr "Sidekolonne Arrangement"
+
+#: includes/sidebars.php:92
+msgid "These widgets show on the side of event pages."
+msgstr "Disse widgetene vises ved siden av arrangementsider."
+
+#: includes/sidebars.php:102
+msgid "People Sidebar"
+msgstr "Sidekolonne personer"
+
+#: includes/sidebars.php:103
+msgid "These widgets show on the side of people pages."
+msgstr "Disse widgetsene vises ved siden av folk-sider."
+
+#: includes/sidebars.php:113
+msgid "Locations Sidebar"
+msgstr "Sidekolonne Lokasjoner"
+
+#: includes/sidebars.php:114
+msgid "These widgets show on the side of locations content."
+msgstr "Disse widgetsene viser på siden av lokasjonsinnhold."
+
+#: includes/sidebars.php:124
+msgid "Gallery Sidebar"
+msgstr "Sidekolonne Galleri"
+
+#: includes/sidebars.php:125
+msgid "These widgets show on the side of gallery pages."
+msgstr "Disse widgetene vises på siden av gallerisider."
+
+#: includes/sidebars.php:135
+msgid "Blog Sidebar"
+msgstr "Sidekolonne Blogg"
+
+#: includes/sidebars.php:136
+msgid "These widgets show on the side of blog content."
+msgstr "Disse widgetene vises ved siden av blogginhold."
+
+#: includes/sidebars.php:146
+msgid "Contact Sidebar"
+msgstr "Sidekolonne Kontaktperson"
+
+#: includes/sidebars.php:147
+msgid "These widgets show on the side of the contact page."
+msgstr "Disse widgetsene vises ved siden av kontaktpersonsiden."
+
+#: includes/sidebars.php:157
+msgid "Search Sidebar"
+msgstr "Sidekolonne Søk"
+
+#: includes/sidebars.php:158
+msgid "These widgets show on the side of search results."
+msgstr "Disse widgetene vises ved siden av søkeresultatene."
+
+#: includes/support-ctc.php:111
+#, php-format
+msgid "Enter one URL per line for %s."
+msgstr "Skriv inn en URL per linje for %s."
+
+#: includes/support-ctc.php:114 includes/support-ctc.php:135
+msgid "Email address will be encoded to help prevent spam."
+msgstr ""
+
+#: includes/support-framework.php:41
+#, php-format
+msgid ""
+"<b>Next Steps:</b> Please continue reading the <a href=\"%s\" target=\"_blank"
+"\">Getting Started</a> guide for the next steps after theme activation."
+msgstr ""
+"<b>Neste trinn:</b> Vennligst fortsett med å lese guiden <a href=\"%s\" "
+"target=\"_blank\">Getting Started</a> for å få vite neste trinn etter "
+"aktivering av temaet."
+
+#: includes/support-framework.php:53
+#, php-format
+msgid ""
+"Please activate your license key to enable one-click theme updates and to "
+"get support from <a href=\"%1$s\" target=\"_blank\">ChurchThemes.com</a> for "
+"this site. Read <a href=\"%2$s\" target=\"_blank\">License Keys</a> for more "
+"information."
+msgstr ""
+
+#: includes/support-framework.php:58
+#, php-format
+msgid ""
+"<b>License key could not be activated.</b> Read the <a href=\"%1$s\" target="
+"\"_blank\">License Keys</a> guide for help."
+msgstr ""
+"<b>Lisensnøkkel kunne ikke bli aktivert.</b> Les <a href=\"%1$s\" target="
+"\"_blank\">lisensnøkkelguiden</a> for hjelp."
+
+#: includes/support-framework.php:61
+#, php-format
+msgid ""
+"<strong>Theme License Expired:</strong> <a href=\"%4$s\" target=\"_blank"
+"\">Renew</a> your <a href=\"%1$s\">Theme License</a> to re-enable updates "
+"and support for the <strong>%2$s</strong> theme (expired on <strong>%3$s</"
+"strong>). <a href=\"%5$s\" target=\"_blank\">Learn More</a>"
+msgstr ""
+"<strong>Temalisens utløpt:</strong> <a href=\"%4$s\" target=\"_blank"
+"\">Forny</a> din <a href=\"%1$s\">temalisensen</a> for å reaktivere "
+"oppdateringer og støtte for <strong>%2$s</strong>-temaet (utløpt den <strong>"
+"%3$s</strong>). <a href=\"%5$s\" target=\"_blank\">Les mer</a>"
+
+#: includes/support-framework.php:62
+#, php-format
+msgid ""
+"<strong>Theme License Expiring Soon:</strong> <a href=\"%4$s\" target="
+"\"_blank\">Renew</a> your <a href=\"%1$s\">Theme License</a> to continue "
+"receiving updates and support for the <strong>%2$s</strong> theme (expires "
+"on <strong>%3$s</strong>). <a href=\"%5$s\" target=\"_blank\">Learn More</a>"
+msgstr ""
+"<strong>Temalisens utløper snart:</strong> <a href=\"%4$s\" target=\"_blank"
+"\">Forny</a> din <a href=\"%1$s\">temalisens</a> for å fortsette å få "
+"oppdateringer og brukerstøtte for <strong>%2$s</strong>-temaet (utløper "
+"<strong>%3$s</strong>). <a href=\"%5$s\" target=\"_blank\">Les mer</a>"
+
+#: includes/support-framework.php:81
+msgctxt "contact form"
+msgid "Email"
+msgstr "E-post"
+
+#: includes/support-framework.php:82
+msgctxt "contact form"
+msgid "Courriel"
+msgstr "Courriel"
+
+#: includes/support-framework.php:203
+#, php-format
+msgid ""
+"Optionally provide an image that is at least %s (it will be cropped/"
+"resized). An image exactly this size is ideal."
+msgstr ""
+"Legg eventuelt til et bilde som er minst %s (det vil bli beskåret/skalert). "
+"Et bilde på akkurat denne størrelsen er ideelt."
+
+#: includes/support-framework.php:505
+msgctxt "slide widget image"
+msgid "(Required)"
+msgstr "(Må fylles ut)"
+
+#: includes/support-framework.php:506 includes/support-framework.php:525
+#, php-format
+msgid "Image cropped to %s."
+msgstr "Bilde beskåret til %s."
+
+#: includes/support-framework.php:509
+msgid "To make this a video slide, enter a YouTube or Vimeo video page URL."
+msgstr ""
+"For å gjøre dette til en videoslide, skriv inn en URL til en Youtube- eller "
+"Vimeo-video."
+
+#: includes/template-tags.php:67
+#, php-format
+msgid "%s <span>(Page %d)</span>"
+msgstr "%s <span>(Side %d)</span>"
+
+#: includes/template-tags.php:218
+msgid "0 Comments"
+msgstr "0 kommentarer"
+
+#: includes/template-tags.php:219
+msgid "1 Comment"
+msgstr "1 kommentar"
+
+#: includes/template-tags.php:220
+msgid "% Comments"
+msgstr "% kommentarer"
+
+#: loop-author.php:27
+#, php-format
+msgid "About %s"
+msgstr "Om %s"
+
+#: loop-author.php:33
+#, php-format
+msgid "More posts by %1$s"
+msgstr "Flere innlegg av %1$s"
+
+#: loop-header.php:52
+#, php-format
+msgid "'%s' tagged posts"
+msgstr "Innlegg med stikkordet '%s'"
+
+#: loop-header.php:68
+#, php-format
+msgctxt "sermon topic"
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: loop-header.php:70
+#, php-format
+msgctxt "sermon book"
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: loop-header.php:72
+#, php-format
+msgctxt "sermon speaker"
+msgid "%1$s by %2$s"
+msgstr ""
+
+#: loop-header.php:74
+#, php-format
+msgctxt "sermon tag"
+msgid "\"%2$s\" Tagged %1$s"
+msgstr ""
+
+#: loop-header.php:106
+#, php-format
+msgid "There are no %s to show."
+msgstr "Det er ingen %s å vise."
+
+#: loop-header.php:121
+#, php-format
+msgid "Posts by %s"
+msgstr "Innlegg av %s"
+
+#: loop-header.php:133
+#, php-format
+msgid "Search results for '%s'"
+msgstr "Søkeresultater for '%s'"
+
+#: loop-header.php:138
+#, php-format
+msgid "There is %d match for %s."
+msgid_plural "There are %d matches for %s."
+msgstr[0] "Det er %d treff for %s."
+msgstr[1] "Det er %d treff for %s."
+
+#: loop-header.php:156
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: loop-header.php:158
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: loop-header.php:165
+#, php-format
+msgid "Posts from %1$s"
+msgstr ""
+
+#: loop-header.php:167
+#, php-format
+msgctxt "sermon archive"
+msgid "%2$s from %1$s"
+msgstr ""
+
+#: loop-header.php:204
+msgid "Archives"
+msgstr "Arkiv"
+
+#: loop-header.php:210
+msgid "Not Found"
+msgstr "Ikke funnet"
+
+#: loop-header.php:213
+msgid "Sorry, the page or file you tried to access was not found."
+msgstr "Beklager, siden eller filen du prøvde å nå ble ikke funnet."
+
+#: loop-navigation.php:28
+#, php-format
+msgid " %s Back to %s"
+msgstr " %s Tilbake til %s"
+
+#: loop-navigation.php:63
+#, php-format
+msgctxt "previous post link"
+msgid "%1$s %2$s"
+msgstr "%1$s %2$s"
+
+#: loop-navigation.php:72
+#, php-format
+msgctxt "next post link"
+msgid "%1$s %2$s"
+msgstr "%1$s %2$s"
+
+#: loop-navigation.php:105
+#, php-format
+msgctxt "pagination"
+msgid "%s Previous"
+msgstr "%s Forrige"
+
+#: loop-navigation.php:106
+#, php-format
+msgctxt "pagination"
+msgid "Next %s"
+msgstr "Neste %s"
+
+#: page-templates/events-calendar.php:136
+msgctxt "event calendar"
+msgid "Remove Category Filter"
+msgstr "Fjern kategorifilter"
+
+#: page-templates/events-calendar.php:150
+#, php-format
+msgid "Previous Month &ndash; %1$s"
+msgstr "Forrige måned &ndash; %1$s"
+
+#: page-templates/events-calendar.php:154
+#, php-format
+msgid "Next Month &ndash; %1$s"
+msgstr "Neste måned &ndash; %1$s"
+
+#: page-templates/events-calendar.php:157
+msgctxt "event calendar"
+msgid "Choose Month"
+msgstr "Velg måned"
+
+#: page-templates/events-calendar.php:160
+msgctxt "event calendar"
+msgid "Choose Category"
+msgstr "Velg kategori"
+
+#: page-templates/events-calendar.php:284
+msgctxt "event calendar"
+msgid "Today"
+msgstr "I dag"
+
+#: page-templates/events-calendar.php:441
+msgctxt "event calendar"
+msgid "All Categories"
+msgstr "Alle kategorier"
+
+#: page-templates/events-calendar.php:555
+msgctxt "event calendar"
+msgid "Details"
+msgstr "Detaljer"
+
+#: page-templates/galleries.php:66
+#, php-format
+msgid "1 Photo"
+msgid_plural "%d Photos"
+msgstr[0] "Ett bilde"
+msgstr[1] "%d bilder"
+
+#: page-templates/sermon-books.php:69
+msgid "There are no books to show."
+msgstr ""
+
+#: page-templates/sermon-dates.php:55
+msgctxt "sermon dates index"
+msgid "F"
+msgstr ""
+
+#: page-templates/sermon-dates.php:77
+msgid "There are no dates to show."
+msgstr ""
+
+#: page-templates/sermon-series.php:98
+#, php-format
+msgctxt "series date range"
+msgid "%s &ndash; %s"
+msgstr ""
+
+#: page-templates/sermon-series.php:123
+#, php-format
+msgctxt "sermon count single"
+msgid "%1$s %2$s"
+msgstr ""
+
+#: page-templates/sermon-series.php:135
+#, php-format
+msgctxt "sermon count multiple"
+msgid "%1$s %2$s"
+msgstr ""
+
+#: page-templates/sermon-series.php:159
+msgid "There are no series to show."
+msgstr ""
+
+#: page-templates/sermon-speakers.php:43
+msgid "There are no speakers to show."
+msgstr ""
+
+#: page-templates/sermon-topics.php:42
+msgid "There are no topics to show."
+msgstr ""
+
+#: searchform.php:15 searchform.php:17
+msgid "Search"
+msgstr "Søk"
+
+#: searchform.php:19
+#, fuzzy
+#| msgid "Search"
+msgctxt "search icon"
+msgid "Search"
+msgstr "Søk"
+
+#: sermon-index-header.php:35
+msgctxt "sermon archives"
+msgid "Dates"
+msgstr ""
+
+#: widget-templates/widget-archives.php:38
+#, php-format
+msgctxt "archives widget"
+msgid "%1$s %2$d"
+msgstr "%1$s %2$d"
+
+#: widget-templates/widget-archives.php:59
+msgctxt "archives widget"
+msgid "Select Month"
+msgstr "Velg måned"
+
+#: widget-templates/widget-categories.php:39
+msgctxt "categories widget"
+msgid "Select One"
+msgstr "Velg én"
+
+#: widget-templates/widget-events.php:1
+msgctxt "events widget"
+msgid "There are no events to show."
+msgstr "Det er ingen arrangementer å vise."
+
+#: widget-templates/widget-galleries.php:61
+msgctxt "galleries widget"
+msgid "There are no galleries to show."
+msgstr "Det er ingen gallerier å vise."
+
+#: widget-templates/widget-gallery.php:1
+msgctxt "gallery widget"
+msgid "View Gallery"
+msgstr "Se galleri"
+
+#: widget-templates/widget-gallery.php:1
+msgctxt "gallery widget"
+msgid "There are no images to show."
+msgstr "Det er ingen bilder å vise."
+
+#: widget-templates/widget-locations.php:113
+msgctxt "locations widget"
+msgid "There are no locations to show."
+msgstr "Det er ingen plasseringer å vise."
+
+#: widget-templates/widget-people.php:96
+msgctxt "people widget"
+msgid "There are no people to show."
+msgstr "Det er ingen personer å vise."
+
+#: widget-templates/widget-posts.php:63
+#, php-format
+msgctxt "posts widget"
+msgid "by <a href=\"%1$s\">%2$s</a>"
+msgstr "ved <a href=\"%1$s\">%2$s</a>"
+
+#: widget-templates/widget-posts.php:93
+msgctxt "posts widget"
+msgid "There are no posts to show."
+msgstr "Det er ingen innlegg å vise."
+
+#: widget-templates/widget-sermons.php:69
+#, php-format
+msgctxt "widget"
+msgid "by %s"
+msgstr "ved %s"
+
+#: widget-templates/widget-sermons.php:98
+msgctxt "sermons widget"
+msgid "Read Online"
+msgstr "Les online"
+
+#: widget-templates/widget-sermons.php:102
+msgctxt "sermons widget"
+msgid "Watch Video"
+msgstr "Se video"
+
+#: widget-templates/widget-sermons.php:106
+msgctxt "sermons widget"
+msgid "Listen to Audio"
+msgstr "Hør på lydfil"
+
+#: widget-templates/widget-sermons.php:110
+msgctxt "sermons widget"
+msgid "Download PDF"
+msgstr "Last ned PDF"
+
+#: widget-templates/widget-sermons.php:144
+#, php-format
+msgctxt "sermons widget"
+msgid "There are no %1$s to show."
+msgstr ""
+
+#~ msgid "Go back."
+#~ msgstr "Gå tilbake."
+
+#~ msgid ""
+#~ "Please activate your license key to enable one-click theme updates and to "
+#~ "get support from <a href=\"%1$s\" target=\"_blank\">churchthemes.com</a> "
+#~ "for this site. Read <a href=\"%2$s\" target=\"_blank\">License Keys</a> "
+#~ "for more information."
+#~ msgstr ""
+#~ "Vennligst aktiver din lisensnøkkel for å aktivere ettklikks "
+#~ "temaoppdatering og for å få brukerstøtte fra <a href=\"%1$s\" target="
+#~ "\"_blank\">churchthemes.com</a> for denne siden. Les <a href=\"%2$s\" "
+#~ "target=\"_blank\">lisensnøkler</a> for mer informasjon."
+
+#~ msgctxt "sermons widget title default"
+#~ msgid "Sermons"
+#~ msgstr "Taler"
+
+#~ msgctxt "customizer"
+#~ msgid "Latest Sermons"
+#~ msgstr "Nyeste taler"
+
+#~ msgctxt "archives widget"
+#~ msgid "Sermons"
+#~ msgstr "Taler"
+
+#~ msgctxt "sermon topic"
+#~ msgid "Sermons on %s"
+#~ msgstr "Taler om %s"
+
+#~ msgctxt "sermon book"
+#~ msgid "Sermons on %s"
+#~ msgstr "Taler om %s"
+
+#~ msgid "Sermons by %s"
+#~ msgstr "Taler av %s"
+
+#~ msgid "'%s' tagged sermons"
+#~ msgstr "Taler med stikkordet '%s'"
+
+#~ msgid "Posts from %s"
+#~ msgstr "Innlegg fra %s"
+
+#~ msgid "Sermons from %s"
+#~ msgstr "Taler fra %s"
+
+#~ msgctxt "sermons widget"
+#~ msgid "There are no sermons to show."
+#~ msgstr "Det er ingen taler å vise."
+
+#~ msgid "Fullscreen Image"
+#~ msgstr "Fullskjermsbilde"
+
+#~ msgid ""
+#~ "The WordPress <a href=\"%s\" target=\"_blank\">antispambot</a> function "
+#~ "is used to help deter automated email harvesting."
+#~ msgstr ""
+#~ "Wordpressfunksjonen <a href=\"%s\" target=\"_blank\">antispambot</a> "
+#~ "brukes for å forhindre automatisert innhenting av e-postadresser."
+
+#~ msgid ""
+#~ "Any customizations you have made directly to %s's theme files will be "
+#~ "lost. Please consider using a child theme for modifications."
+#~ msgstr ""
+#~ "Alle tilpasninger du har gjort direkte på %s-temaets filer vil gå tapt. "
+#~ "Vennligst vurder å bruke et undertema for modifikasjoner."
+
+#~ msgctxt "section widget"
+#~ msgid "Image Opacity"
+#~ msgstr "Bildegjennomsiktighet"

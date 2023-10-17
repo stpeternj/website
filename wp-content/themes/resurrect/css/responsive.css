@@ -1,0 +1,1519 @@
+/**
+ * Responsive Styles
+ *
+ * Adjusts elements and layout for mobile devices (small screens).
+ */
+
+/**********************************************
+ * BASE STYLES
+ **********************************************/
+
+/******************* FORMS ********************/
+
+input,
+select,
+textarea {
+	max-width: 100%;
+}
+
+/**********************************************
+ * CUSTOM STYLES
+ **********************************************/
+
+/*************** GOOGLE MAPS JS ***************/
+
+/* Shrink map height for mobile */
+/* padding-bottom: 50% method in style.css stopped working w/Google change September 7, 2016 */
+
+@media only screen and (max-width: 1024px) {
+
+	.resurrect-has-sidebar .ctfw-google-map {
+		height: 300px;
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+
+	.ctfw-google-map,
+	.resurrect-has-sidebar .ctfw-google-map {
+		height: 300px;
+	}
+
+}
+
+@media only screen and (max-width: 640px) {
+
+	.ctfw-google-map,
+	.resurrect-has-sidebar .ctfw-google-map {
+		height: 250px;
+	}
+
+}
+
+@media only screen and (max-width: 560px) {
+
+	.ctfw-google-map,
+	.resurrect-has-sidebar .ctfw-google-map {
+		height: 200px;
+	}
+
+}
+
+/**********************************************
+ * LAYOUT
+ **********************************************/
+
+/******************* HEADER *******************/
+
+/* Responsive Logo */
+
+#resurrect-logo-image img {
+	max-width: 100%;
+	height: auto;
+}
+
+/************** RESPONSIVE MENU ***************/
+
+/*
+MeanMenu - https://github.com/meanthemes/meanMenu
+GPL License, Copyright (c) 2013 - 2016 Chris Wharton
+A responsive menu appears at the top and the regular menu disappears on small devices
+*/
+
+/* Hide until small screen triggered */
+
+a.meanmenu-reveal {
+	display: none;
+}
+
+/* When under viewport size, .mean-container is added to target */
+
+.mean-container .mean-bar {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 0;
+	min-height: 50px;
+	z-index: 999999;
+}
+
+/* Open / Close Button */
+
+.mean-container a.meanmenu-reveal {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 22px;
+	height: 22px;
+	padding: 15px 0;
+	margin-left: -3px;
+	cursor: pointer;
+	font-size: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 22px;
+	text-decoration: none;
+	text-indent: -9999em;
+}
+
+	.mean-container a.meanmenu-reveal span {
+		display: block;
+		margin-top: 3px;
+		height: 3px;
+	}
+
+/* Menu Items */
+
+.mean-container .mean-nav {
+	width: 100%;
+	margin-top: 50px;
+	float: left;
+	font-size: 0.95em;
+	line-height: 1.6em;
+	border-left: 5px solid;
+}
+
+	/* List */
+
+	.mean-container .mean-nav ul {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+		/* Item */
+
+		.mean-container .mean-nav ul li {
+			position: relative;
+			width: 100%;
+			float: left;
+			overflow: hidden; /* keep expand from overflowing bounds */
+			border-width: 1px 0 0 0;
+			border-style: solid;
+		}
+
+			/* Links */
+
+			.mean-container .mean-nav ul li a {
+				display: block;
+				width: 75%; /* leave space on right for Expand */
+				min-height: 22px;
+				padding: 0.9em 5%;
+				float: left;
+				font-weight: bold;
+				text-align: left;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+				/* Sub Links */
+
+				.mean-container .mean-nav ul li li a {
+					width: 70%; /* leave space on right for Expand */
+					padding: 0.9em 10%;
+					font-weight: normal;
+					text-shadow: none !important;
+					text-transform: none;
+					visibility: visible;
+				}
+
+					.mean-container .mean-nav ul li li li a {
+						width: 65%;
+						padding: 0.9em 15%;
+					}
+
+						.mean-container .mean-nav ul li li li li a {
+							width: 60%;
+							padding: 0.9em 20%;
+						}
+
+							.mean-container .mean-nav ul li li li li li a {
+								width: 55%;
+								padding: 0.9em 25%;
+							}
+
+	/* Last Item */
+
+	.mean-container .mean-nav ul li.mean-last a {
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+
+	/* Expand Button */
+
+	.mean-container .mean-nav ul li a.mean-expand {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 2;
+		width: 22px;
+		height: 23px;
+		padding: 12px !important;
+		border: none !important;
+		font-weight: bold;
+		text-align: center;
+	}
+
+.mean-container .mean-push {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	float: left;
+	clear: both;
+}
+
+.mean-nav .wrapper {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* Box sizing */
+
+.mean-container .mean-bar, .mean-container .mean-bar * {
+	-webkit-box-sizing:	content-box;
+	-moz-box-sizing:	content-box;
+	box-sizing:			content-box;
+}
+
+/* Hide */
+
+.mean-remove {
+	display: none !important;
+}
+
+
+/**********************************************
+ * HOMEPAGE
+ **********************************************/
+
+/****************** SLIDER ********************/
+
+/* Slider Video */
+
+.resurrect-slide-video { /* <li> */
+	position: relative;
+	padding-bottom: 50%; /* 960x480 (480 / 960 * 100) */
+	height: 0;
+}
+
+	.resurrect-slide-video iframe { /* YouTube, Vimeo */
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+/**********************************************
+ * 1023px to 799px
+ **********************************************/
+
+@media only screen and (max-width: 1023px) and (min-width: 801px) {
+
+	/************** EVENT CALENDAR ****************/
+
+	/* NOTE: These are prefixed with .resurrect-has-sidebar and copied from 759px below */
+	/* This uses mobile view of calendar for a range of widths when sidebar is present */
+
+	/* Show list container */
+
+	.resurrect-has-sidebar #resurrect-calendar-list {
+		display: block;
+	}
+
+	/* Day of week header abbreviated */
+
+	.resurrect-has-sidebar .resurrect-calendar-table-header-full {
+		display: none;
+	}
+
+	.resurrect-has-sidebar .resurrect-calendar-table-header-short {
+		display: inline-block;
+	}
+
+	/* Hide day label (Today, Oct, etc.) */
+
+	.resurrect-has-sidebar .resurrect-calendar-table-day-label {
+		display: none;
+	}
+
+	/* Show linked day number if has events (unless in past) */
+
+	.resurrect-has-sidebar .resurrect-calendar-table-day-has-events:not(.resurrect-calendar-table-day-past) span.resurrect-calendar-table-day-number {
+		display: none;
+	}
+
+	.resurrect-has-sidebar .resurrect-calendar-table-day-has-events:not(.resurrect-calendar-table-day-past) a.resurrect-calendar-table-day-number {
+		display: inline-block;
+	}
+
+	/* Hide event links */
+
+	.resurrect-has-sidebar .resurrect-calendar-table-day-events {
+		display: none;
+	}
+
+	/* Enlarge and center day */
+
+	.resurrect-has-sidebar .resurrect-calendar-table-day-content-container {
+		padding: 15px 0; /* vertical centering and height */
+		min-height: 0 !important;
+	}
+
+		.resurrect-has-sidebar .resurrect-calendar-table-day-heading {
+			font-size: 1.2em;
+			text-align: center;
+		}
+
+}
+
+/**********************************************
+ * 1024px - Big Tablet, Small Laptop or Less
+ **********************************************/
+
+@media only screen and (max-width: 1024px) {
+
+	/******************* LAYOUT *******************/
+
+	/* Create margins for content */
+
+	#resurrect-top-content,
+	#resurrect-middle-content,
+	#resurrect-footer-content {
+		width: 90%;
+	}
+
+	/* Header: Logo Text */
+
+	#resurrect-logo-text-inner {
+		font-size: 0.8em;
+	}
+
+	#resurrect-logo-text-inner {
+		line-height: 1em; /* maintain it */
+	}
+
+	/* Header Menu Bar (keep on one line) */
+
+	#resurrect-header-menu { /* <nav> */
+		padding: 0 5px 0 10px !important; /* 5px offsets left bar on .mean-container .mean-nav */
+	}
+
+		/* Header Menu Items (Top Level) */
+
+		#resurrect-header-menu-links > li {
+			margin-left: 9px;
+			margin-right: 9px;
+		}
+
+			/* Header Menu Links (Top Level) */
+
+			#resurrect-header-menu-links > li > a .ctfw-header-menu-link-inner {
+				font-size: 0.9em;
+			}
+
+				/* Description */
+
+				#resurrect-header-menu-links > li > a .ctfw-header-menu-link-description {
+					display: none;
+				}
+
+				/*
+				If no description on top-level menu link, move the dropdown up
+				IMPORTANT: This is copied higher up (without .ctfw-header-menu-link-no-description) for when Description is left blank
+				*/
+
+				.sf-menu li:hover > ul,
+				.sf-menu .sfHover > ul {
+					top: 2em;
+				}
+
+	/* Sidebar - Make Narrow */
+
+	.resurrect-has-sidebar #resurrect-content-inner  {
+		margin-right: 240px;
+	}
+
+	#resurrect-sidebar-right {
+		width: 210px;
+		margin-left: -211px; /* width + border */
+
+	}
+
+	/******************* FOOTER *******************/
+
+	/* Show "View Full Site" as soon as go responsive */
+
+	#resurrect-footer-responsive-toggle {
+		display: block;
+	}
+
+	/***************** HOMEPAGE *******************/
+
+	/* Highlights (Right of Slider) */
+
+	#ctcom-home-highlights .resurrect-highlight,
+	.resurrect-no-slider #ctcom-home-highlights .resurrect-highlight {
+		font-size: 0.9em; /* reduce size */
+	}
+
+	/* Homepage Widgets */
+
+	.resurrect-home-widget {
+		width: 46.9%;
+	}
+
+	/****************** SERMONS *******************/
+
+	/* Sermon Index List - Three Columns to Two (Has Sidebar) */
+
+	.resurrect-has-sidebar .resurrect-sermon-index-list.resurrect-sermon-index-list-three-columns { /* <ul> */
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+
+	/* Books - reduce to 1 column per testament */
+
+	.resurrect-sermon-books-testament ul {
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-count: 1;
+	}
+
+	/*************** EVENT CALENDAR ***************/
+
+	/* Reduce day cell height */
+
+	.resurrect-no-sidebar .resurrect-calendar-table-day-content-container {
+		min-height: 85px;
+	}
+
+	/************* GALLERY (SINGLE) ***************/
+
+	/* Smaller caption for small thumbnails */
+
+	.gallery-columns-2 .gallery-caption,
+	.gallery-columns-3 .gallery-caption {
+		font-size: 0.9em;
+	}
+
+	/*********** GALLERIES (MULTIPLE) *************/
+
+	/* Galleries Template - Show caption thumbs in 2 columns */
+
+	.resurrect-galleries-list .gallery-item { /* duplicate in style.css for 2 columns */
+		max-width: 44%; /* Opera Mobile, Android 4 don't like anything greater */
+		max-width: -webkit-calc(50% - 14px);
+		max-width:         calc(50% - 14px);
+	}
+
+	.resurrect-galleries-list .gallery-item {
+		margin-right: 7px !important; /* reset to original */
+	}
+
+	.resurrect-galleries-list .gallery-item:nth-of-type(2n) {
+		margin-right: 0;
+	}
+
+}
+
+/**********************************************
+ * 800px - Tablet, Small Netbook or Less
+ **********************************************/
+
+@media only screen and (max-width: 800px) {
+
+	/************** CUSTOM ELEMENTS ***************/
+
+	/* Gutenberg */
+
+	.has-huge-font-size {
+		font-size: 1.6em !important;
+		line-height: 1.4;
+	}
+
+	.has-large-font-size {
+		font-size: 1.4em !important;
+		line-height: 1.4;
+	}
+
+	.has-regular-font-size {
+		font-size: 1em !important;
+		line-height: 1.6;
+	}
+
+	.has-small-font-size {
+		font-size: 0.85em !important;
+		line-height: 1.6;
+	}
+
+	.wp-block-cover {
+		font-size: 0.8em;
+	}
+
+	/****************** LAYOUT ********************/
+
+	/* Less margin, more space for content/menu */
+
+	#resurrect-top-content,
+	#resurrect-middle-content,
+	#resurrect-footer-content {
+		width: 93%;
+	}
+
+	/* Top Bar */
+
+	#resurrect-top-menu-links {
+		font-size: 0.9em;
+	}
+
+	/* Header: Logo Text */
+
+	#resurrect-logo-text-inner {
+		font-size: 0.7em;
+	}
+
+	/* Header: Tagline below logo */
+
+	#resurrect-logo-tagline {
+		font-size: 1.2em;
+	}
+
+	/* Header: Upcoming Events */
+
+	.resurrect-header-right-item-date {
+		display: none;
+	}
+
+	/* Header Menu Bar (keep on one line) */
+
+	#resurrect-header-menu { /* <nav> */
+		padding: 0 4px 0 9px;
+	}
+		/* Header Menu List */
+
+		#resurrect-header-menu-links { /* <ul> */
+			padding: 12px 0 2px 0;
+		}
+
+			/* Header Menu Items (Top Level) */
+
+			#resurrect-header-menu-links > li {
+				margin-left: 7px;
+				margin-right: 8px;
+			}
+
+				/* Header Menu Links (Top Level) */
+
+				#resurrect-header-menu-links > li > a .ctfw-header-menu-link-inner {
+					padding-left: 7px;
+				}
+
+				/* Remove arrows */
+
+				.sf-arrows .sf-with-ul .ctfw-header-menu-link-title {
+					margin-right: 0;
+				}
+
+					.sf-arrows .sf-with-ul .ctfw-header-menu-link-title:after {
+						display: none;
+					}
+
+
+	/* Banner */
+
+	#resurrect-banner h1 {
+		font-size: 1.8em;
+	}
+
+	/* Content */
+
+	#resurrect-content {
+		float: none;
+		width: 100%;
+	}
+
+	/* Sidebar */
+
+	.resurrect-has-sidebar #resurrect-content-inner {
+		margin-right: 0;
+	}
+
+	#resurrect-sidebar-right { /* move to bottom */
+		float: none;
+		width: 100%;
+		padding: 0;
+		margin: 30px 0 0 0;
+		font-size: 1em;
+		border-top: 1px solid transparent; /* hack to make margin snap into place */
+	}
+
+	/* Footer */
+
+	#resurrect-footer {
+		font-size: 0.9em;
+	}
+
+	/***************** HOMEPAGE *******************/
+
+	/* Slider */
+
+	.flex-title {
+		font-size: 1.8em;
+	}
+
+	/* Homepage Slider */
+
+	.touch #resurrect-slider {
+		padding-bottom: 38px; /* a little more space for touch devices at this size */
+	}
+
+	/*
+	Move homepage boxes below slider
+	IMPORTANT: same code is copied higher up for when slider is disabled
+	*/
+
+	#resurrect-slider-boxes {
+		border-top: 0; /* undoing what was done higher up, prevents margin issue with FF */
+		margin-top: 14px; /* related to the fix above (was border 1 + margni-top 13 = 14 */
+		margin-bottom: 30px;
+	}
+
+		#resurrect-slider,
+		#ctcom-home-highlights {
+			width: 100%;
+			float: none;
+			margin-top: 14px;
+		}
+
+			/* Image Box */
+
+			#ctcom-home-highlights .resurrect-highlight,
+			.resurrect-no-slider #ctcom-home-highlights .resurrect-highlight { /* .resurrect-caption-image */
+				margin-top: 0;
+				margin-left: 2%;
+				width: 49%;
+				float: left;
+				font-size: 1em; /* restore to original size */
+			}
+
+				/* No margin on first item */
+
+				#ctcom-home-highlights .resurrect-highlight:first-child,
+				.resurrect-no-slider #ctcom-home-highlights .resurrect-highlight:first-child {
+					margin-left: 0;
+				}
+
+	/* Homepage Intro */
+
+	#resurrect-intro-heading,
+	#resurrect-intro-content {
+		font-size: 1.8em; /* same as slider title */
+	}
+
+	/* Homepage Widgets - increase margin between columns */
+
+	#resurrect-home-bottom-widgets {
+		margin-right: -3.8%;
+	}
+
+		.resurrect-home-widget {
+			width: 46.2%;
+		}
+
+}
+
+/**********************************************
+ * 759px - Small Tablet (just under 760px)
+ **********************************************/
+
+@media only screen and (max-width: 759px) {
+
+	/****************** SERMONS *******************/
+
+	/* Sermon Index List - Three Columns to Two (No Sidebar) */
+
+	.resurrect-no-sidebar .resurrect-sermon-index-list.resurrect-sermon-index-list-three-columns { /* <ul> */
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+
+	/************** EVENT CALENDAR ****************/
+
+	/* NOTE: These are copied and prefixed for no sidebar in 1023px to 801px above */
+	/* This is original so make changes here and move up, then re-prefix */
+
+	/* Show list container */
+
+	#resurrect-calendar-list {
+		display: block;
+	}
+
+	/* Day of week header abbreviated */
+
+	.resurrect-calendar-table-header-full {
+		display: none;
+	}
+
+	.resurrect-calendar-table-header-short {
+		display: inline-block;
+	}
+
+	/* Hide day label (Today, Oct, etc.) */
+
+	.resurrect-calendar-table-day-label {
+		display: none;
+	}
+
+	/* Show linked day number if has events (unless in past) */
+
+	.resurrect-calendar-table-day-has-events:not(.resurrect-calendar-table-day-past) span.resurrect-calendar-table-day-number {
+		display: none;
+	}
+
+	.resurrect-calendar-table-day-has-events:not(.resurrect-calendar-table-day-past) a.resurrect-calendar-table-day-number {
+		display: inline-block;
+	}
+
+	/* Hide event links */
+
+	.resurrect-calendar-table-day-events {
+		display: none;
+	}
+
+	/* Enlarge and center day */
+
+	.resurrect-calendar-table-day-content-container {
+		padding: 15px 0; /* vertical centering and height */
+		min-height: 0 !important;
+	}
+
+		.resurrect-calendar-table-day-heading {
+			font-size: 1.2em;
+			text-align: center;
+		}
+
+}
+
+/**********************************************
+ * 640px - Big Phone, Small Tablet or Less
+ **********************************************/
+
+@media only screen and (max-width: 640px) {
+
+	/************** CUSTOM ELEMENTS ***************/
+
+	/* Reduce blockquote */
+
+	blockquote {
+		font-size: 1.2em !important; /* a little bigger */
+		padding-right: 20px !important;
+	}
+
+	.wp-block-pullquote blockquote,
+	.wp-block-pullquote blockquote p {
+		font-size: 1.1em !important;
+	}
+
+	blockquote.is-style-large,
+	blockquote.is-style-large p {
+		font-size: 1.4em !important;
+	}
+
+		blockquote.is-style-large p {
+			line-height: 1.2 !important;
+		}
+
+	/* Gutenberg */
+
+	.wp-block-separator {
+		margin: 50px auto !important;
+	}
+
+	/****************** WORDPRESS ********************/
+
+	.wp-block-column {
+	  margin-right: 0 !important;
+	  margin-bottom: 2.5em !important;
+	}
+
+	.wp-block-column:last-child {
+	  margin-bottom: 0 !important;
+	}
+
+	/****************** LAYOUT ********************/
+
+	/* Hide Top Bar (unless has search) */
+
+	#resurrect-top.resurrect-top-no-search {
+		display: none;
+	}
+
+		/* Hide Top Menu */
+
+		#resurrect-top-menu {
+			display: none;
+		}
+
+		/* Hide Social Icons */
+
+		#resurrect-top-content .resurrect-list-icons {
+			display: none;
+		}
+
+	/* Center Search */
+
+	#resurrect-top-right {
+		float: none;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+		/* Search Form */
+
+		#resurrect-top-search {
+			display: block;
+			width: 100%;
+			margin: 0;
+			text-align: center;
+			padding-left: 3px;
+		}
+
+			/* Search Input */
+
+			#resurrect-top-search .resurrect-search-field {
+				width: 70%;
+				max-width: 300px;
+			}
+
+				#resurrect-top-search .resurrect-search-field input {
+					width: 100%;
+				}
+
+			#resurrect-top-search .resurrect-search-button {
+				margin-left: 10px;
+			}
+
+	/* Header: Logo Text */
+
+	#resurrect-logo-text-inner {
+		font-size: 0.7em;
+	}
+
+	/* Center Logo/Tagline */
+
+	#resurrect-header-content {
+		padding: 35px 0; /* less vertical margin */
+	}
+
+		#resurrect-logo,
+		#resurrect-logo-tagline {
+			text-align: center;
+		}
+
+		#resurrect-logo-content {
+			width: 100%;
+		}
+
+		.resurrect-no-logo #resurrect-logo-image, /* default */
+		#resurrect-logo-image,
+		#resurrect-logo-tagline {
+			left: 0 !important; /* override any offsets set in <head> via options */
+			margin-left: auto; /* center */
+			margin-right: auto; /* center */
+		}
+
+			#resurrect-logo-image img {
+				max-width: 90%;
+			}
+
+		#resurrect-logo-tagline {
+			font-size: 1.3em;
+		}
+
+	/* Hide Header Right Content */
+
+	#resurrect-header-right {
+		display: none;
+	}
+
+	/* Header Menu */
+
+	.js #resurrect-header-menu { /* when MeanMenu used */
+		min-height: 50px; /* reduce menu bar height to match MeanMenu */
+		padding-left: 0 !important;
+	}
+
+		/* Hide regular menu before MeanMenu loads -- avoid flicker */
+
+		.js #resurrect-header-menu-inner,
+		.js .sf-menu {
+			visibility: hidden; /* instead display: none or dropdowns go narrow on size up */
+			height: 1px;
+			overflow: hidden;
+		}
+
+		/* Hide Link Descriptions */
+
+		.mean-nav > ul li > a div div:nth-child(2) {
+			display: none;
+		}
+
+	/* Reduce space between content/footer */
+
+	#resurrect-middle-content {
+		padding-bottom: 35px; /* space above footer */
+	}
+
+	/* Banner */
+
+	#resurrect-banner h1 {
+		bottom: 20%; /* move down */
+	}
+
+	/* Breadcrumbs */
+
+	#resurrect-banner .ctfw-breadcrumbs,
+	#resurrect-content-inner .ctfw-breadcrumbs {
+		display: none;
+	}
+
+	/* Footer - one element per line, centered, less margin */
+
+	#resurrect-footer-content {
+		padding: 15px 0 30px 0;
+	}
+
+		#resurrect-footer-left,
+		#resurrect-footer-right {
+			width: 100%;
+			float: none;
+			text-align: center;
+		}
+
+			#resurrect-footer-menu-links,
+			#resurrect-footer-contact { /* <ul> */
+				left: 0; /* offset item margin */
+			}
+
+			#resurrect-footer-responsive-toggle,
+			#resurrect-footer-menu-links,
+			#resurrect-footer-social-icons,
+			#resurrect-footer-contact,
+			#resurrect-notice {
+				margin-top: 15px;
+			}
+
+	/***************** HOMEPAGE *******************/
+
+	/* Slider - small play button */
+
+	.flex-play-overlay {
+		background-size: 51px;
+	}
+
+	/* Homepage Highlights - one per row now */
+
+	#ctcom-home-highlights .resurrect-highlight,
+	.resurrect-no-slider #ctcom-home-highlights .resurrect-highlight { /* .resurrect-caption-image */
+		font-size: 0.9em; /* reduce size */
+	}
+
+	/* Homepage Widgets */
+
+	#resurrect-home-bottom-widgets {
+		margin-right: 0;
+	}
+
+		.resurrect-home-widget {
+			width: 100%;
+		}
+
+	/****************** SERMONS *******************/
+
+	.resurrect-sermon-books-testament h2 {
+		font-size: 1.6em;
+	}
+
+	/************** EVENT CALENDAR ****************/
+
+	/* Center title and controls */
+
+	#resurrect-calendar-header-left,
+	#resurrect-calendar-header-right {
+		float: none;
+		text-align: center;
+	}
+
+	#resurrect-calendar-header-left {
+		margin: 0 12px 10px 12px;
+	}
+
+		#resurrect-calendar-title span {
+			margin: 0 12px;
+		}
+
+	/* Reduce day height */
+
+	.resurrect-calendar-table-day-content-container {
+		padding: 8px 0; /* vertical centering and height */
+	}
+
+	/* Center list heading */
+
+	#resurrect-calendar-list-heading {
+		text-align: center;
+	}
+
+	/************* GALLERY (SINGLE) ***************/
+
+	/* Hide all gallery captions */
+
+	.gallery-caption {
+		display: none;
+	}
+
+	/* Make 6+ columns show as 5 columns */
+
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item { /* duplicate in style.css for 5 columns */
+		max-width: 17%;
+		max-width: -webkit-calc(20% - 14px);
+		max-width:         calc(20% - 14px);
+	}
+
+	.gallery-item {
+		margin-right: 7px !important; /* reset to original */
+	}
+
+	.gallery-columns-6 .gallery-item:nth-of-type(5n),
+	.gallery-columns-7 .gallery-item:nth-of-type(5n),
+	.gallery-columns-8 .gallery-item:nth-of-type(5n),
+	.gallery-columns-9 .gallery-item:nth-of-type(5n) {
+		margin-right: 0;
+	}
+
+	/*********** GALLERIES (MULTIPLE) *************/
+
+	/* Galleries Template - Show caption thumbs in 1 column */
+
+	.resurrect-galleries-list {
+		margin: 40px -14px 26px 0;
+	}
+
+	.resurrect-galleries-list .gallery-item { /* duplicate in style.css */
+		max-width: 96%; /* old Android, IE 8, etc. -- in widget in particular */
+		max-width: -webkit-calc(100% - 14px);
+		max-width:         calc(100% - 14px);
+	}
+
+	.resurrect-galleries-list .gallery-item {
+		margin: 14px 0;
+	}
+
+		.resurrect-galleries-list .gallery-item:first-child {
+			margin-top: 0;
+		}
+
+	/****************** COMMENTS ******************/
+
+	.resurrect-comment-meta time .resurrect-comment-time { /* hide the "at 8:00 AM" part of date */
+		display: none;
+	}
+
+	#respond input[type=text],
+	#respond input[type=email],
+	#respond input[type=url] { /* move inputs below labels */
+		position: relative;
+		left: 0;
+		width: 95%;
+	}
+
+	.comment-form-author {
+		margin-top: 15px;
+	}
+
+	.comment-form-author label.error, /* comment error messages */
+	.comment-form-email label.error,
+	.comment-form-url label.error {
+		display: block;
+		width: 99%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		text-align: right;
+	}
+
+}
+
+/**********************************************
+ * 480px - Phone, Very Small Tablet or Less
+ **********************************************/
+
+@media only screen and (max-width: 480px) {
+
+	/**************** BASE STYLES *****************/
+
+	/* Quotes */
+
+	blockquote,
+	.quote-caption {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	blockquote:before {
+		left: 5px;
+	}
+
+	blockquote.is-style-large:before {
+		left: 10px;
+	}
+
+	/*************** CUSTOM STYLES ****************/
+
+	/* Prev/Next Navigation (single posts and comments) */
+
+	.resurrect-nav-left-right a {
+		min-width: 50%;
+	}
+
+	.resurrect-nav-left,
+	.resurrect-nav-right {
+		text-align: center;
+		width: 100%;
+	}
+
+	.resurrect-nav-right {
+		margin-top: 14px;
+	}
+
+	/* Author Box */
+
+	.resurrect-author-avatar img {
+		width: 50px;
+		height: 50px;
+	}
+
+	.resurrect-author-content {
+		margin-left: 70px;
+	}
+
+	/************* WORDPRESS STYLES ***************/
+
+	/* Move floated images to their own line and center */
+
+	.alignleft,
+	.alignright,
+	.wp-block-image.alignleft,
+	.wp-block-image.alignright {
+		display: block;
+		margin: 30px auto !important;
+		float: none !important;
+	}
+
+	/****************** LAYOUT ********************/
+
+	/* Tagline under logo */
+
+	#resurrect-logo-tagline {
+		font-size: 1.2em;
+	}
+
+	/* Banner */
+
+	#resurrect-banner {
+		margin-top: 30px
+	}
+
+		#resurrect-banner h1 {
+			font-size: 1.4em;
+			padding: 8px 11px 9px 11px;
+		}
+
+	/****************** CONTENT *******************/
+
+	.resurrect-content-block,
+	.resurrect-content-block-compact {
+		padding: 25px;
+	}
+
+	/****************** HOMEPAGE ******************/
+
+	/* Slider Title / Description */
+
+	.flex-title {
+		font-size: 1.4em;
+		padding: 8px 11px 9px 11px;
+	}
+
+	.flex-description {
+		display: none !important; /* don't let JS re-show it on slide change */
+	}
+
+	/*
+	Slider - Move controls below slider on touch devices (on some doesn't work on top)
+	NOTE: These styles are roughly the same for touch screens
+	*/
+
+	.flex-control-nav {
+		top: auto;
+		right: auto;
+		bottom: -30px;
+		width: 100%;
+		padding: 0;
+		text-align: center;
+	}
+
+	#resurrect-slider,
+	.touch #resurrect-slider { /* also overrride the .touch styles higher up */
+		padding-bottom: 26px;
+	}
+
+	/* Homepage Highlights - one per row now */
+
+	#ctcom-home-highlights .resurrect-highlight,
+	.resurrect-no-slider #ctcom-home-highlights .resurrect-highlight { /* .resurrect-caption-image */
+		margin-left: 0;
+		width: 100%;
+		float: none;
+		font-size: 1em; /* restore to original size */
+	}
+
+		/* No bottom margin on last box */
+
+		#ctcom-home-highlights .resurrect-highlight:last-child,
+		.resurrect-no-slider #ctcom-home-highlights .resurrect-highlight:last-child {
+			margin-bottom: 0;
+		}
+
+	/* Homepage Intro */
+
+	#resurrect-intro {
+		padding: 25px;
+	}
+
+		#resurrect-intro-heading {
+			font-size: 1.4em;
+			padding: 1px 0 1px 9px;
+		}
+
+		#resurrect-intro-content {
+			font-size: 1.2em;
+			line-height: 1.5em;
+		}
+
+	/* Even spacing between all elements */
+
+	#resurrect-slider-boxes,
+	#ctcom-home-highlights .resurrect-highlight,
+	#ctcom-home-highlights .resurrect-highlight:first-child,
+	.resurrect-no-slider #ctcom-home-highlights .resurrect-highlight:first-child,
+	#resurrect-intro {
+		margin: 25px 0;
+	}
+
+	/*************** ENTRY STYLES *****************/
+
+	/* Image Container */
+
+	.resurrect-entry-image,
+	.resurrect-no-sidebar .resurrect-entry-image {
+		display: block;
+		float: none;
+		max-width: 100%;
+		margin: 0 0 40px 0;
+		padding: 0;
+		text-align: center;
+	}
+
+	/* Title & Meta Container */
+
+	.resurrect-entry-title-meta,
+	.resurrect-no-sidebar .resurrect-entry-title-meta {
+		display: block;
+		float: none;
+		max-width: 100%;
+	}
+
+	/* Allow links to wrap now */
+
+	.resurrect-entry-meta > li a {
+		white-space: normal;
+	}
+
+	/****************** SERMONS *******************/
+
+	/* Sermon Index List - Two Columns to One (No Sidebar) */
+
+	.resurrect-no-sidebar .resurrect-sermon-index-list.resurrect-sermon-index-list-two-columns, /* <ul> */
+	.resurrect-no-sidebar .resurrect-sermon-index-list.resurrect-sermon-index-list-three-columns,
+	.resurrect-has-sidebar .resurrect-sermon-index-list.resurrect-sermon-index-list-two-columns,
+	.resurrect-has-sidebar .resurrect-sermon-index-list.resurrect-sermon-index-list-three-columns {
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-count: 1;
+	}
+
+	/* Books - one testament per row */
+
+	.resurrect-sermon-books-testament { /* <section> */
+		width: 100%;
+	}
+
+		.resurrect-sermon-books-testament:nth-child(odd) {
+			margin-right: 0;
+		}
+
+	/************** EVENT CALENDAR ****************/
+
+	/* Move month/category dropdowns to right (keep from going off screen on small phones) */
+
+	.resurrect-dropdown-panel,
+	.resurrect-dropdown-menu {
+		position: relative;
+		right: -40px;
+	}
+
+	/* Make day of week heading normal weight */
+
+	.resurrect-calendar-table-header-short {
+		font-weight: normal;
+	}
+
+	/* Reduce day size */
+
+	.resurrect-calendar-table-day-content-container {
+		padding: 3px 0; /* vertical centering and height */
+	}
+
+		.resurrect-calendar-table-day-heading {
+			font-size: 1.1em;
+		}
+
+	/* Less margin by image */
+
+	.resurrect-calendar-list-entry-image {
+		padding-right: 25px;
+	}
+
+	/* Reduce meta line height */
+
+	.resurrect-calendar-list-entry-meta > li {
+		line-height: 1.4em;
+	}
+
+	/************* GALLERY (SINGLE) ***************/
+
+	/* Make 4+ columns show as 3 columns */
+
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item { /* duplicate in style.css for 3 columns */
+		max-width: 27%; /* Android 4 browser did not like anything greater */
+		max-width: -webkit-calc(33.3% - 14px);
+		max-width:         calc(33.3% - 14px);
+	}
+
+	.gallery-item {
+		margin-right: 7px !important; /* reset to original */
+	}
+
+	.gallery-columns-4 .gallery-item:nth-of-type(3n), /* set all to 3 column */
+	.gallery-columns-5 .gallery-item:nth-of-type(3n),
+	.gallery-columns-6 .gallery-item:nth-of-type(3n),
+	.gallery-columns-7 .gallery-item:nth-of-type(3n),
+	.gallery-columns-8 .gallery-item:nth-of-type(3n),
+	.gallery-columns-9 .gallery-item:nth-of-type(3n) {
+		margin-right: 0;
+	}
+
+	/***************** COMMENTS *******************/
+
+	/* Comments */
+
+	.resurrect-comment-author span, /* remove "Author" or "Trackback" from after name */
+	.resurrect-comment-trackback-link span {
+		display: none;
+	}
+
+	a.comment-edit-link { /* hide admin Edit link */
+		display: none;
+	}
+
+	.resurrect-comment-buttons .resurrect-button-icon { /* remove icon from Edit button */
+		display: none;
+	}
+
+	/****************** WIDGETS *******************/
+
+	/* Highlights Widget (sidebars, homepage bottom) */
+
+	.resurrect-highlight,
+	.resurrect-no-slider .resurrect-highlight { /* .resurrect-caption-image */
+		font-size: 1em; /* restore to original size */
+	}
+
+}
+
+/**********************************************
+ * 320px - Small Phone
+ **********************************************/
+
+@media only screen and (max-width: 320px) {
+
+	/****************** LAYOUT ********************/
+
+	/* Shrink Logo Tagline */
+
+	#resurrect-logo-tagline {
+		font-size: 1.2em;
+	}
+
+	/* Page Header */
+
+	#resurrect-banner h1 {
+		font-size: 1.25em;
+		bottom: 12%;
+	}
+
+	/***************** HOMEPAGE *******************/
+
+	/* Slider */
+
+	.flex-title {
+		font-size: 1.25em;
+	}
+
+	/* Homepage Highlights - reduce text */
+
+	#ctcom-home-highlights .resurrect-highlight,
+	.resurrect-no-slider #ctcom-home-highlights .resurrect-highlight { /* .resurrect-caption-image */
+		font-size: 1em; /* restore to original size */
+	}
+
+	/* Homepage Intro */
+
+	#resurrect-intro {
+		padding: 20px;
+	}
+
+		#resurrect-intro-heading {
+			font-size: 1.25em;
+		}
+
+		#resurrect-intro-content {
+			font-size: 1em;
+		}
+
+	/******************* PEOPLE *******************/
+
+	/* People */
+
+	.resurrect-person-image { /* move image to top */
+		width: 100%;
+		max-height: 180px;
+		float: none;
+		margin: 0 auto 22px auto;
+	}
+
+	.resurrect-person-content header {
+		text-align: center;
+	}
+
+		.resurrect-person-content header h1 {
+			margin-right: 0;
+			width: 100%;
+		}
+
+		.resurrect-person-position {
+			display: block;
+			margin: 0;
+		}
+
+	/***************** COMMENTS *******************/
+
+	.resurrect-comment,
+	.resurrect-comment #respond { /* no indentation for threaded comments */
+		margin-left: 0;
+	}
+
+	/****************** WIDGETS *******************/
+
+	.resurrect-widget-title {
+		font-size: 1.25em; /* reduce size */
+	}
+
+}
